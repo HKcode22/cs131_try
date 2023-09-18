@@ -1,1000 +1,1000 @@
-   40  git commit -m "m"
-   41  git push --set-upstream origin master
-   42  rm -rf cs131
-   43  cd ..
-   44  rm -rf cs131
-   45  cd cs131
-   46  cd Desktop
-   47  cd cs131
-   48  rm -rf cs131
-   49  cd ..
-   50  rm -rf cs131
-   51  cd cs131
-   52  mkdir cs131
-   53  cd cs131
-   54  ls
-   55  mkdir sampleProject
-   56  ls -ltr
-   57  cd sampleProject/
-   58  touch sampleFile.txt
-   59  git init
-   60  git add .
-   61  git status
-   62  git config --global user.email "hk84164@gmail.com"
-   63  git config --global user.name "HKcode22"
-   64  cd ~/.ssh && ssh-keygen
-   65  cat id_rsa.pub
-   66  git -T git@github.com
-   67  ssh -T git@github.com
-   68  git remote add origin git@github.com:HKcode22/cs131.git
-   69  cd ..
-   70  cd cs131
-   71  cd Desktop
-   72  git commit -m "Message"
-   73  cd cs131
-   74  git commit -m "Message"
-   75  .bash_history
-   76  git add ../../.bash_history
-   77  git add ../../.gitconfig
-   78  git add sampleProject/../../.ssh/
-   79  ../../.ssh/
-   80  git add sampleProject/../../.ssh/
-   81  git add ../../.ssh/
-   82  git add ../../SampleRepoForCS131/
-   83  git status
-   84  git commit -m "Message"
-   85  git ../../.wget-hsts
-   86  git add ../../.wget-hsts
-   87  git add ../../Worksheet1/
-   88  git add ../../a.txt
-   89  git add ../../hamzaf23
-   90  git add ../../index.html
-   91  git add ../../index.html.2
-   92  git add ../../index.html.3
-   93  git add ../../index.html.4
-   94  git add ../../index.html.5
-   95  git add ../../index.html.6
-   96  git add ../../index.html.8
-   97  ../../index.html.8
-   98  git add ../../index.html.8
-   99  git add ../../index.html.9
-  100  git commit -m "Message"
-  101  git push --set-upstream origin master
-  102  git remote show origin
-  103  git push --set-upstream origin main
-  104  git pull origin main
-  105  git fetch origin main
-  106  git merge origin/main
-  107  ls
-  108  mkdir Worksheet1
-  109  git commit -m "Message"
-  110  mkdir sampleProject
-  111  ls -ltr
-  112  cd sampleProject/
-  113  touch sampleFile.txt
-  114  git init
-  115  git add .
-  116  git status
-  117  git remote add origin git@github.com:khanchandaniashish/DemoRepoForCS131.git
-  118  git remote add origin git@github.com:HKcode22/cs131.git
-  119  git commit -m "Message"
-  120  git push --set-upstream origin master
-  121  git push --set-upstream origin main
-  122  git push --set-upstream origin master
-  123  git remote add origin git@github.com:HKcode22/cs131.git
-  124  git remote set-url origin git@github.com:HKcode22/cs131.git
-  125  git push --set-upstream origin master
-  126  git push --set-upstream origin main
-  127  cd ..
-  128  git remote set-url origin git@github.com:HKcode22/cs131.git
-  129  git push --set-upstream origin master
-  130  git push --set-upstream origin main
-  131  git pull origin main
-  132  hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-  133  [hamzaf23@sjsu cs131]$ git pull origin main
-  134  error: Pulling is not possible because you have unmerged files.
-  135  hint: Fix them up in the work tree, and then use 'git add/rm <file>'
-  136  hint: as appropriate to mark resolution and make a commit.
-  137  git status
-  138  git add ../../Worksheet1
-  139  git status
-  140  git add ../../Worksheet1
-  141  git add ../../.ssh/known_hosts
-  142  git add .
-  143  git add ../../.ssh/known_hosts
-  144  git status
-  145  git add ../../Worksheet1
-  146  git restore ../../Worksheet1
-  147  git add ../project2/
-  148  git add ../../index.html.1
-  149  git add ../../index.html.7
-  150  git status
-  151  git add ../../Worksheet1
-  152  git add .
-  153  git status
-  154  git add ../../Worksheet1
-  155  git restore ../../Worksheet1
-  156  git status
-  157  git restore ../../Worksheet1
-  158  git add .
-  159  git status
-  160  git add .
-  161  git reset ../../Worksheet1
-  162  git commit -m "Resolve merge conflicts (excluding Worksheet1)"
-  163  git status
-  164  git push origin main
-  165  git commit -m "Messege"
-  166  git push origin main
-  167  git add .
-  168  git reset ../../Worksheet1
-  169  git commit -m "Messege"
-  170  git rm -r Worksheet1
-  171  no changes added to commit (use "git add" and/or "git commit -a")
-  172  [hamzaf23@sjsu cs131]$ git rm -r Worksheet1
-  173  fatal: pathspec 'Worksheet1' did not match any files
-  174  git branch
-  175  ls
-  176  git rm -r Worksheet1
-  177  git commit -m "Remove Worksheet1 directory"
-  178  git rm -r ../../Worksheet1
-  179  cd /path/to/parent/directory
-  180  git rm -r Worksheet1
-  181  rm -rf Worksheet1
-  182  git rm -r Worksheet1
-  183  rm -rf Worksheet1
+   86  git push <remote> <branch>
+   87  git push origin main
+   88  git remote add origin git@github.com:HKcode22/cs131.git
+   89  git commit -m "Message"
+   90  git push --set-upstream origin master
+   91  git push --set-upstream origin main
+   92  git remote add origin cd /path/to/your/repository
+   93  cd Worksheet1
+   94  git add cmds.log
+   95  git commit -m "Add cmds.log file"
+   96  git push origin main
+   97  cd /path/to/your/repository
+   98  cd ..
+   99  git add cmds.log
+  100  git add history > cmds.lg
+  101  git add history > cmds.log
+  102  history > cmds.log
+  103  git add cmds.log
+  104  git commit -m "Add cmds.log file"
+  105  git push origin main
+  106  git push origin master
+  107  git origin main
+  108  git push origin main
+  109  mv cmds.log /path/to/Worksheet1/
+  110  cd Worksheet1
+  111  git add Worksheet1/cmds.log
+  112  git add cmds.log
+  113  git commit -m "Move cmds.log to Worksheet1 directory"
+  114  git push origin main
+  115  git push --set-upstream origin master
+  116  git push --set-upstream origin main
+  117  mv cmds.log Worksheet1/
+  118  mv cmds.log
+  119  mv cmds.log Worksheet1/
+  120  cd ..
+  121  cd /path/to/parent/directory
+  122  mv cmds.log Worksheet1/
+  123  git add Worksheet1/cmds.log
+  124  git commit -m "Move cmds.log into Worksheet1 directory"
+  125  git add Worksheet1/cmds.log
+  126  git commit -m "Move cmds.log into Worksheet1 directory"
+  127  mv Worksheet1/cmds.lg Worksheet1/cmds.log
+  128  mv cmds.log Worksheet1/cmds.log
+  129  cd /path/to/your/cmds.log
+  130  cd /path/to/cs131
+  131  mv cmds.log Worksheet1/cmds.log
+  132  mv cmds.log Worksheet1/
+  133  find /path/to/parent/directory -name "cmds.log"
+  134  mv <path_to_cmds.log> Worksheet1/cmds.log
+  135  git add git add Worksheet1/cmds.log
+  136  git commit -m "Move cmds.log into Worksheet1 directory"
+  137  git add Worksheet1/cmds.log
+  138  git commit -m "Move cmds.log into Worksheet1 directory"
+  139  history > cmds.log
+  140  cd ..
+  141  cd Worksheet1/
+  142  cd cs131
+  143  cd ..
+  144  cd 
+  145  cd cs131
+  146  cd Worksheet1/
+  147  cd Desktop/cs131
+  148  cd
+  149  cd Desktop/cs131
+  150  cd cs131
+  151  cd Worksheet1/
+  152  ls
+  153  cd hamzaf23/
+  154  cd
+  155  mkdir Desktop
+  156  cd Worksheet1/
+  157  cd
+  158  wget www.github.com
+  159  mkdir myproject
+  160  cd hamzaf23
+  161  -al
+  162  ls
+  163  -al
+  164  git init
+  165  git status
+  166  touch hamzaf23
+  167  git commit -m "This is my first commit!"
+  168  cd Desktop
+  169  ls
+  170  mkdir project2
+  171  cd myproject2
+  172  cd project2
+  173  git init
+  174  touch hamzaf23
+  175  touch hamzaf23.txt
+  176  ls
+  177  git status
+  178  git commit -m "This is my first commit"
+  179  git add
+  180  git add .
+  181  add hamzaf23.txt
+  182  git add
+  183  git add hamzaf23
   184  git status
-  185  git submodule deinit -f -- <path/to/submodule>
-  186  rm -rf <path/to/submodule>
-  187  git submodule
-  188  git submodule deinit -f -- Worksheet1
-  189  rm -rf Worksheet1
-  190  git config -f .gitmodules --remove-section submodule.Worksheet1
-  191  git config -f .git/config --remove-section submodule.Worksheet1
-  192  git commit -m "Remove Worksheet1 submodule"
-  193  git submodule
-  194  rm -rf ../../Worksheet1
-  195  git commit -m "Remove Worksheet1 submodule"
-  196  git rm --cached ../../Worksheet1
-  197  git commit -m "Remove Worksheet1 submodule reference"
-  198  rm -rf ../../Worksheet1
-  199  git commit -m "Remove Worksheet1 submodule files"
-  200  git push origin main
-  201  rm -rf ../../Worksheet1
-  202  git push origin main
-  203  mkdir sampleProject
-  204  ls -ltr
-  205  cd sampleProject/
-  206  touch sampleFile.txt
-  207  git init
-  208  git add .
-  209  git status
-  210  git config --global user.email "hk84164@gmail.com"
-  211  git config --global user.name "HKcode22"
-  212  git remote add origin git@github.com:HKcode22/cs131.git
-  213  git commit -m "Message"
-  214  git push --set-upstream origin master
-  215  git push --set-upstream origin main
+  185  git config --global user.email "hamza84164@gmail.com
+  186  d
+  187  b
+  188  git config --global user.email "hamza84164@gmail.com"
+  189  git config --global user.name "Hamza Khan
+  190  git config --global user.name "Hamza Khan"
+  191  git commit -m "This is my first commit!"
+  192  git branch
+  193  git checkout -b my-new-branch
+  194  git branch
+  195  ls
+  196  pwed
+  197  pwd
+  198  git remote add origin https://github.com/HKcode22/cs131
+  199  git branch -M main
+  200  ls
+  201  git branch
+  202  git branch -h
+  203  git push -u origin main
+  204  git branch
+  205  git push origin master
+  206  git push origin main
+  207  ls
+  208  cd ..
+  209  ls
+  210  mkdir cs131
+  211  cd cs131/
+  212  git init
+  213  ls
+  214  mkdir Worksheet1
+  215  cd Worksheet1/
   216  ls
-  217  git status
+  217  history > cmds.logs
   218  cd ..
   219  cd Worksheet1
-  220  mkdir Worksheet1
-  221  ls -ltr
-  222  cd sampleProject/
-  223  cd Worksheet1
-  224  cd ..
-  225  cd Worksheet1
-  226  touch sampleFile.txt
-  227  git init
+  220  cd cs131
+  221  cd ..
+  222  touch a.txt
+  223  git add .
+  224  git init
+  225  touch sampletext.txt
+  226  ls
+  227  pwd
   228  git add .
   229  git status
-  230  git config --global user.email "hk84164@gmail.com"
-  231  git config --global user.name "HKcode22"
-  232  git remote add origin git@github.com:HKcode22/cs131.git
-  233  git commit -m "Message"
-  234  git push --set-upstream origin maste
-  235  git push --set-upstream origin master
-  236  git push --set-upstream origin main
-  237  git branch -m master main
-  238  git push --set-upstream origin main
-  239  git checkout main
-  240  git pull origin main
-  241  git push origin main
-  242  git checkout main
-  243  git push -f origin main
-  244  git pull origin main
-  245  git push --set-upstream origin master
-  246  error: failed to push some refs to 'github.com:HKcode22/cs131.git'
-  247  [hamzaf23@sjsu Worksheet1]$ git push --set-upstream origin master
-  248  error: src refspec master does not match any
-  249  error: failed to push some refs to 'github.com:HKcode22/cs131.git'
-  250  [hamzaf23@sjsu Worksheet1]$ git push --set-upstream origin master
-  251  error: src refspec master does not match any
-  252  error: failed to push some refs to 'github.com:HKcode22/cs131.git'
-  253  [hamzaf23@sjsu Worksheet1]$ git push --set-upstream origin master
-  254  error: src refspec master does not match any
-  255  error: failed to push some refs to 'github.com:HKcode22/cs131.git'
-  256  [hamzaf23@sjsu Worksheet1]$ git push --set-upstream origin master
-  257  error: src refspec master does not match any
-  258  error: failed to push some refs to 'github.com:HKcode22/cs131.git'
-  259  [hamzaf23@sjsu Worksheet1]$ git push --set-upstream origin master
-  260  error: src refspec master does not match any
-  261  error: failed to push some refs to 'github.com:HKcode22/cs131.git'
-  262  [hamzaf23@sjsu Worksheet1]$ git push --set-upstream origin master
-  263  error: src refspec master does not match any
-  264  error: failed to push some refs to 'github.com:HKcode22/cs131.git'
-  265  [hamzaf23@sjsu Worksheet1]$ error: failed to push some refs to 'github.com:HKcode22/cs131.git'
-  266  [hamzaf23@sjsu Worksheet1]$ git push --set-upstream origin master
-  267  error: src refspec master does not match any
-  268  error: failed to push some refs to 'github.com:HKcode22/cs131.git'
-  269  [hamzaf23@sjsu Worksheet1]$ git push --set-upstream origin master
-  270  error: src refspec master does not match any
-  271  error: failed to push some refs to 'github.com:HKcode22/cs131.git'
-  272  [hamzaf23@sjsu Worksheet1]$ git push --set-upstream origin master
-  273  error: src refspec master does not match any
-  274  error: failed to push some refs to 'github.com:HKcode22/cs131.git'
-  275  [hamzaf23@sjsu Worksheet1]$ git push --set-upstream origin master
-  276  error: src refspec master does not match any
-  277  error: failed to push some refs to 'github.com:HKcode22/cs131.git'
-  278  [hamzaf23@sjsu Worksheet1]$ git push --set-upstream origin master
-  279  error: src refspec master does not match any
-  280  error: failed to push some refs to 'github.com:HKcode22/cs131.git'
-  281  [hamzaf23@sjsu Worksheet1]$ git push --set-upstream origin master
-  282  error: src refspec master does not match any
-  283  error: failed to push some refs to 'github.com:HKcode22/cs131.git'
-  284  [hamzaf23@sjsu Worksheet1]$ git push --set-upstream origin main
-  285  git push --set-upstream origin main
-  286  git push --set-upstream origin master
-  287  history > cmds.log
-  288  git push cmds.log 
-  289  cd ..
-  290  git push cmds.log
-  291  git push origin main
-  292  git push origin master
-  293  git push --set-upstream origin master
-  294  git push --set-upstream origin main
-  295  mkdir sampleProject
-  296  ls -ltr
-  297  cd sampleProject/
-  298  touch sampleFile.txt
-  299  git init
-  300  git add .
-  301  git status
-  302  git config --global user.name "HKcode22"
-  303  git config --global user.email "hk84164@gmail.com"
-  304  cd Worksheet1
-  305  cd ..
-  306  cd Worksheet1
-  307  history > cmds.log
-  308  git add cmds.log
-  309  git push <remote> <branch>
-  310  git push origin main
-  311  git remote add origin git@github.com:HKcode22/cs131.git
+  230  cd ~/.ssh && ssh-keygen
+  231  cd ..
+  232  cd cs131
+  233  cd ~/.ssh && ssh-keygen
+  234  cat id_rsa.pub
+  235  cd ..
+  236  ls
+  237  cd cs131
+  238  git status
+  239  git add .
+  240  git add
+  241  git add .
+  242  git status
+  243  git commit -m "hello"
+  244  git add cs131
+  245  git status
+  246  git add cs131
+  247  git restore cs131
+  248  git statust
+  249  git status
+  250  cd ..
+  251  cd cs131
+  252  git add
+  253  git add /
+  254  git add .
+  255  git status
+  256  git add Worksheet1
+  257  git add .
+  258  git status
+  259  cd ..
+  260  mkdir cs131
+  261  cd Desktop
+  262  mkdir cs131
+  263  cd cs131
+  264  git status
+  265  git config --global user.email "hk8414@gmail.com"
+  266  git config --global user.name "Hamza Khan"
+  267  cd ..
+  268  cd .ssh
+  269  cd ..
+  270  cd .ssh
+  271  ssh -T git@github.com
+  272  cd ..
+  273  cd cs131
+  274  git push --set-upstream origin master
+  275  mkdir Worksheet1
+  276  git remote set-url origin https://github.com/HKcode22/cs131.git
+  277  git push --set-upstream origin master
+  278  ls Worksheet1
+  279  ls
+  280  cd Worksheet1
+  281  ls
+  282  cd cs131
+  283  cd ..
+  284  mkdir sampleProject
+  285  ls -ltr
+  286  cd sampleProject/
+  287  touch sampleFile.txt
+  288  git init
+  289  git add .
+  290  git status
+  291  git config --global user.email "hk84164@gmail.com"
+  292  git config --global user.name "Hamza Khan"
+  293  cd ~/.ssh && ssh-keygen
+  294  cat id_rsa.pub
+  295  git remote add origin git@github.com:khanchandaniashish/DemoRepoForCS131.git
+  296  cd ..
+  297  cd cs131
+  298  git remote add origin git@github.com:khanchandaniashish/DemoRepoForCS131.git
+  299  git remote add origin git@github.com:khanchandaniashish/DemoRepoForCS131.gitr
+  300  git remote set-url origin https://github.com/HKcode22/cs131
+  301  git remote add origin git@github.com:khanchandaniashish/DemoRepoForCS131.git
+  302  git commit -m "Message"
+  303  git branch --unset-upstream
+  304  git commit -m "Message"
+  305  git add Worksheet1
+  306  git restore Worksheet1
+  307  git add sampleProject
+  308  git add cs131
+  309  git restore cs131
+  310  git add sampleProject
+  311  git add .
   312  git commit -m "Message"
-  313  git push --set-upstream origin master
-  314  git push --set-upstream origin main
-  315  git remote add origin cd /path/to/your/repository
-  316  cd Worksheet1
-  317  git add cmds.log
-  318  git commit -m "Add cmds.log file"
-  319  git push origin main
-  320  cd /path/to/your/repository
-  321  cd ..
-  322  git add cmds.log
-  323  git add history > cmds.lg
-  324  git add history > cmds.log
-  325  history > cmds.log
+  313  git add cs131
+  314  git commit -m "Message"
+  315  cd cs131
+  316  cd Desktop
+  317  cd cs131
+  318  cd Worksheet1
+  319  ls
+  320  git status
+  321  git add cmds.logs
+  322  git add .
+  323  git add cmds.log
+  324  git status
+  325  git add Worksheet1/cmds.log
   326  git add cmds.log
-  327  git commit -m "Add cmds.log file"
+  327  git commit -m "Move cmds.log into Worksheet1 directory"
   328  git push origin main
-  329  git push origin master
-  330  git origin main
-  331  git push origin main
-  332  mv cmds.log /path/to/Worksheet1/
+  329  cd Worksheet1
+  330  cd Deskstop
+  331  cd Desktop
+  332  cd cs131
   333  cd Worksheet1
-  334  git add Worksheet1/cmds.log
+  334  ls
   335  git add cmds.log
-  336  git commit -m "Move cmds.log to Worksheet1 directory"
+  336  git commit -m "Add cmds.log to Worksheet1"
   337  git push origin main
-  338  git push --set-upstream origin master
-  339  git push --set-upstream origin main
-  340  mv cmds.log Worksheet1/
-  341  mv cmds.log
-  342  mv cmds.log Worksheet1/
-  343  cd ..
-  344  cd /path/to/parent/directory
-  345  mv cmds.log Worksheet1/
-  346  git add Worksheet1/cmds.log
-  347  git commit -m "Move cmds.log into Worksheet1 directory"
-  348  git add Worksheet1/cmds.log
-  349  git commit -m "Move cmds.log into Worksheet1 directory"
-  350  mv Worksheet1/cmds.lg Worksheet1/cmds.log
-  351  mv cmds.log Worksheet1/cmds.log
-  352  cd /path/to/your/cmds.log
-  353  cd /path/to/cs131
-  354  mv cmds.log Worksheet1/cmds.log
-  355  mv cmds.log Worksheet1/
-  356  find /path/to/parent/directory -name "cmds.log"
-  357  mv <path_to_cmds.log> Worksheet1/cmds.log
-  358  git add git add Worksheet1/cmds.log
-  359  git commit -m "Move cmds.log into Worksheet1 directory"
-  360  git add Worksheet1/cmds.log
-  361  git commit -m "Move cmds.log into Worksheet1 directory"
-  362  history > cmds.log
-  363  cd ..
-  364  cd Worksheet1/
-  365  cd cs131
-  366  cd ..
-  367  cd 
-  368  cd cs131
-  369  cd Worksheet1/
-  370  cd Desktop/cs131
-  371  cd
-  372  cd Desktop/cs131
-  373  cd cs131
-  374  cd Worksheet1/
-  375  ls
-  376  cd hamzaf23/
-  377  cd
-  378  mkdir Desktop
-  379  cd Worksheet1/
-  380  cd
-  381  wget www.github.com
-  382  mkdir myproject
-  383  cd hamzaf23
-  384  -al
-  385  ls
-  386  -al
-  387  git init
-  388  git status
-  389  touch hamzaf23
-  390  git commit -m "This is my first commit!"
-  391  cd Desktop
-  392  ls
-  393  mkdir project2
-  394  cd myproject2
-  395  cd project2
-  396  git init
-  397  touch hamzaf23
-  398  touch hamzaf23.txt
-  399  ls
-  400  git status
-  401  git commit -m "This is my first commit"
-  402  git add
-  403  git add .
-  404  add hamzaf23.txt
-  405  git add
-  406  git add hamzaf23
-  407  git status
-  408  git config --global user.email "hamza84164@gmail.com
-  409  d
-  410  b
-  411  git config --global user.email "hamza84164@gmail.com"
-  412  git config --global user.name "Hamza Khan
-  413  git config --global user.name "Hamza Khan"
-  414  git commit -m "This is my first commit!"
-  415  git branch
-  416  git checkout -b my-new-branch
-  417  git branch
-  418  ls
-  419  pwed
-  420  pwd
-  421  git remote add origin https://github.com/HKcode22/cs131
-  422  git branch -M main
-  423  ls
-  424  git branch
-  425  git branch -h
-  426  git push -u origin main
-  427  git branch
-  428  git push origin master
-  429  git push origin main
-  430  ls
-  431  cd ..
-  432  ls
-  433  mkdir cs131
-  434  cd cs131/
-  435  git init
-  436  ls
-  437  mkdir Worksheet1
-  438  cd Worksheet1/
-  439  ls
-  440  history > cmds.logs
-  441  cd ..
-  442  cd Worksheet1
-  443  cd cs131
+  338  git push origin master
+  339  git push origin main
+  340  git status
+  341  git push origin mai
+  342  git push origin main
+  343  git pull origin main
+  344  git push origin main
+  345  git add cmds.log
+  346  git commit -m "Add cmds.log to Worksheet1"
+  347  git push origin main
+  348  git branch
+  349  git pull origin master
+  350  git push orgin master
+  351  git push origin master
+  352  git push origin main
+  353  cd ..
+  354  ls
+  355  git push origin mian
+  356  git push origin main
+  357  git pull origin main
+  358  git push origin main
+  359  git status
+  360  git add cmds.log
+  361  git add .
+  362  git add .gitmodules
+  363  git add Worksheet1/
+  364  git cmds.lg
+  365  git add cmds.lg
+  366  git add .
+  367  git restore
+  368  git status
+  369  git push origin master
+  370  git push origin main
+  371  git status
+  372  git pull origin main
+  373  git push origin main
+  374  git pull origin main
+  375  git config pull.rebase false
+  376  git config pull.rebase true
+  377  git config pull.ff only
+  378  git config --global user.email "hk84164@gmail.com"
+  379  git config --global user.name "HKcode22"
+  380  git push origin main
+  381  git pull origin
+  382  git pull origin main
+  383  git config --global user.email "hk84164@gmail.com"
+  384  git config --global user.name "HKcode22"
+  385  git add .
+  386  git commit -m "Committing changes"
+  387  git pull origin main --allow-unrelated-histories
+  388  git push origin main
+  389  echo "# cs131" >> README.md
+  390  git init
+  391  git add README.md
+  392  git commit -m "first commit"
+  393  git config --global user.email "hk84164@gmail.com"
+  394  git config --global user.name "HKcode22"
+  395  git commit -m "first commit"
+  396  git branch -M main
+  397  git remote add origin git@github.com:HKcode22/cs131.git
+  398  git push -u origin main
+  399  rm -rf /path/to/your/repository
+  400  rm -rf cs131
+  401  git remote add origin git@github.com:HKcode22/cs131.git
+  402  git remote remove origin
+  403  git remote rm origin
+  404  git remote -v
+  405  git remote add origin git@github.com:HKcode22/cs131.git
+  406  echo "# cs131" >> README.md
+  407  git init
+  408  git add README.md
+  409  git commit -m "first commit"
+  410  git branch -M main
+  411  git remote add origin git@github.com:HKcode22/cs131.git
+  412  git push -u origin main
+  413  git remote remove origin
+  414  ls
+  415  cd cs131
+  416  cd Desktop
+  417  ls
+  418  cp -r ~/Desktop/cs131 ~/cs131_backup
+  419  ls ~/cs131_backup
+  420  rm -r ~/Desktop/cs131
+  421  rm -rf ~/Desktop/cs131
+  422  ls
+  423  wget www.github.com
+  424  mkdir cs131
+  425  cd cs131
+  426  git init
+  427  touch hamza.txt
+  428  ls
+  429  git status
+  430  git add hamza.txt
+  431  git status
+  432  git commit -m "This is my first commit!"
+  433  git branch
+  434  git remote add origin https://github.com/cubeton/mynewrepository.git
+  435  git remote -v
+  436  git remote add origin git@github.com:HKcode22/cs131.git
+  437  git remote -v
+  438  git config --get-regexp remote.origin
+  439  git remote add origin git@github.com:HKcode22/cs131.git
+  440  git remote remove origin
+  441  git remote rm origin
+  442  git remote add origin git@github.com:HKcode22/cs131.git
+  443  cd Desktop
   444  cd ..
-  445  touch a.txt
-  446  git add .
-  447  git init
-  448  touch sampletext.txt
+  445  cd cs131
+  446  cd ..
+  447  ls
+  448  rm -r ~/Desktop/cs131
   449  ls
-  450  pwd
-  451  git add .
-  452  git status
-  453  cd ~/.ssh && ssh-keygen
-  454  cd ..
-  455  cd cs131
-  456  cd ~/.ssh && ssh-keygen
-  457  cat id_rsa.pub
-  458  cd ..
-  459  ls
-  460  cd cs131
-  461  git status
-  462  git add .
-  463  git add
-  464  git add .
-  465  git status
-  466  git commit -m "hello"
-  467  git add cs131
-  468  git status
-  469  git add cs131
-  470  git restore cs131
-  471  git statust
-  472  git status
-  473  cd ..
-  474  cd cs131
-  475  git add
-  476  git add /
-  477  git add .
-  478  git status
-  479  git add Worksheet1
-  480  git add .
-  481  git status
-  482  cd ..
-  483  mkdir cs131
-  484  cd Desktop
-  485  mkdir cs131
-  486  cd cs131
-  487  git status
-  488  git config --global user.email "hk8414@gmail.com"
-  489  git config --global user.name "Hamza Khan"
-  490  cd ..
-  491  cd .ssh
-  492  cd ..
-  493  cd .ssh
-  494  ssh -T git@github.com
-  495  cd ..
-  496  cd cs131
-  497  git push --set-upstream origin master
-  498  mkdir Worksheet1
-  499  git remote set-url origin https://github.com/HKcode22/cs131.git
-  500  git push --set-upstream origin master
-  501  ls Worksheet1
-  502  ls
-  503  cd Worksheet1
-  504  ls
-  505  cd cs131
-  506  cd ..
-  507  mkdir sampleProject
-  508  ls -ltr
-  509  cd sampleProject/
-  510  touch sampleFile.txt
-  511  git init
-  512  git add .
+  450  cp -r ~/Desktop/cs131 ~/cs131_backup
+  451  ls ~/cs131_backup
+  452  rm -r ~/Desktop/cs131
+  453  ls
+  454  mv cs131 ~/cs131_backup
+  455  ls ~/Desktop
+  456  mv cs131 ~/cs131_backup
+  457  mkdir ~/cs131_backup
+  458  mv ~/Desktop/cs131/* ~/cs131_backup/
+  459  rmdir ~/Desktop/cs131
+  460  rm -r ~/Desktop/cs131
+  461  ls
+  462  rm -r ~/Desktop/cs131
+  463  ls
+  464  rm -r ~/Desktop/cs131
+  465  sudo rm -r ~/Desktop/cs131
+  466  rm -rf ~/Desktop/cs131
+  467  ls ~/Desktop
+  468  mkdir Worksheet1
+  469  cd Worksheet1
+  470  git init
+  471  touch hamza.txt
+  472  ls
+  473  git status
+  474  git add hamza.txt
+  475  git status
+  476  git commit -m "This is my first commit!"
+  477  git branch -M main
+  478  git remote add origin git@github.com:HKcode22/cs131.git
+  479  git push -u origin master
+  480  git push -u origin main
+  481  ls -al ~/.ssh
+  482  ssh-add ~/.ssh/your-ssh-key
+  483  ssh -T git@github.com
+  484  cd ssh
+  485  ls
+  486  ls -ltr
+  487  git commit -m "This is my first commit!"
+  488  git remote add origin git@github.com:HKcode22/cs131.git
+  489  git remote -v
+  490  git remote remove origin
+  491  git remote add origin git@github.com:HKcode22/cs131.git
+  492  git push -u origin master
+  493  git push -u origin main
+  494  ls -al ~/.ssh
+  495  ssh-add ~/.ssh/your-ssh-key
+  496  chmod 600 ~/.ssh/your-ssh-key
+  497  Host github.com
+  498    IdentityFile ~/.ssh/your-ssh-key
+  499  ssh -T git@github.com
+  500  git remote -v
+  501  cd ..
+  502  rm -r Worksheet1
+  503  ls
+  504  rm -rf Worksheet1
+  505  ls
+  506  mkdir Worksheet1
+  507  cd Worksheet1
+  508  ls
+  509  git init
+  510  ls
+  511  touch hamza.txt
+  512  ls
   513  git status
-  514  git config --global user.email "hk84164@gmail.com"
-  515  git config --global user.name "Hamza Khan"
-  516  cd ~/.ssh && ssh-keygen
-  517  cat id_rsa.pub
-  518  git remote add origin git@github.com:khanchandaniashish/DemoRepoForCS131.git
-  519  cd ..
-  520  cd cs131
-  521  git remote add origin git@github.com:khanchandaniashish/DemoRepoForCS131.git
-  522  git remote add origin git@github.com:khanchandaniashish/DemoRepoForCS131.gitr
-  523  git remote set-url origin https://github.com/HKcode22/cs131
-  524  git remote add origin git@github.com:khanchandaniashish/DemoRepoForCS131.git
-  525  git commit -m "Message"
-  526  git branch --unset-upstream
-  527  git commit -m "Message"
-  528  git add Worksheet1
-  529  git restore Worksheet1
-  530  git add sampleProject
-  531  git add cs131
-  532  git restore cs131
-  533  git add sampleProject
-  534  git add .
-  535  git commit -m "Message"
-  536  git add cs131
-  537  git commit -m "Message"
-  538  cd cs131
-  539  cd Desktop
-  540  cd cs131
-  541  cd Worksheet1
-  542  ls
-  543  git status
-  544  git add cmds.logs
-  545  git add .
-  546  git add cmds.log
-  547  git status
-  548  git add Worksheet1/cmds.log
-  549  git add cmds.log
-  550  git commit -m "Move cmds.log into Worksheet1 directory"
-  551  git push origin main
-  552  cd Worksheet1
-  553  cd Deskstop
-  554  cd Desktop
-  555  cd cs131
-  556  cd Worksheet1
-  557  ls
-  558  git add cmds.log
-  559  git commit -m "Add cmds.log to Worksheet1"
-  560  git push origin main
-  561  git push origin master
-  562  git push origin main
+  514  git add hamza.txt
+  515  git satuts
+  516  git status
+  517  git commit -m "This is my first commit!"
+  518  git remote add origin git@github.com:HKcode22/cs131.git
+  519  git push -u origin master
+  520  ssh -T git@github.com
+  521  git remote -v
+  522  git remote set-url origin git@github.com:HKcode22/cs131.git
+  523  Host github.com
+  524   IdentityFile ~/.ssh/id_rsa
+  525  ssh -vT git@github.com
+  526  ssh -i ~/.ssh/id_rsa -T git@github.com
+  527  ls ~/.ssh
+  528  ls
+  529  git config --global user.email "hk84164@gmail.com"
+  530  git config --global user.name "HKcode22"
+  531  cd ~/.ssh && ssh-keygen
+  532  cat id_rsa.pub
+  533  git remote add origin git@github.com:HKcode22/cs131.git
+  534  cd ..
+  535  cd Worksheet1
+  536  cd Desktop
+  537  cd Worksheet1
+  538  git remote add origin git@github.com:HKcode22/cs131.git
+  539  git commit -m "Message"
+  540  git push --set-upstream origin master
+  541  history > cmds.log
+  542  git add cmds.log
+  543  git push cmds.log
+  544  git status
+  545  mv cmds.log Worksheet1/
+  546  cd ..
+  547  mkdir cs131
+  548  cd cs131
+  549  cd Worksheet1
+  550  ls
+  551  cd Worksheet1
+  552  mkdir Worksheet1
+  553  cd Worksheet1
+  554  cd ..
+  555  mv cmds.log Worksheet1/
+  556  mv cmds.log cs131/Worksheet1/
+  557  cd ..
+  558  mv cmds.log cs131/Worksheet1/
+  559  cd cs131
+  560  history > cmds.log
+  561  git add cmds.log
+  562  git statust
   563  git status
-  564  git push origin mai
-  565  git push origin main
-  566  git pull origin main
-  567  git push origin main
-  568  git add cmds.log
-  569  git commit -m "Add cmds.log to Worksheet1"
-  570  git push origin main
-  571  git branch
-  572  git pull origin master
-  573  git push orgin master
-  574  git push origin master
-  575  git push origin main
-  576  cd ..
-  577  ls
-  578  git push origin mian
-  579  git push origin main
-  580  git pull origin main
-  581  git push origin main
-  582  git status
-  583  git add cmds.log
-  584  git add .
-  585  git add .gitmodules
-  586  git add Worksheet1/
-  587  git cmds.lg
-  588  git add cmds.lg
-  589  git add .
-  590  git restore
-  591  git status
-  592  git push origin master
-  593  git push origin main
-  594  git status
-  595  git pull origin main
-  596  git push origin main
-  597  git pull origin main
-  598  git config pull.rebase false
-  599  git config pull.rebase true
-  600  git config pull.ff only
-  601  git config --global user.email "hk84164@gmail.com"
-  602  git config --global user.name "HKcode22"
-  603  git push origin main
-  604  git pull origin
-  605  git pull origin main
-  606  git config --global user.email "hk84164@gmail.com"
-  607  git config --global user.name "HKcode22"
-  608  git add .
-  609  git commit -m "Committing changes"
-  610  git pull origin main --allow-unrelated-histories
-  611  git push origin main
-  612  echo "# cs131" >> README.md
-  613  git init
-  614  git add README.md
-  615  git commit -m "first commit"
-  616  git config --global user.email "hk84164@gmail.com"
-  617  git config --global user.name "HKcode22"
-  618  git commit -m "first commit"
-  619  git branch -M main
-  620  git remote add origin git@github.com:HKcode22/cs131.git
-  621  git push -u origin main
-  622  rm -rf /path/to/your/repository
-  623  rm -rf cs131
-  624  git remote add origin git@github.com:HKcode22/cs131.git
-  625  git remote remove origin
-  626  git remote rm origin
-  627  git remote -v
-  628  git remote add origin git@github.com:HKcode22/cs131.git
-  629  echo "# cs131" >> README.md
-  630  git init
-  631  git add README.md
-  632  git commit -m "first commit"
-  633  git branch -M main
-  634  git remote add origin git@github.com:HKcode22/cs131.git
-  635  git push -u origin main
-  636  git remote remove origin
+  564  ls
+  565  cd cs131
+  566  git init
+  567  mkdir Worksheet1
+  568  cd Worksheet1
+  569  history > cmds.log
+  570  ls
+  571  cd ..
+  572  git add .
+  573  ls
+  574  git init
+  575  git add .
+  576  git status
+  577  git remote add origin git@github.com:HKcode22/cs131_try.git
+  578  git push --set-upstream origin master
+  579  git remote add origin git@github.com:HKcode22/cs131_try.git
+  580  git remote add origin git@github.com:HKcode22/cs131.git
+  581  git push --set-upstream origin master
+  582  git remote remove origin
+  583  git remote add origin git@github.com:HKcode22/cs131.git
+  584  git push --set-upstream origin master
+  585  git branch -b
+  586  git branch
+  587  git add .
+  588  git commit -m "Hi"
+  589  git push origin hi
+  590  git checkout -b master
+  591  git init
+  592  git add README.md
+  593  git commit -m"Messege"
+  594  git branch -M main
+  595  git branch -M master
+  596  git remote add origin git@github.com:HKcode22/cs13.git
+  597  git remote remove origin
+  598  git remote add origin git@github.com:HKcode22/cs131.git
+  599  git push --set-upstream origin master
+  600  git pull 
+  601  git push --set-upstream origin master
+  602  git status
+  603  git add .
+  604  git push --set-upstream origin master
+  605  git fetch origi
+  606  git fetch origin
+  607  git merge origin master
+  608  git pull origin master
+  609  git pull origin main
+  610  git push --set-upstream origin master
+  611  git init
+  612  git add .
+  613  git status
+  614  cd ..
+  615  rm -r cs131
+  616  yes
+  617  ls
+  618  mkdir cs131
+  619  mkdir cs131_try
+  620  cd cs131_try
+  621  git init
+  622  history > cmds.log
+  623  ls
+  624  cat
+  625  cat cmds.log
+  626  git add
+  627  git add .
+  628  git status
+  629  git commit -m "First commit"
+  630  git status
+  631  git push origin main
+  632  git push origin master
+  633  git push
+  634  git remote add origin git@github.com:HKcode22/cs131_try.git
+  635  git push
+  636   git push --set-upstream origin master
   637  ls
-  638  cd cs131
-  639  cd Desktop
-  640  ls
-  641  cp -r ~/Desktop/cs131 ~/cs131_backup
-  642  ls ~/cs131_backup
-  643  rm -r ~/Desktop/cs131
-  644  rm -rf ~/Desktop/cs131
-  645  ls
-  646  wget www.github.com
-  647  mkdir cs131
-  648  cd cs131
-  649  git init
-  650  touch hamza.txt
+  638  mkdir Worksheet1
+  639  cd Worksheet1
+  640  history > cmds.log
+  641  ls
+  642  cd ..
+  643  git add .
+  644  git status
+  645  git commit -m "First messege"
+  646  git push
+  647  cd ..
+  648  ls
+  649  cd cs131
+  650  lx
   651  ls
-  652  git status
-  653  git add hamza.txt
-  654  git status
-  655  git commit -m "This is my first commit!"
-  656  git branch
-  657  git remote add origin https://github.com/cubeton/mynewrepository.git
-  658  git remote -v
-  659  git remote add origin git@github.com:HKcode22/cs131.git
-  660  git remote -v
-  661  git config --get-regexp remote.origin
-  662  git remote add origin git@github.com:HKcode22/cs131.git
-  663  git remote remove origin
-  664  git remote rm origin
-  665  git remote add origin git@github.com:HKcode22/cs131.git
-  666  cd Desktop
-  667  cd ..
-  668  cd cs131
+  652  mkdir Worksheet1
+  653  ls
+  654  cd Worksheet1
+  655  history > cmds.log
+  656  ls
+  657  cd ..
+  658  git add .
+  659  ls
+  660  git init
+  661  git add .
+  662  git status
+  663  git push origin main
+  664  git push origin master
+  665  git remote add origin git@github.com:HKcode22/cs131_try.git
+  666  git push --set-upstream origin master
+  667  git push origin master
+  668  git push --set-upstream origin master
   669  cd ..
-  670  ls
-  671  rm -r ~/Desktop/cs131
+  670  rm -r cs131
+  671  sudo rm -r cs131
   672  ls
-  673  cp -r ~/Desktop/cs131 ~/cs131_backup
-  674  ls ~/cs131_backup
-  675  rm -r ~/Desktop/cs131
-  676  ls
-  677  mv cs131 ~/cs131_backup
-  678  ls ~/Desktop
-  679  mv cs131 ~/cs131_backup
-  680  mkdir ~/cs131_backup
-  681  mv ~/Desktop/cs131/* ~/cs131_backup/
-  682  rmdir ~/Desktop/cs131
-  683  rm -r ~/Desktop/cs131
-  684  ls
-  685  rm -r ~/Desktop/cs131
-  686  ls
-  687  rm -r ~/Desktop/cs131
-  688  sudo rm -r ~/Desktop/cs131
-  689  rm -rf ~/Desktop/cs131
-  690  ls ~/Desktop
-  691  mkdir Worksheet1
-  692  cd Worksheet1
-  693  git init
-  694  touch hamza.txt
-  695  ls
-  696  git status
-  697  git add hamza.txt
-  698  git status
-  699  git commit -m "This is my first commit!"
-  700  git branch -M main
-  701  git remote add origin git@github.com:HKcode22/cs131.git
-  702  git push -u origin master
-  703  git push -u origin main
-  704  ls -al ~/.ssh
-  705  ssh-add ~/.ssh/your-ssh-key
-  706  ssh -T git@github.com
-  707  cd ssh
-  708  ls
-  709  ls -ltr
-  710  git commit -m "This is my first commit!"
-  711  git remote add origin git@github.com:HKcode22/cs131.git
-  712  git remote -v
-  713  git remote remove origin
-  714  git remote add origin git@github.com:HKcode22/cs131.git
-  715  git push -u origin master
-  716  git push -u origin main
-  717  ls -al ~/.ssh
-  718  ssh-add ~/.ssh/your-ssh-key
-  719  chmod 600 ~/.ssh/your-ssh-key
-  720  Host github.com
-  721    IdentityFile ~/.ssh/your-ssh-key
-  722  ssh -T git@github.com
-  723  git remote -v
+  673  sudo rm -rf cs131
+  674  rm cs131
+  675  rmdir cs131
+  676  cs131
+  677  cd cs131
+  678  ls
+  679  cd ..
+  680  rm cs131
+  681  rm -r cs131
+  682  ls
+  683  rm -r cs131
+  684  rm -ir cs131
+  685  mkdir cs131
+  686  cd cs131
+  687  ls
+  688  git status
+  689  rm 
+  690  ls
+  691  rm Worksheet
+  692  rm Worksheet1
+  693  [sudo] password for hamzaf23: 
+  694  Sorry, try again.
+  695  [sudo] password for hamzaf23: 
+  696  Sorry, try again.
+  697  [sudo] password for hamzaf23: 
+  698  ls
+  699  rm -r cs131
+  700  ls cs131
+  701  ls
+  702  mv cs131_try cs131
+  703  ls
+  704  cd cs131
+  705  ls
+  706  git init
+  707  git status
+  708  git remote add origin git@github.com:HKcode22/cs131.git
+  709  git push --set-upstream origin master
+  710  git commit -m "Correct cs131"
+  711  git push --set-upstream origin master
+  712  mkdir sampleProject
+  713  ls -ltr
+  714  cd sampleProject/
+  715  touch sampleFile.txt
+  716  cd ..
+  717  git init
+  718  git add .
+  719  git status
+  720  git config --global user.email "hk84164@gmail.com"
+  721  git config --global user.name "Hamza Khan"
+  722  cd ~/.ssh && ssh-keygen
+  723  cat id_rsa.pub
   724  cd ..
-  725  rm -r Worksheet1
+  725  cd cs131
   726  ls
-  727  rm -rf Worksheet1
-  728  ls
-  729  mkdir Worksheet1
-  730  cd Worksheet1
+  727  git commit -m "Message"
+  728  git push --set-upstream origin master
+  729  cd cs131
+  730  mkdir Worksheet2
   731  ls
-  732  git init
+  732  rm cmds.log
   733  ls
-  734  touch hamza.txt
-  735  ls
-  736  git status
-  737  git add hamza.txt
-  738  git satuts
-  739  git status
-  740  git commit -m "This is my first commit!"
-  741  git remote add origin git@github.com:HKcode22/cs131.git
-  742  git push -u origin master
-  743  ssh -T git@github.com
-  744  git remote -v
-  745  git remote set-url origin git@github.com:HKcode22/cs131.git
-  746  Host github.com
-  747   IdentityFile ~/.ssh/id_rsa
-  748  ssh -vT git@github.com
-  749  ssh -i ~/.ssh/id_rsa -T git@github.com
-  750  ls ~/.ssh
-  751  ls
-  752  git config --global user.email "hk84164@gmail.com"
-  753  git config --global user.name "HKcode22"
-  754  cd ~/.ssh && ssh-keygen
-  755  cat id_rsa.pub
-  756  git remote add origin git@github.com:HKcode22/cs131.git
-  757  cd ..
-  758  cd Worksheet1
-  759  cd Desktop
-  760  cd Worksheet1
-  761  git remote add origin git@github.com:HKcode22/cs131.git
-  762  git commit -m "Message"
-  763  git push --set-upstream origin master
-  764  history > cmds.log
-  765  git add cmds.log
-  766  git push cmds.log
-  767  git status
-  768  mv cmds.log Worksheet1/
-  769  cd ..
-  770  mkdir cs131
-  771  cd cs131
-  772  cd Worksheet1
-  773  ls
-  774  cd Worksheet1
-  775  mkdir Worksheet1
-  776  cd Worksheet1
-  777  cd ..
-  778  mv cmds.log Worksheet1/
-  779  mv cmds.log cs131/Worksheet1/
-  780  cd ..
-  781  mv cmds.log cs131/Worksheet1/
-  782  cd cs131
-  783  history > cmds.log
-  784  git add cmds.log
-  785  git statust
-  786  git status
-  787  ls
-  788  cd cs131
-  789  git init
-  790  mkdir Worksheet1
-  791  cd Worksheet1
-  792  history > cmds.log
-  793  ls
-  794  cd ..
-  795  git add .
-  796  ls
-  797  git init
-  798  git add .
-  799  git status
-  800  git remote add origin git@github.com:HKcode22/cs131_try.git
-  801  git push --set-upstream origin master
-  802  git remote add origin git@github.com:HKcode22/cs131_try.git
-  803  git remote add origin git@github.com:HKcode22/cs131.git
-  804  git push --set-upstream origin master
-  805  git remote remove origin
-  806  git remote add origin git@github.com:HKcode22/cs131.git
-  807  git push --set-upstream origin master
-  808  git branch -b
-  809  git branch
-  810  git add .
-  811  git commit -m "Hi"
-  812  git push origin hi
-  813  git checkout -b master
-  814  git init
-  815  git add README.md
-  816  git commit -m"Messege"
-  817  git branch -M main
-  818  git branch -M master
-  819  git remote add origin git@github.com:HKcode22/cs13.git
-  820  git remote remove origin
-  821  git remote add origin git@github.com:HKcode22/cs131.git
-  822  git push --set-upstream origin master
-  823  git pull 
+  734  cd Worksheet2
+  735  cd ..
+  736  git push --set-upstream origin master
+  737  git push origin master
+  738  git rm cmds.log
+  739  git push origin master
+  740  ls
+  741  git rm cmds.log
+  742  git commit -m "Remove cmds.log"
+  743  git push origin master
+  744  cd Worksheet2
+  745  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
+  746  grep -w "United States" "Global YouTube Statistics.csv"
+  747  grep "United States" "Global YouTube Statistics.csv"
+  748  grep -w "United States" "Global YouTube Statistics.csv"
+  749  grep -i "Music" "Global YouTube Statistics.csv"
+  750  grep "United States" "Global YouTube Statistics.csv" > counts.txt
+  751  grep "Music" "Global YouTube Statistics.csv" >> counts.txt
+  752  wc -l < counts.txt >> counts.txt
+  753  wc -w < counts.txt >> counts.txt
+  754  ls
+  755  vi counts.txt
+  756  grep "Music" "Global YouTube Statistics.csv" | wc -l > counts.txt
+  757  grep "Music" "Global YouTube Statistics.csv" | wc -w >> counts.txt
+  758  vi counts.txt
+  759  history > cmds.log
+  760  cd cs131
+  761  ls
+  762  git add .
+  763  git init
+  764  git status
+  765  git commit -m "Messege"
+  766  git push --set-upstream origin master
+  767  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
+  768  mkdir Worksheet3
+  769  cd Worksheet3
+  770  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
+  771  grep -E 'United States|United Kingdom|India' ws3.txt > ws3_filtered.txt
+  772  sort -t ',' -k youtube_dataset.csv > ws3.txt
+  773  sort -t ',' -k 4,4n youtube_dataset.csv > ws3.txt
+  774  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
+  775  cd Worksheet3
+  776  grep -E 'United States|United Kingdom|India' youtube_data.csv | sort -t ',' -k 2 -n -r > ws3.txt
+  777  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
+  778  grep -E 'United States|United Kingdom|India' youtube_data.csv | sort -t ',' -k 2 -n -r > ws3.txt
+  779  cd Worksheet3
+  780  grep -E 'United States|United Kingdom|India' "Global YouTube Statistics.cvs" | sort -t ',' -k 2 -n -r > ws3.txt
+  781  grep -E 'United States|United Kingdom|India' "Global YouTube Statistics.csv" | sort -t ',' -k 2 -n -r > ws3.txt
+  782  sort -t, -k5,5nr Global\ YouTube\ Statistics.csv > ws3.txt
+  783  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
+  784  ls
+  785  head -n 1 'Global YouTube Statistics.csv' | tr ',' '\n' | grep -n 'highest_monthly_earnings'
+  786  # Sort the "highest_monthly_earnings" to find the highest monthly earner from the United States, the United Kingdom, and India
+  787  grep -E 'United States|United Kingdom|India' 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r > ws3.txt
+  788  # Sort the "highest_monthly_earnings" to find the highest monthly earner from the United States, the United Kingdom, and India
+  789  grep -E 'United States|United Kingdom|India' 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r > ws3.txt
+  790  ls
+  791  head -n 1 'Global YouTube Statistics.csv' | tr ',' '\n' | grep -n '#Subscribers'
+  792  grep -E 'United States|United Kingdom|India' 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r > ws3.txt
+  793  head -n 1 'Global YouTube Statistics.csv' | tr ',' '\n' | grep -n 'highest_monthly_earnings'
+  794  head -n 1 'Global YouTube Statistics.csv' | tr ',' '\n' | grep -n '#Subscribers'
+  795  head -n 1 'Global YouTube Statistics.csv' | tr ',' '\n' | grep -n 'Subscribers'
+  796  head -n 1 'Global YouTube Statistics.csv' | tr ',' '\n' | grep -i -n 'subscribers'
+  797  head -n 1 'Global YouTube Statistics.csv' | tr ',' '\n' | grep -i -n '#Subscribers'
+  798  sort -t',' -k3 -n -r 'Global YouTube Statistics.csv' > ws3.txt
+  799  vi ws3.txt
+  800  sort -t',' -k3 -n -r 'Global YouTube Statistics.csv' > ws3.txt
+  801  vi ws3.txt
+  802  sort -t',' -k16 -n -r 'Global YouTube Statistics.csv' > ws3_task1.txt
+  803  sort -t',' -k3 -n -r 'Global YouTube Statistics.csv' > ws3_task2.txt
+  804  vi ws3.txt
+  805  grep -E 'United States|United Kingdom|India' 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r > ws3.txt
+  806  grep -E 'United States|United Kingdom|India' 'Global YouTube Statistics.csv' | sort -t',' -k3 -n -r > ws3.txt
+  807  vi ws3.txt
+  808  history > cmds.log
+  809  vi ws3.txt
+  810  head -n 1 'Global YouTube Statistics.csv' | tr ',' '\n' | grep -n 'highest_monthly_earnings'
+  811  ws3.txt
+  812  vi ws3.txt
+  813  rm ws3.txt
+  814  vi ws3.txt
+  815  grep -E 'United States|United Kingdom|India' 'Global YouTube Statistics.csv' | sort -t',' -k3 -n -r > ws3.txt
+  816  grep -E 'United States|United Kingdom|India' 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r > ws3.txt
+  817  vi ws3.txt
+  818  sort ws3.txt
+  819  vi ws3.txt
+  820  history > cmds.log
+  821  cd ..
+  822  git add cmds.log
+  823  git push
   824  git push --set-upstream origin master
-  825  git status
-  826  git add .
-  827  git push --set-upstream origin master
-  828  git fetch origi
-  829  git fetch origin
-  830  git merge origin master
-  831  git pull origin master
-  832  git pull origin main
-  833  git push --set-upstream origin master
-  834  git init
-  835  git add .
-  836  git status
-  837  cd ..
-  838  rm -r cs131
-  839  yes
-  840  ls
-  841  mkdir cs131
-  842  mkdir cs131_try
-  843  cd cs131_try
-  844  git init
-  845  history > cmds.log
-  846  ls
-  847  cat
-  848  cat cmds.log
-  849  git add
-  850  git add .
-  851  git status
-  852  git commit -m "First commit"
-  853  git status
-  854  git push origin main
-  855  git push origin master
-  856  git push
-  857  git remote add origin git@github.com:HKcode22/cs131_try.git
-  858  git push
-  859   git push --set-upstream origin master
-  860  ls
-  861  mkdir Worksheet1
-  862  cd Worksheet1
-  863  history > cmds.log
+  825  git add Worksheet3
+  826  git commit -m "Add ws3.txt and cmds.log"
+  827  cd Worksheet3
+  828  ls
+  829  vi ws3_filtered.txt
+  830  vi ws3.txt
+  831  rm ws3_filtered.txt
+  832  ws3_task1.txt
+  833  rm ws3_task1.txt
+  834  rm Global YouTube Statistics.csv.3
+  835  rm ws3.txt.swp
+  836  cd ..
+  837  git commit -m "Add counts.txt and cmds.log"
+  838  git add Worksheet3
+  839  git commit -m "Add counts.txt and cmds.log"
+  840  git push origin master
+  841  cd Worksheet3
+  842  git commit -m "Add counts.txt and cmds.log"
+  843  git push origin master
+  844  cd ..
+  845  git add .
+  846  git add
+  847  git status
+  848  git add Worksheet1
+  849  git add Desktop/Worksheet1
+  850  git status
+  851  git restore Worksheet1
+  852  git status
+  853  git add Worksheet1
+  854  git statu
+  855  git status
+  856  ls
+  857  cd Worksheet1
+  858  cd Worksheet
+  859  cd Workhseet1
+  860  cd Worksheet2
+  861  ls
+  862  git status
+  863  cd cs131
   864  ls
   865  cd ..
-  866  git add .
-  867  git status
-  868  git commit -m "First messege"
-  869  git push
-  870  cd ..
+  866  mw Worksheet3 cs131
+  867  mv Worksheet3 cs131
+  868  ls
+  869  cs131
+  870  cd cs131
   871  ls
-  872  cd cs131
-  873  lx
-  874  ls
-  875  mkdir Worksheet1
-  876  ls
-  877  cd Worksheet1
-  878  history > cmds.log
-  879  ls
-  880  cd ..
-  881  git add .
-  882  ls
-  883  git init
-  884  git add .
-  885  git status
-  886  git push origin main
-  887  git push origin master
-  888  git remote add origin git@github.com:HKcode22/cs131_try.git
-  889  git push --set-upstream origin master
-  890  git push origin master
-  891  git push --set-upstream origin master
-  892  cd ..
-  893  rm -r cs131
-  894  sudo rm -r cs131
-  895  ls
-  896  sudo rm -rf cs131
-  897  rm cs131
-  898  rmdir cs131
-  899  cs131
-  900  cd cs131
-  901  ls
-  902  cd ..
-  903  rm cs131
-  904  rm -r cs131
-  905  ls
-  906  rm -r cs131
-  907  rm -ir cs131
-  908  mkdir cs131
-  909  cd cs131
+  872  git add Worksheet3
+  873  git commit -m "Add ws3.txt and cmds.log"
+  874  rm ws3_task2.txt
+  875  cd Worksheet3
+  876  rm ws3_task2.txt
+  877  cd ..
+  878  git push origin master
+  879  cd Worksheet3
+  880  rm ws3.txt.swd
+  881  rm .ws3.txt.swd
+  882  rm .ws3.txt.swe
+  883  rm .ws3.txt.swp
+  884  rm .ws3.txt.swo
+  885  rm .ws3.txt.swm  .ws3.txt.swl
+  886  rm .ws3.txt.swf
+  887  ls
+  888  rm 'Global YouTube Statistics.csv.2
+  889  'Global YouTube Statistics.csv.2
+  890  rm Global YouTube Statistics.csv.2
+  891  rm 'Global YouTube Statistics.csv.2'
+  892  rm 'Global YouTube Statistics.csv.1'
+  893  ls
+  894  rm 'Global YouTube Statistics.csv.3'
+  895  cd //
+  896  cd ..
+  897  cd cs131
+  898  cd ..
+  899  cd .
+  900  cd //
+  901  rm 'Global YouTube Statistics.csv.3'
+  902  cd back
+  903  cd ~
+  904  cd cs131
+  905  git commit -m "Add ws3.txt and cmds.log"
+  906  git add
+  907  git add .
+  908  git add Worksheet3
+  909  git commit -m "Add ws3.txt and cmds.log"
   910  ls
-  911  git status
-  912  rm 
-  913  ls
-  914  rm Worksheet
-  915  rm Worksheet1
-  916  [sudo] password for hamzaf23: 
-  917  Sorry, try again.
-  918  [sudo] password for hamzaf23: 
-  919  Sorry, try again.
-  920  [sudo] password for hamzaf23: 
-  921  ls
-  922  rm -r cs131
-  923  ls cs131
-  924  ls
-  925  mv cs131_try cs131
-  926  ls
-  927  cd cs131
-  928  ls
-  929  git init
-  930  git status
-  931  git remote add origin git@github.com:HKcode22/cs131.git
-  932  git push --set-upstream origin master
-  933  git commit -m "Correct cs131"
-  934  git push --set-upstream origin master
-  935  mkdir sampleProject
-  936  ls -ltr
-  937  cd sampleProject/
-  938  touch sampleFile.txt
-  939  cd ..
-  940  git init
-  941  git add .
-  942  git status
-  943  git config --global user.email "hk84164@gmail.com"
-  944  git config --global user.name "Hamza Khan"
-  945  cd ~/.ssh && ssh-keygen
-  946  cat id_rsa.pub
-  947  cd ..
-  948  cd cs131
-  949  ls
-  950  git commit -m "Message"
-  951  git push --set-upstream origin master
-  952  cd cs131
-  953  mkdir Worksheet2
-  954  ls
-  955  rm cmds.log
-  956  ls
-  957  cd Worksheet2
-  958  cd ..
-  959  git push --set-upstream origin master
-  960  git push origin master
-  961  git rm cmds.log
-  962  git push origin master
-  963  ls
-  964  git rm cmds.log
-  965  git commit -m "Remove cmds.log"
-  966  git push origin master
-  967  cd Worksheet2
-  968  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
-  969  grep -w "United States" "Global YouTube Statistics.csv"
-  970  grep "United States" "Global YouTube Statistics.csv"
-  971  grep -w "United States" "Global YouTube Statistics.csv"
-  972  grep -i "Music" "Global YouTube Statistics.csv"
-  973  grep "United States" "Global YouTube Statistics.csv" > counts.txt
-  974  grep "Music" "Global YouTube Statistics.csv" >> counts.txt
-  975  wc -l < counts.txt >> counts.txt
-  976  wc -w < counts.txt >> counts.txt
-  977  ls
-  978  vi counts.txt
-  979  grep "Music" "Global YouTube Statistics.csv" | wc -l > counts.txt
-  980  grep "Music" "Global YouTube Statistics.csv" | wc -w >> counts.txt
-  981  vi counts.txt
-  982  history > cmds.log
-  983  cd cs131
+  911  cd Worksheet3
+  912  ls
+  913  rm .ws3.txt.swd .ws3.txt.swe .ws3.txt.swf .ws3.txt.swg .ws3.txt.swh .ws3.txt.swi .ws3.txt.swj .ws3.txt.swk .ws3.txt.swl .ws3.txt.swm .ws3.txt.swo .ws3.txt.swp .ws3_filtered.txt.swp Global YouTube Statistics.csv.3
+  914  cd ..
+  915  git commit -m "Add ws3.txt and cmds.log"
+  916  git add
+  917  git add Worksheet3
+  918  git commit -m "Add ws3.txt and cmds.log"
+  919  rm .ws3.txt.swg
+  920  cd Worksheet3
+  921  rm .ws3.txt.swj
+  922  vi ws3.txt
+  923  cd ..
+  924  git add Worksheet3
+  925  git push origin master
+  926  mkdir Assignment1
+  927  cd Assignment1
+  928  echo $SHELL
+  929  cd ..
+  930  echo $HOME
+  931  id
+  932  cd Assignment1
+  933  id
+  934  ls
+  935  cd cs131
+  936  cd Assignment1
+  937  cd ..
+  938  echo $HOME
+  939  cd Assignment1
+  940  echo $SHELL
+  941  cd ..
+  942  echo $HOME
+  943  id
+  944  cd Assignment1
+  945  id
+  946  mkdir myDir
+  947  chmod -w myDir
+  948  cd myDir
+  949  cd ..
+  950  chmod -w -x myDir
+  951  cd myDir
+  952  ls
+  953  ls -l
+  954  mkdir myDir2 myDir3
+  955  cd myDir2
+  956  touch myFile.txt
+  957  mv myFile.txt myDir3
+  958  free -m
+  959  cat /etc/os-release
+  960  ls -l /etc/os-release
+  961  cd ..
+  962  history > cmds.log
+  963  cd ..
+  964  git add Assignment1
+  965  cd Assignment1
+  966  vi Assignment1.txt
+  967  cat /etc/os-release
+  968  ls -l /etc/os-release
+  969  cd Assignment1
+  970  cd cs131
+  971  cd Assignment1
+  972  history > cmds.log
+  973  git commit -m "cmds.log and myDir2 and myDir3"
+  974  ls
+  975  git commit -m "cmds.log and myDir and myDir2 and myDir3"
+  976  cd ..
+  977  git add Assingment1
+  978  git add Assignment1
+  979  git status
+  980  cd Assignment1
+  981  git push origin master
+  982  ls
+  983  cd myDir2
   984  ls
-  985  git add .
-  986  git init
-  987  git status
-  988  git commit -m "Messege"
-  989  git push --set-upstream origin master
-  990  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
-  991  mkdir Worksheet3
-  992  cd Worksheet3
-  993  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
-  994  grep -E 'United States|United Kingdom|India' ws3.txt > ws3_filtered.txt
-  995  sort -t ',' -k youtube_dataset.csv > ws3.txt
-  996  sort -t ',' -k 4,4n youtube_dataset.csv > ws3.txt
-  997  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
-  998  cd Worksheet3
-  999  grep -E 'United States|United Kingdom|India' "Global YouTube Statistics.cvs" | sort -t ',' -k 2 -n -r > ws3.txt
- 1000  grep -E 'United States|United Kingdom|India' "Global YouTube Statistics.csv" | sort -t ',' -k 2 -n -r > ws3.txt
- 1001  sort -t, -k5,5nr Global\ YouTube\ Statistics.csv > ws3.txt
- 1002  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
- 1003  ls
- 1004  head -n 1 'Global YouTube Statistics.csv' | tr ',' '\n' | grep -n 'highest_monthly_earnings'
- 1005  # Sort the "highest_monthly_earnings" to find the highest monthly earner from the United States, the United Kingdom, and India
- 1006  grep -E 'United States|United Kingdom|India' 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r > ws3.txt
- 1007  # Sort the "highest_monthly_earnings" to find the highest monthly earner from the United States, the United Kingdom, and India
- 1008  grep -E 'United States|United Kingdom|India' 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r > ws3.txt
- 1009  ls
- 1010  head -n 1 'Global YouTube Statistics.csv' | tr ',' '\n' | grep -n '#Subscribers'
- 1011  grep -E 'United States|United Kingdom|India' 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r > ws3.txt
- 1012  head -n 1 'Global YouTube Statistics.csv' | tr ',' '\n' | grep -n 'highest_monthly_earnings'
- 1013  head -n 1 'Global YouTube Statistics.csv' | tr ',' '\n' | grep -n '#Subscribers'
- 1014  head -n 1 'Global YouTube Statistics.csv' | tr ',' '\n' | grep -n 'Subscribers'
- 1015  head -n 1 'Global YouTube Statistics.csv' | tr ',' '\n' | grep -i -n 'subscribers'
- 1016  head -n 1 'Global YouTube Statistics.csv' | tr ',' '\n' | grep -i -n '#Subscribers'
- 1017  sort -t',' -k3 -n -r 'Global YouTube Statistics.csv' > ws3.txt
- 1018  vi ws3.txt
- 1019  sort -t',' -k3 -n -r 'Global YouTube Statistics.csv' > ws3.txt
- 1020  vi ws3.txt
- 1021  sort -t',' -k16 -n -r 'Global YouTube Statistics.csv' > ws3_task1.txt
- 1022  sort -t',' -k3 -n -r 'Global YouTube Statistics.csv' > ws3_task2.txt
- 1023  vi ws3.txt
- 1024  grep -E 'United States|United Kingdom|India' 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r > ws3.txt
- 1025  grep -E 'United States|United Kingdom|India' 'Global YouTube Statistics.csv' | sort -t',' -k3 -n -r > ws3.txt
- 1026  vi ws3.txt
- 1027  history > cmds.log
- 1028  vi ws3.txt
- 1029  head -n 1 'Global YouTube Statistics.csv' | tr ',' '\n' | grep -n 'highest_monthly_earnings'
- 1030  ws3.txt
- 1031  vi ws3.txt
- 1032  rm ws3.txt
+  985  rm myDir3
+  986  ls
+  987  cd ..
+  988  ls
+  989  cd ..
+  990  git add Assignment1
+  991  git status
+  992  cd Assignment1
+  993  cd Worksheet3
+  994  pwd
+  995  ls
+  996  cd cs131
+  997  ls
+  998  cd worksheet3
+  999  cs Worksheet3
+ 1000  cd Worksheet3
+ 1001  vi ws3.txt
+ 1002  grep "United States" ws3.txt | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2
+ 1003  grep "United Kingdom" ws3.txt | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2
+ 1004  grep "India" ws3.txt | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2
+ 1005  grep "United States" ws3.txt | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 > ws3.txt
+ 1006  grep "India" ws3.txt | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 > ws3.txt
+ 1007  grep "United Kingdom" ws3.txt | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 > ws3.txt
+ 1008  vi ws3.txt
+ 1009  grep "United States" ws3.txt | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1010  vi ws3.txt
+ 1011  grep "United States" ws3.txt | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 > ws3.txt
+ 1012  grep "United Kingdom" ws3.txt | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1013  grep "India" ws3.txt | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1014  vi ws3.txt
+ 1015  grep "United States" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1016  grep "United States" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 > ws3.txt
+ 1017  vi ws3.txt
+ 1018  grep "United Kingdom" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 > ws3.txt
+ 1019  grep "India" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 > ws3.txt
+ 1020  grep "United States" 'Global YouTube Statistics.csv' | sort -t',' -k3-n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1021  grep "United Kingdom" 'Global YouTube Statistics.csv' | sort -t',' -k3-n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1022  grep "United States" 'Global YouTube Statistics.csv' | sort -t',' -k3 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1023  grep "United Kingdom" 'Global YouTube Statistics.csv' | sort -t',' -k3 -n -r | head -n 1 | cut -d',' -f2 > ws3.txt
+ 1024  grep "India" 'Global YouTube Statistics.csv' | sort -t',' -k3 -n -r | head -n 1 | cut -d',' -f2 > ws3.txt
+ 1025  vi ws3.txt
+ 1026  grep "United States" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 > ws3.txt
+ 1027  grep "United Kingdom" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1028  grep "India" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1029  vi ws3.txt
+ 1030  grep "United States" 'Global YouTube Statistics.csv' | sort -t',' -k3 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1031  grep "United Kingdom" 'Global YouTube Statistics.csv' | sort -t',' -k3 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1032  grep "India" 'Global YouTube Statistics.csv' | sort -t',' -k3 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
  1033  vi ws3.txt
- 1034  grep -E 'United States|United Kingdom|India' 'Global YouTube Statistics.csv' | sort -t',' -k3 -n -r > ws3.txt
- 1035  grep -E 'United States|United Kingdom|India' 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r > ws3.txt
- 1036  vi ws3.txt
- 1037  sort ws3.txt
- 1038  vi ws3.txt
- 1039  history > cmds.log
+ 1034  grep "United States" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 > ws3.txt
+ 1035  grep "United Kingdom" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1036  grep "India" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1037  "Sports" 'Global YouTube Statistics.csv' | sort -t',' -k3 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1038  "Sport" 'Global YouTube Statistics.csv' | sort -t',' -k3 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1039  grep "Sports" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1040  grep "Education" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1041  grep "United States" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 > ws3.txt
+ 1042  grep "United Kingdom" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1043  grep "India" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 >> ws3.tx
+ 1044  grep "Sports" 'Global YouTube Statistics.csv' | sort -t',' -k3 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1045  grep "Education" 'Global YouTube Statistics.csv' | sort -t',' -k3 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1046  grep "Entertainment" 'Global YouTube Statistics.csv' | sort -t',' -k3 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1047  vi ws3.txt
+ 1048  grep "Entertainment" 'Global YouTube Statistics.csv' | sort -t',' -k3 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1049  grep "United States" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 > ws3.txt
+ 1050  grep "United Kingdom" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1051  grep "India" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 >> ws3.tx
+ 1052  grep "Sports" 'Global YouTube Statistics.csv' | sort -t',' -k3 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1053  grep "Education" 'Global YouTube Statistics.csv' | sort -t',' -k3 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1054  grep "Entertainment" 'Global YouTube Statistics.csv' | sort -t',' -k3 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1055  vi ws3.txt
+ 1056  "United States" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 > ws3.txt
+ 1057  grep "United States" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 > ws3.txt
+ 1058  grep "United Kingdom" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1059  grep "India" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 >> ws3.tx
+ 1060  grep "Sports" 'Global YouTube Statistics.csv' | sort -t',' -k3 -n -r | head -n 1 | cut -d',' -f2 > ws3.txt
+ 1061  grep "Education" 'Global YouTube Statistics.csv' | sort -t',' -k3 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1062  grep "Entertainment" 'Global YouTube Statistics.csv' | sort -t',' -k3 -n -r | head -n 1 | cut -d',' -f2 > ws3.txt
+ 1063  vi ws3.txt
+ 1064  grep "Sports" 'Global YouTube Statistics.csv' | sort -t',' -k3 -n -r | head -n 1 | cut -d',' -f2 > ws3.txt
+ 1065  grep "Education" 'Global YouTube Statistics.csv' | sort -t',' -k3 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1066  grep "United States" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 > ws3.txt
+ 1067  grep "United Kingdom" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1068  grep "India" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 >> ws3.tx
+ 1069  grep "Sports" 'Global YouTube Statistics.csv' | sort -t',' -k3 -n -r | head -n 1 | cut -d',' -f2 > ws3.txt
+ 1070  vi ws3.txt
+ 1071  grep "United States" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 > ws3.txt
+ 1072  grep "Education" 'Global YouTube Statistics.csv' | sort -t',' -k3 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1073  grep "United States" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 > ws3.txt
+ 1074  grep "India" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 >> ws3.tx
+ 1075  grep "United States" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 > ws3.txt
+ 1076  grep "United Kingdom" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1077  grep "India" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 >> ws3.tx
+ 1078  vi ws3.txt
+ 1079  grep "India" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 >> ws3.tx
+ 1080  grep "India" 'Global YouTube Statistics.csv' | sort -t',' -k16 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1081  grep "Sports" 'Global YouTube Statistics.csv' | sort -t',' -k3 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1082  grep "Education" 'Global YouTube Statistics.csv' | sort -t',' -k3 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1083  grep "Entertainment" 'Global YouTube Statistics.csv' | sort -t',' -k3 -n -r | head -n 1 | cut -d',' -f2 >> ws3.txt
+ 1084  vi ws3.txt
+ 1085  history > cmds.log
