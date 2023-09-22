@@ -1,0 +1,55 @@
+1) Make a directory Assignment1 under your home directory and change it. All your homework for this assignment will be done there.
+( Mention the commands used to make the directory )
+I used the commands, mkdir
+mkdir Assignment1
+
+
+
+2) Echo your current Shell using the global variable and paste the output of the command.  Which commands did you use?
+I used the command, echo $SHELL
+Outcome was, /bin/bash
+
+
+
+2) Echo your home directory path and paste the output of the command.  Which commands did you use?
+I used the command echo $HOME
+Outcome was /mnt/scratch/FA23_CS131_Ashish/hamzaf23
+
+
+
+3) What is your UID?  To what group(s) do you belong?  How did you find out (command used)?
+My UID and groups is uid=1141(hamzaf23) gid=1141(hamzaf23) groups=1141(hamzaf23),77(S77)
+I used the command, id
+
+
+
+
+4) Create a new directory "myDir" under the Assignment 1 folder. Now remove "write" permission for yourself.(see chmod man page) 
+From this temp directory, are you allowed to cd in that directory? Can you "ls" it?  Can you "ls -l" it? Can you create files under it?
+I can cd into it. I can still use ls. I can still ls -l. I can't create files into it.
+
+
+5) Create a new directory "myDir2" and create a new directory "myDir3" 
+6) Inside myDir2, create a file "myFile.txt" (use 'touch' or 'vi' command). Once done, move this file from myDir2 to myDir3 using the mv command.
+
+
+
+6) Find the total amount of RAM/Memory in the IBM VM using the 'free' command. Display the amount of memory in mebibytes.
+(Use 'man free' command to learn about it)
+The total RAM/Memory is 71367
+Total Memory: 71367 MiB
+Used Memory: 12005 MiB
+Free Memory: 5671 MiB
+Shared Memory: 1180 MiB
+Buffer/Cache Memory: 53690 MiB
+Available Memory: 55922 MiB
+
+
+9) Identify the operating system version. Which file under /etc/ contains this information?
+Operating system version is Red Hat Enterprise Linux, the information is under the /etc/os-release
+
+
+10) What is the permission (given to all users) for the file containing the OS version information
+The permission that is given to all users for the file containing the OS version information, are rwxrwxrwx.
+
+
