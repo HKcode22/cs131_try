@@ -36,7 +36,9 @@ I can cd into it. I can still use ls. I can still ls -l. I can't create files in
 
 6) Find the total amount of RAM/Memory in the IBM VM using the 'free' command. Display the amount of memory in mebibytes.
 (Use 'man free' command to learn about it)
+
 The total RAM/Memory is 71367
+
 Total Memory: 71367 MiB
 Used Memory: 12005 MiB
 Free Memory: 5671 MiB
@@ -45,11 +47,13 @@ Buffer/Cache Memory: 53690 MiB
 Available Memory: 55922 MiB
 
 
-9) Identify the operating system version. Which file under /etc/ contains this information?
-Operating system version is Red Hat Enterprise Linux, the information is under the /etc/os-release
+9) Identify the operating system version. Which file under /etc/ contains this inf
+ormation?
+
+Operating system version is Red Hat Enterprise Linux, the information is under thecat/etc/os-release
+
 
 
 10) What is the permission (given to all users) for the file containing the OS version information
-The permission that is given to all users for the file containing the OS version information, are rwxrwxrwx.
-
+The permission that is given to all users for the file containing the OS version information, is ls -l.
 
