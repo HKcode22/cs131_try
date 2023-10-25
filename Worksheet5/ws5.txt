@@ -1,0 +1,5 @@
+  309 Worksheet 5/United States/Entertainment.txt
+   69 Worksheet 5/United States/Gaming.txt
+   88 Worksheet 5/United States/Comedy.txt
+  232 Worksheet 5/United States/Music.txt
+  698 total
