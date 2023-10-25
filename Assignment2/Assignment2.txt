@@ -1,0 +1,58 @@
+1. Execute this command :
+
+find /etc -type f > one.txt 2> two.txt
+
+a. Explain in simple English what we are trying to do in this command.
+
+In this command we are finding the files and directories located in the /etc directory. It will save the list of file paths in one.txt and any error message during the operation in two.txt.
+
+
+b. Using the cat command view one.txt and two.txt... In simple English sentences explain your observations about the content found in one.txt and two.txt
+------------
+When I do cat one.txt, I see a list of all the regular files found in the /etc directory and its subdirectory. When I do two.txt I see error messeges.
+
+2. Which [Month, Year] had the most YouTube channels created   [ Use the created year and created month columns ] 
+Your answer should contain what commands you used along with the output. 
+Requirement: You should apply cut sort and uniq commands to accomplish this task. You can use commands in addition to these as well but solve the actual problem using cut sort and uniq.
+Example :
+As per the Dataset, Top 3 [Month, Year] with the most number of YouTube channels created were :
+1. March, 2006, with 15 channels
+2. July, 2014, with 13 channels
+3. Aug 2014 with 12 channels
+
+The command(s) used to find it was this:cut -d ',' -f 20,21 'Global YouTube Statistics.csv' | sort | uniq -c | sort -nr | head -3
+Explain the command along with the parameters used and the reason for using them.
+------------
+using cut to extract the specfic column from a file. Using -f 20m21 to get the 20 and 21 fields, which is created year and created month. And sort is to extract month,year in order. I used -nr to count from decending order, and head -3 to display 3 combinations with highest counts.
+
+
+
+
+
+
+3. Write the command you would use to find all the processes owned by you. Paste the output of the same. 
+ps -u hamzaf23
+
+4. Open two terminals and login to the IBM VM.
+a. In the first terminal execute: vi file.txt Do not quit or close the vi prompt screen at this moment and keep it open.
+b. In the second terminal use the same command you used in Q3 and paste the output of it below. What did you notice? What is the Process ID for the vim?
+c. Now go back to the first terminal and quit the vi using: q! option. 
+d. In the second terminal use the same command you used in Q3 and paste the output of it below. what did you notice? What changed and why?
+The proccessess are dynamic and their status can change when they are created. In terminal while the file.txt was in vi mode, the second terminal after doing the ps command was shoing me that vi is running.
+
+
+
+5. What is the init process in Linux ? Find the process id for the init process. Show the command you used to do this. ( Note: The init process is also called systemd in the flavor we use on IBM VM)
+The init process is the first process that starts when a computer boots up. And it runs up until the system shuts down.
+
+pgrep init
+
+
+
+
+
+6. Explain the command in not more than 4 sentences:  ps aux
+Annotate Assignment2.txt with the Task numbers so the TA can clearly identify your answers. Overall presentation in the text file will be evaluated too.
+ps aux is used to show a detailed list of all processess running on the unix based systemed. The command ps gives information about the users who started each process. It also shows the process ID (PID), CPU usage, and user owner and many more things. This command is usefull for monitoring system activity.
+
+
