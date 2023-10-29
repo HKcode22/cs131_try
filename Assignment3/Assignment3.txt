@@ -1,0 +1,214 @@
+Task 1
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q1.
+Understand and understand what the "last" command does. Google or look it up in man page and execute on your terminal.
+I have used the same command and put the output in the file last.fake that you will download using wget command above. Filename is : last.fake
+To filter the information we need from the last.fake file, we will narrow it down to only include users with the 'f23' string, as we are interested in the data of individuals in our class.
+Directions: You should use awk,sed OR just grep and a ridrection operator to get this done. Move all lines that contain 'f23' to a new file called lastf23.fake
+
+Give commands and Output of :
+1. The number of lines in last.fake before filtering
+2. The command you used to make the file such that only lines that have "f23" are in the "lastf23.fake" file. (Similar to how you extracted US data from YoutubeDataset)
+3. The number of lines in lastf23.fake after you filtered everything that does not have "f23"
+
+wc -l last.fake
+2162 last.fake
+
+grep 'f23' last.fake > lastf23.fake
+239 lastf23.fake
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Task 2
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+We will use the lastf23.fake file that you created in Step 1 for all the tasks ahead.
+
+Find all the usernames that logged in on a Sunday from the lastf23.fake file.
+Give only the distinct users.
+Directions :
+Use Grep to find users logged in on Sunday.
+Use Awk to access the column to get only the user names
+Use uniq and sort commands to get distinct users
+Use Begin and End to print the message as show in the output below
+
+
+Give the commands and output for the same.
+Your script should output a report like this:
+
+The list of people who worked on Sunday are:
+Tigressf23
+Pof23
+Shifu23
+Kudos to these people for putting in the work
+
+
+awk '($4=="Sun") {print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "The list of people who worked on Sunday are:"} {print $0} END {print "Kudos to these people for putting in the work"}'
+
+The list of people who worked on Sunday are:
+jewonf23
+saniaf23
+tienf23
+Kudos to these people for putting in the work
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Task 3
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Find all the night owls from the lastf23.fake file.
+Use the apporpriate file to find the users who logged in between 11PM - 4 AM ( inclusing 11PM, use >= 11PM and <=4AM)
+Again, give a list of distinct users.
+Directions: Use awk, sort and uniq!
+
+Give the commands and output for the same.
+Your script should output a report like this:
+
+Night Owls List:
+Tigressf23
+Pof23
+Oogway23
+Night Owls are dope. Please ensure you get enough sleep though.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+awk '($7 >= "23:00" && $8 <= "04:00"){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
+
+Night Owls List:
+anasf23
+divijf23
+hamzaf23
+kobef23
+maximf23
+saniaf23
+thif23
+tienf23
+Night Owls are dope. Please ensure you get enough sleep though.
+
+
+
+Task 4
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Find all the Early Birds from the lastf23.fake file.
+Use the apporpriate file to find the users who logged in between 5AM to 9AM ( including 9AM, use >=5AM and <= 9AM)
+Again, give a list of distinct users.
+Directions: Use awk, sort and uniq!
+
+Give the commands and output for the same.
+Your script should output a report like this:
+
+Early Birds List:
+Tigressf23
+Pof23
+Oogway23
+Early Birds are dope. Please ensure you get enough sleep though.
+
+awk '($7 >= "05:00" && $8 <= "09:00"){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Early Birds List:"} {print $0} END {print "Early Birds are dope. Please ensure you get enough sleep though."}'
+
+Early Birds List:
+aaronf23
+anasf23
+divijf23
+hamzaf23
+hof23
+jamesf23
+jewonf23
+junf23
+kobef23
+maximf23
+rahulf23
+rikkif23
+saniaf23
+thif23
+tienf23
+Early Birds are dope. Please ensure you get enough sleep though.
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Task 5
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Display the users having a username that starts with "t"
+Directions : use awk and regex that we used in Class activity to find Tomatoes!
+Give the commands and output for the same.
+
+awk '$1 ~ /^t/' lastf23.fake | sort -u
+
+thif23   pts/104      172.20.25.9      Tue Oct  3 05:01 - 05:54  (00:52)
+thif23   pts/104      172.20.25.9      Tue Oct  3 21:33 - 23:34  (02:01)
+thif23   pts/104      172.20.25.9      Tue Oct  3 23:42 - 23:44  (00:01)
+thif23   pts/107                       Fri Oct 13 20:17 - 20:55  (00:38)
+thif23   pts/111      172.29.96.114    Fri Oct 13 21:33 - 23:58  (02:24)
+thif23   pts/120      172.29.96.114    Fri Oct 13 19:04 - 20:56  (01:51)
+thif23   pts/121                       Fri Oct 13 19:05 - 19:56  (00:51)
+thif23   pts/122                       Thu Oct  5 01:36 - 02:01  (00:25)
+thif23   pts/122                       Tue Oct  3 20:42 - 00:53  (04:11)
+thif23   pts/132      172.20.25.9      Thu Oct  5 01:36 - 02:01  (00:25)
+thif23   pts/135      172.20.25.9      Tue Oct  3 20:42 - 23:24  (02:41)
+thif23   pts/137      172.29.96.61     Mon Oct  2 19:53 - 19:58  (00:05)
+thif23   pts/31                        Thu Oct 26 03:19 - 03:34  (00:15)
+thif23   pts/36       172.29.96.61     Tue Oct  3 21:29 - 00:47  (03:18)
+thif23   pts/40       172.29.96.61     Tue Oct  3 20:42 - 23:24  (02:42)
+thif23   pts/42       172.29.96.249    Thu Oct 26 01:23 - 06:09  (04:45)
+thif23   pts/60                        Fri Oct 13 14:05 - 14:28  (00:22)
+thif23   pts/62       172.29.96.78     Thu Oct  5 01:09 - 02:34  (01:25)
+thif23   pts/73       172.20.25.9      Fri Oct 13 14:05 - 14:28  (00:22)
+thif23   pts/76       172.29.96.98     Fri Oct 13 13:57 - 16:34  (02:36)
+thif23   pts/77       172.29.96.114    Fri Oct 13 20:13 - 20:38  (00:25)
+thif23   pts/80       172.29.96.66     Tue Oct 10 18:38 - 18:38  (00:00)
+thif23   pts/88       172.29.96.62     Tue Oct  3 05:00 - 06:03  (01:02)
+thif23   pts/88       172.29.96.62     Tue Oct  3 06:05 - 09:18  (03:13)
+thif23   pts/88                        Tue Oct  3 21:33 - 23:34  (02:01)
+thif23   pts/88                        Tue Oct  3 23:42 - 23:44  (00:02)
+thif23   pts/93       172.29.96.86     Wed Oct 11 19:33 - 21:45  (02:12)
+thif23   pts/96                        Thu Oct 26 02:25 - 03:18  (00:52)
+thif23   pts/96                        Tue Oct  3 05:01 - 05:54  (00:52)
+tienf23  pts/111      172.29.96.116    Fri Oct 13 20:24 - 20:31  (00:06)
+tienf23  pts/117      172.29.96.207    Mon Oct 23 21:54 - 23:01  (01:07)
+tienf23  pts/121      172.29.96.67     Tue Oct  3 23:12 - 01:42  (02:29)
+tienf23  pts/2        172.29.96.51     Tue Oct 10 21:04 - 21:13  (00:08)
+tienf23  pts/41       172.29.97.2      Wed Oct 25 22:20 - 00:22  (02:01)
+tienf23  pts/62       172.29.96.157    Wed Oct 18 17:49 - 17:53  (00:03)
+tienf23  pts/77       172.29.96.116    Fri Oct 13 20:43 - 20:46  (00:02)
+tienf23  pts/77       172.29.96.132    Mon Oct 16 23:40 - 23:40  (00:00)
+tienf23  pts/77       172.29.96.156    Wed Oct 18 18:11 - 19:02  (00:50)
+tienf23  pts/83       172.29.96.58     Tue Oct 10 19:18 - 19:21  (00:03)
+tienf23  pts/85       172.29.96.51     Tue Oct 10 19:39 - 21:30  (01:50)
+tienf23  pts/96       172.29.96.37     Sun Oct  1 05:10 - 05:12  (00:01)
+tienf23  pts/96                        Sun Oct  1 04:36 - 04:36  (00:00)
+tienf23  pts/96                        Sun Oct  1 04:36 - 04:37  (00:00)
+tienf23  pts/96                        Sun Oct  1 04:37 - 04:56  (00:19)
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Task 6
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Use awk on the passwd.fake file to find all users that have usernames starting with 'a' and have UID divisble by 2.
+(Notice that you have to use && as I only want the list of users who qualify both conditions)
+Give the commands and output for the same.
+
+
+awk -F: '($1 ~ /^a/) && ($3 % 2 == 0) {print $1}' passwd.fake | sort -u
+
+no output
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Task 7
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Use sed on passwd.fake to Display all the distinct lines left in passwd.fake after deleting all letter and digits and spaces.
+Directions : You would need just the sed command and regex to do this. Use sort -u to only display the distinct lines that remain.
+Give the commands and output for the same.
+
+sed 's/[a-zA-Z0-9 ]//g' passwd.fake | sort -u
+
+{"":{"":,"":{"":{"":[{"":".","":"/.","":""},{"":".","":"/.","":""},{"":".","":"/.","":""}],"":},"":{"":[{"":"","":"","":""},{"":".","":".","":""},{"":".","":".","":""},{"":".","":".","":""},{"":"-.","":"-.","":""}],"":}},"":.,"":[],"":,"":{"":,"":"","":"","":"","":,"":,"":,"":"--::.","":"://..//?=","":,"":,"":},"":,"":,"":{"":"","":":.","":,"":"","":""},"":"/.","":,"":{"":[":::::/://",":::::/://",":::::/://","::::://://",":::::///://",":::::/://",":::::/://",":::::/://",":::::///://",":::::/://","::::://://","::::://://",":::::/://",":::::/://","-:::::/://","-:::::/://","::::://://",":::::/://",":::::///://","::::://://",":::::///://",":::::///://","-:::::/://","-::::-:/://",":::::/://",":::::///://","::::-:///://",":::::/://","::::://://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///://","-:::::///-://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///__/://",":::::///__/://",":::::///__/://",":::::///__/://",":::::///__/://",":::::///__/://",":::::///__/://",":::::///__/://",":::::///__/://",":::::///__/://",":::::///__/://",":::::///__/://",":::::///__/://",":::::///__/://",":::::///__/://",":::::///__/://",":::::///__/://",":::::///__/://",":::::///__/://",":::::///__/://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///://",":::::///__/://",":::::///__/://",":::::///__/://",":::::///__/://",":::::///__/://",":::::///__/://",":::::///__/://",":::::///__/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///__/://",":::::///__/://",":::::///__/://",":::::///__/://",":::::///__/://",":::::///__/://",":::::///://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://",":::::///_/://","::::://://"],"":[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],"":,"":,"":{"":,"":,"":"////","":"//-/__","":,"":"////","":"////_","":,"":},"":".","":"://.//////.?=","":{"":".","":{"":""},"":{"":""},"":"://..","":,"":,"":"","":"/?_=%%%.%%%%%%.","":,"":,"":,"":{"":"","":""},"":""},"":,"":,"":,"":,"":"://..//-----","":,"":,"":,"":,"":,"":,"":"////","":"////","":{"":,"":,"":"//////.","":,"":,"":,"":},"":{"":"//-/___","":"//-/___","":"////?=","":,"":},"":"://.//////.","":,"":,"":,"":,"":,"":{"":,"":,"":"","":"","":,"":"://..///----/----/--","":,"":},"":,"":,"":,"":{"":,"":,"":[]}},"":,"":,"_":{"///":{"":"-"},"//":{"":"_-"}}},"":"//.·/"}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
