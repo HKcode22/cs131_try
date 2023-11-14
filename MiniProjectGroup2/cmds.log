@@ -1,0 +1,985 @@
+    1  rm myFiletxt
+    2  ls
+    3  touch myFile.txt
+    4  ls
+    5  mv myFile.txt Assignment1/myDir3
+    6  cd ..
+    7  mv myFile.txt myDir3
+    8  cd myDir2
+    9  mv myFile.txt ~/Assignment1/myDir3/
+   10  cd ..
+   11  mv myFile.txt ~/Assignment1/myDir3/
+   12  mv myDir2/myFile.txt myDir3
+   13  ls
+   14  cd myDir2
+   15  ls
+   16  cd ..
+   17  cd myDir3
+   18  ls
+   19  cd ..
+   20  git add Assignment1
+   21  git status
+   22  cd Assignment1
+   23  ls
+   24  rm cmds.loh
+   25  history > cmds.log
+   26  vi Assignment.txt
+   27  rm Assignment.txt
+   28  ls
+   29  cd Assignment1.txt
+   30  vi Assignment1.txt
+   31  /etc/password
+   32  vi Assignment1.txt
+   33  cd ..
+   34  git add
+   35  git add Assignment1
+   36  git stauts
+   37  git status
+   38  cd Assignment1
+   39  ls
+   40  cd myDir2
+   41  ls
+   42  cd ..
+   43  cd myDir3
+   44  ls
+   45  cd ..
+   46  git add Assignment1
+   47  git status
+   48  cd Assignment1
+   49  history > cmds.log
+   50  cd ..
+   51  git add Assignment1
+   52  ls
+   53  git commit -m "Add Assignment1 and cmds.log"
+   54  cd Assignment1
+   55  cd myDir3
+   56  ls
+   57  rmdir myDir2
+   58  rm myDir2
+   59  cd ..
+   60  git add Assignment1
+   61  git commit -m "Add Assignment1"
+   62  git add Assignment1
+   63  git status
+   64  l
+   65  ls
+   66  git commit -m"Add Assignt1.txt"
+   67  git add .
+   68  git status
+   69  git add Assignment1
+   70  git status
+   71  git commit -m"add Assignment"
+   72  git push origin master
+   73  git add Assignment1
+   74  git status
+   75  cd Assignment1
+   76  git commit -m"add Assignment1"
+   77  ls
+   78  git push origin master
+   79  cd myDir2
+   80  cd..
+   81  cd ..
+   82  mkdir myDir2
+   83  ls
+   84  cd ..
+   85  ls
+   86  git add Assignment1
+   87  git status
+   88  git commit -m"add Assignment1"
+   89  cd Assignment1
+   90  mkdir Mydir4
+   91  rmdir Mydir4
+   92  cd ..
+   93  cd Assignment
+   94  cd Assignment1
+   95  ls
+   96  history > cmds.log
+   97  ls
+   98  cd ..
+   99  git add Assignment1
+  100  git status
+  101  cd Assignment1
+  102  git commit -m"add Assignment1"
+  103  git push origin master
+  104  cd myDir2
+  105  ls
+  106  cd ..
+  107  myDir2
+  108  cd myDir2
+  109  git push origin master
+  110  cd ..
+  111  cd ..script capture.log
+  112  script capture.log
+  113  u
+  114  cd ..
+  115  cd
+  116  stop
+  117  cat capture.log
+  118  vi ws4.txt
+  119  l
+  120  w
+  121  grep "United States" 'Global YouTube Statistics.csv' | cut -d ',' -f3 >  Subscribers/United_States.txt
+  122  grep "India" 'Global YouTube Statistics.csv' | cut -d ',' -f3 >  Subscribers/India.txt
+  123  awk '{ total += $1 } END { print total / NR }' Subscribers/United_States.txt > ws4_means.txt
+  124  awk '{ total += $1 } END { print total / NR }' Subscribers/India.txt > ws4_means.txt
+  125  awk '{ total += $1 } END { print total / NR }' Subscribers/United_States.txt >> ws4_means.txt
+  126  awk '{ total += $1 } END { print total / NR }' Subscribers/United_States.txt > ws4_means.txt
+  127  awk '{ total += $1 } END { print total / NR }' Subscribers/India.txt >> ws4_means.txt
+  128  vi ws4.txt
+  129  vi ws4_means.txt
+  130  vi Subscribers/India.txt
+  131  l
+  132  w
+  133  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
+  134  mkdir Subscribers
+  135  head - 1 'Global YouTube Statistics.csv'
+  136  head -n 1 Global YouTube Statistics.csv' | grep -i "Subscribers"
+  137  h
+  138  done
+  139  sto
+  140  stop
+  141  grep "United States" 'Global YouTube Statistics.csv' | -f3 >  Subscribers/United_States.txt
+  142  grep "United States" 'Global YouTube Statistics.csv' | cut -d ',' -f3 >  Subscribers/United_States.txt
+  143  grep "United States" 'Global YouTube Statistics.csv' | cut -d ',' -f3 >  Subscribers/India.txt
+  144  grep "India" 'Global YouTube Statistics.csv' | cut -d ',' -f3 >  Subscribers/India.txt
+  145  awk '{ total += $1 } END { print total / NR }' Subscribers/United_States.txt > ws4.txt
+  146  awk '{ total += $1 } END { print total / NR }' Subscribers/India.txt >> ws4.txt
+  147  vi ~/.bashrc
+  148  cat Subscribers/United_States.txt | paste -sd+ - | bc -l
+  149  vi ws4.txt
+  150  awk '{ total += $1 } END { print total / NR }' Subscribers/United_States.txt > ws4_means.txt
+  151  awk '{ total += $1 } END { print total / NR }' Subscribers/India.txt >> ws4_means.txt
+  152  vi ws4_means.txt
+  153  cat ~/cs131/Worksheet4/Subscribers/United_States.txt | paste -sd+ - | bc -l > ~/cs131/Worksheet4/ws4_means.txt
+  154  vi United_States.txt
+  155  vi Subscribers/United_States.txt
+  156  cat Subscribers/United_States.txt | paste -sd+ - | bc -l > ws4_means.txt
+  157  vi ws4_means.txt
+  158  echo Subscribers/United_States.txt | bc
+  159  bc
+  160  awk '{ total += $1 } END { print total / NR }' Subscribers/India.txt >> ws4_means.txt
+  161  awk '{ total += $1 } END { print total / NR }' Subscribers/United_States.txt > ws4.txt
+  162  awk '{ total += $1 } END { print total / NR }' Subscribers/India.txt >> ws4_means.txt
+  163  vi ws4_means.txt
+  164  awk '{ total += $1 } END { print total / NR }' Subscribers/United_States.txt > ws4_means.txt
+  165  awk '{ total += $1 } END { print total / NR }' Subscribers/India.txt >> ws4_means.txt
+  166  vi ws4.txt
+  167  script ws4.txt
+  168  :w
+  169  exut
+  170  exit
+  171  cd cs131
+  172  ls
+  173  rmkdir ws4.txt
+  174  rm ws4.txt
+  175  ls
+  176  cd Worksheet4
+  177  ls
+  178  nano ~/.bashrc
+  179  l
+  180  nano ~/.bashrc
+  181  script ws4.txt
+  182  cd cs131
+  183  ls
+  184  git add Worksheet4
+  185  cd Worksheet4
+  186  ls
+  187  cd Subscribers
+  188  ls
+  189  cd ..
+  190  cat ws4_means.txt
+  191  cat ws4.txt
+  192  cd ..
+  193  cd cs131
+  194  ls
+  195  mkdir Worksheet4
+  196  script ws4.txt
+  197  nano ~/.bashrc
+  198  l
+  199  w
+  200  l
+  201  nano ~/.bashrc
+  202  source ~/.bashrc
+  203  l
+  204  w
+  205  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
+  206  cd ..
+  207  cd cs131
+  208  cd cs131
+  209  cd Worksheet4
+  210  git commit -m"Add Worksheet4"
+  211  git push origin master
+  212  cd cs131
+  213  cd Worksheet4
+  214  history > cmds.log
+  215  cd cmds.log
+  216  ls
+  217  cat cmds.log
+  218  cd ..
+  219  git add Worksheet4
+  220  cd Worksheet4
+  221  git commit - m
+  222  git commit -m "add worksheet4"
+  223  git push origin master
+  224  cd ..
+  225  tar
+  226  man
+  227  tar
+  228  man
+  229  tar --help
+  230  cd cs131
+  231  mkdir Assignment2
+  232  cd Assignment2
+  233  vi Assignment2.txt
+  234  find /etc -type f > one.txt 2> two.txt
+  235  cat one.txt
+  236  cat two.txt
+  237      PID TTY          TIME CMD
+  238  2358192 ?        00:00:04 systemd
+  239  2358194 ?        00:00:00 (sd-pam)
+  240  2509382 ?        00:00:00 sshd
+  241  2509385 pts/94   00:00:00 bash
+  242  2525798 ?        00:00:00 sshd
+  243  2525804 pts/60   00:00:00 bash
+  244  2532533 pts/94   00:00:00 ps
+  245  ps -u hamzaf23
+  246  cd cs131
+  247  cd Assignment2
+  248  pgrep init
+  249  ps -u hamzaf23
+  250  cd ..
+  251  cd cs131
+  252  cd Assignment2
+  253  ps -u hamzaf23
+  254  ps aux
+  255  cd cs131
+  256  cd Assignment2
+  257  vi Assigment2.txt
+  258  vi Assignment2.txt
+  259  cut -d, -f1,2 dataset.csv | sort | uniq -c | sort -nr | head -3
+  260  find /etc -type f > one.txt 2> two.txt
+  261  vi file.txt
+  262  ps -u your_username
+  263  ps -u hamzaf23@sjsu
+  264  whoami
+  265  ps -u hamzaf23
+  266  vi file.txt
+  267  ps -u hamzaf23
+  268  vi file.txt
+  269  ps aux
+  270  cd cs131
+  271  cd Assignment2
+  272  cat one.txt
+  273  cat two.txt
+  274  When I do cat one.txt, I see a list of all the regular files found in the /etc directory and its subdirectory. When I do two.txt I see error messeges
+  275  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
+  276  cut -d, -f3,4 Global\ YouTube\ Statistics.csv | sort | uniq -c | sort -nr | head -3
+  277  cut -d, -f8,9 "Global YouTube Statistics.csv" | sort | uniq -c | sort -nr | head -3
+  278  cut -d, -f2,3 YouTubeData.csv | sort | uniq -c | sort -nr
+  279  cut -d, -f2,3 "Global YouTube Statistics" | sort | uniq -c | sort -nr
+  280  cut -d, -f2,3 "Global YouTube Statistics.cvs" | sort | uniq -c | sort -nr
+  281  cut -d, -f2,3 "Global YouTube Statistics.csv" | sort | uniq -c | sort -nr
+  282  cut -d ',' -f 2,3 "Global YouTube Statistics.csv" | sort | uniq -c | sort -nr
+  283  cut -d ',' -f 7 "Global Youtube Statistics.csv" | cut -d '/' -f 3 | sort | uniq -c | sort -nr
+  284  2. Which [Month, Year] had the most YouTube channels created   [ Use the created year and created month columns ] 
+  285  Your answer should contain what commands you used along with the output. 
+  286  Requirement: You should apply cut sort and uniq commands to accomplish this task. You can use commands in addition to these as well but solve the actual problem using cut sort and uniq.
+  287  Example :
+  288  As per the Dataset, Top 3 [Month, Year] with the most number of YouTube channels created were :
+  289  1. December,2025 with 35 channels  
+  290  2. December,2060 with 20 channels 
+  291  3. January,1998 with 16 channels
+  292  [ Replace months and years above with your answer ]
+  293  The command(s) used to find it was this: _______________
+  294  Explain the command along with the parameters used and the reason for using them.
+  295  head Global Youtube Statistics.csv
+  296  head "Global Youtube Statistics.csv"
+  297  "Global YouTube Statistics.csv"
+  298  head "Global YouTube Statistics.csv"
+  299  head -n 1 'Global YouTube Statistics.csv' | tr ',' '\n' | grep -n 'created_year'
+  300  head -n 1 'Global YouTube Statistics.csv' | tr ',' '\n' | grep -n 'created_month'
+  301  cut -d ',' -f 20,21 'Global YouTube Statistics.csv' | sort | uniq -c | sort -nr | head -3
+  302  pgrep systemd
+  303  pgrep init
+  304  cd cs131
+  305  cd Assignment2
+  306  vi Assignment2.txt
+  307  history > cmds.log
+  308  cd ..
+  309  git add 
+  310  git add .
+  311  cd cs131
+  312  git add Assignment2
+  313  cd Assignment2
+  314  git commit -m"add"
+  315  git origin push master
+  316  git origin master
+  317  git push origin master
+  318  cd awk
+  319  mkdir Worksheet5
+  320  cd Worksheet5
+  321  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
+  322  ls
+  323  music_count=0
+  324  entertainment_count=0
+  325  gaming_count=0
+  326  comedy_count=0
+  327  music_count=0
+  328  entertainment_count=0
+  329  gaming_count=0
+  330  comedy_count=0
+  331  while IFS=, read -r category country; do   if [ "$country" == "United States" ]; then     case "$category" in       "Music")         echo "$category" >> "Workhsheet 5/United States/Music.txt";         ((music_count++));         ;;       "Entertainment")         echo "$category" >> "Workhsheet 5/United States/Entertainment.txt";         ((entertainment_count++));         ;;       "Gaming")         echo "$category" >> "Workhsheet 5/United States/Gaming.txt";         ((gaming_count++));         ;;       "Comedy")         echo "$category" >> "Workhsheet 5/United States/Comedy.txt";         ((comedy_count++));         ;;     esac;   fi; done < "Global YouTube Statistics.csv"
+  332  echo "Music: $music_count" >> "ws5.txt"
+  333  echo "Entertainment: $entertainment_count" >> "ws5.txt"
+  334  echo "Gaming: $gaming_count" >> "ws5.txt"
+  335  echo "Comedy: $comedy_count" >> "ws5.txt"
+  336  # Initialize a counter for each category
+  337  music_count=0
+  338  entertainment_count=0
+  339  gaming_count=0
+  340  comedy_count=0
+  341  # Loop through the CSV file and categorize entries
+  342  while IFS=, read -r category country; do   if [ "$country" == "United States" ]; then     case "$category" in       "Music")         echo "$category" >> "Workhsheet 5/United States/Music.txt";         ((music_count++));         ;;       "Entertainment")         echo "$category" >> "Workhsheet 5/United States/Entertainment.txt";         ((entertainment_count++));         ;;       "Gaming")         echo "$category" >> "Workhsheet 5/United States/Gaming.txt";         ((gaming_count++));         ;;       "Comedy")         echo "$category" >> "Workhsheet 5/United States/Comedy.txt";         ((comedy_count++));         ;;     esac;   fi; done < "Global YouTube Statistics.csv"
+  343  # Output the counts to a ws5.txt file
+  344  echo "Music: $music_count" >> "ws5.txt"
+  345  echo "Entertainment: $entertainment_count" >> "ws5.txt"
+  346  echo "Gaming: $gaming_count" >> "ws5.txt"
+  347  echo "Comedy: $comedy_count" >> "ws5.txt"
+  348  music_count=0
+  349  entertainment_count=0
+  350  gaming_count=0
+  351  comedy_count=0
+  352  while IFS=, read -r category country; do   if [ "$country" == "United States" ]; then     case "$category" in       "Music")         echo "$category" >> "Workhsheet 5/United States/Music.txt";         ((music_count++));         ;;       "Entertainment")         echo "$category" >> "Workhsheet 5/United States/Entertainment.txt";         ((entertainment_count++));         ;;       "Gaming")         echo "$category" >> "Workhsheet 5/United States/Gaming.txt";         ((gaming_count++));         ;;       "Comedy")         echo "$category" >> "Workhsheet 5/United States/Comedy.txt";         ((comedy_count++));         ;;     esac;   fi; done < "Global YouTube Statistics.csv"
+  353  echo "Music: $music_count" >> "ws5.txt"
+  354  echo "Entertainment: $entertainment_count" >> "ws5.txt"
+  355  echo "Gaming: $gaming_count" >> "ws5.txt"
+  356  echo "Comedy: $comedy_count" >> "ws5.txt"
+  357  vi ws5.txt
+  358  cat ws5.txt
+  359  echo "Entertainment: $entertainment_count" >> "ws5.txt"
+  360  echo "Gaming: $gaming_count" >> "ws5.txt"
+  361  echo "Comedy: $comedy_count" >> "ws5.txt"
+  362  cat ws5.txt
+  363  while IFS=, read -r category country; do   if [ "$country" == "United States" ]; then     case "$category" in       "Music")         echo "$category" >> "Workhsheet 5/United States/Music.txt";         ((music_count++));         ;;       "Entertainment")         echo "$category" >> "Workhsheet 5/United States/Entertainment.txt";         ((entertainment_count++));         ;;       "Gaming")         echo "$category" >> "Workhsheet 5/United States/Gaming.txt";         ((gaming_count++));         ;;       "Comedy")         echo "$category" >> "Workhsheet 5/United States/Comedy.txt";         ((comedy_count++));         ;;     esac;   fi; done < "Global YouTube Statistics.csv"
+  364  echo "Music: $music_count" >> "ws5.txt"
+  365  echo "Entertainment: $entertainment_count" >> "ws5.txt"
+  366  echo "Gaming: $gaming_count" >> "ws5.txt"
+  367  echo "Comedy: $comedy_count" >> "ws5.txt"
+  368  cat ws5.txt
+  369  #ji
+  370  # Loop through each category and extract entries to respective files
+  371  categories=("Music" "Entertainment" "Gaming" "Comedy")
+  372  for category in "${categories[@]}"; do   grep "United States" "Global YouTube Statistics.csv" | grep "$category" > "Workhsheet 5/United States/$category.txt"; done
+  373  # Count the number of entries in each category file and save to ws5.txt
+  374  echo "Number of entries in 'Music.txt':" $(wc -l "Workhsheet 5/United States/Music.txt" | awk '{print $1}') > ws5.txt
+  375  echo "Number of entries in 'Entertainment.txt':" $(wc -l "Workhsheet 5/United States/Entertainment.txt" | awk '{print $1}') >> ws5.txt
+  376  echo "Number of entries in 'Gaming.txt':" $(wc -l "Workhsheet 5/United States/Gaming.txt" | awk '{print $1}') >> ws5.txt
+  377  echo "Number of entries in 'Comedy.txt':" $(wc -l "Workhsheet 5/United States/Comedy.txt" | awk '{print $1}') >> ws5.txt
+  378  ls
+  379  for category in "${categories[@]}"; do   grep "United States" "Global YouTube Statistics.csv" | grep "$category" > "Worksheet5/United States/$category.txt"; done
+  380  # Count the number of entries in each category file and save to ws5.txt
+  381  echo "Number of entries in 'Music.txt':" $(wc -l "Worksheet5/United States/Music.txt" | awk '{print $1}') > ws5.txt
+  382  echo "Number of entries in 'Entertainment.txt':" $(wc -l "Worksheet5/United States/Entertainment.txt" | awk '{print $1}') >> ws5.txt
+  383  echo "Number of entries in 'Gaming.txt':" $(wc -l "Worksheet5/United States/Gaming.txt" | awk '{print $1}') >> ws5.txt
+  384  echo "Number of entries in 'Comedy.txt':" $(wc -l "Worksheet5/United States/Comedy.txt" | awk '{print $1}') >> ws5.txt
+  385  for category in "${categories[@]}"; do   grep "United States" "Global YouTube Statistics.csv" | grep "$category" > "Worksheet5/United States/$category.txt"; done
+  386  # Count the number of entries in each category file and save to ws5.txt
+  387  echo "Number of entries in 'Music.txt':" $(wc -l "United States/Music.txt" | awk '{print $1}') > ws5.txt
+  388  echo "Number of entries in 'Entertainment.txt':" $(wc -l "United States/Entertainment.txt" | awk '{print $1}') >> ws5.txt
+  389  echo "Number of entries in 'Gaming.txt':" $(wc -l "United States/Gaming.txt" | awk '{print $1}') >> ws5.txt
+  390  echo "Number of entries in 'Comedy.txt':" $(wc -l "United States/Comedy.txt" | awk '{print $1}') >> ws5.txt
+  391  cat ws5.txt
+  392  while IFS=, read -r _ country category _; do     if [ "$country" == "United States" ]; then         case "$category" in             "Music")                 echo "$category" >> "Worksheet5/United States/Music.txt";                 ;;             "Entertainment")                 echo "$category" >> "Worksheet5/United States/Entertainment.txt";                 ;;             "Gaming")                 echo "$category" >> "Worksheet5/United States/Gaming.txt";                 ;;             "Comedy")                 echo "$category" >> "Worksheet5/United States/Comedy.txt";                 ;;         esac;     fi; done < "Global YouTube Statistics.csv"
+  393  cat United States/Comedy.txt
+  394  while IFS=, read -r _ country category _; do     if [ "$country" == "United_States" ]; then         case "$category" in             "Music")                 echo "$category" >> "Worksheet5/United_States/Music.txt";                 ;;             "Entertainment")                 echo "$category" >> "Worksheet5/United_States/Entertainment.txt";                 ;;             "Gaming")                 echo "$category" >> "Worksheet5/United_States/Gaming.txt";                 ;;             "Comedy")                 echo "$category" >> "Worksheet5/United_States/Comedy.txt";                 ;;         esac;     fi; done < "Global YouTube Statistics.csv"
+  395  cat United_States/Comedy.txt
+  396  cat Worksheet5/United_States/Comedy.txt
+  397  ls
+  398  while IFS=, read -r _ country category _; do     if [ "$country" == "United_States" ]; then         case "$category" in             "Music")                 echo "$category" >> "United_States/Music.txt";                 ;;             "Entertainment")                 echo "$category" >> "United_States/Entertainment.txt";                 ;;             "Gaming")                 echo "$category" >> "United_States/Gaming.txt";                 ;;             "Comedy")                 echo "$category" >> "United_States/Comedy.txt";                 ;;         esac;     fi; done < "Global YouTube Statistics.csv"
+  399  ls
+  400  wc -l "United_States/Music.txt" "United_States/Entertainment.txt" "United_States/Gaming.txt" "United_States/Comedy.txt" > ws5.txt
+  401  while IFS=, read -r _ country category _; do     if [ "$country" == "United_States" ]; then         case "$category" in             "Music")                 mkdir "United_States";                 echo "$category" >> "United_States/Music.txt";                 ;;             "Entertainment")                 mkdir "United_States";                 echo "$category" >> "United_States/Entertainment.txt";                 ;;             "Gaming")                 mkdir "United_States";                 echo "$category" >> "United_States/Gaming.txt";                 ;;             "Comedy")                 mkdir "United_States";                 echo "$category" >> "United_States/Comedy.txt";                 ;;         esac;     fi; done < "Global YouTube Statistics.csv"
+  402  wc -l "United_States/Music.txt" "United_States/Entertainment.txt" "United_States/Gaming.txt" "United_States/Comedy.txt" > ws5.txt
+  403  while IFS=, read -r _ country category _; do     if [ "$country" == "United_States" ]; then         case "$category" in             "Music")                 mkdir "United_States";                 echo "$category" >> "United_States/Music.txt";                 ;;             "Entertainment")                 mkdir "United_States";                 echo "$category" >> "United_States/Entertainment.txt";                 ;;             "Gaming")                 mkdir "United_States";                 echo "$category" >> "United_States/Gaming.txt";                 ;;             "Comedy")                 mkdir "United_States";                 echo "$category" >> "United_States/Comedy.txt";                 ;;         esac;     fi; done < "Global YouTube Statistics.csv"
+  404  nano ~/.bashrc
+  405  cat ~/.bashrc
+  406  alias c
+  407  c
+  408  nano ~/.bashrc
+  409  alias c
+  410  c
+  411  awk -F, '$2 == "United_States" { 
+  412      category = $3; 
+  413      gsub(/ /, "_", category); 
+  414      filename = "United_States/" category ".txt"; 
+  415      print $3 >> filename; 
+  416  }' "Global YouTube Statistics.csv"
+  417  wc -l "United_States/Music.txt" "United_States/Entertainment.txt" "United_States/Gaming.txt" "United_States/Comedy.txt" > ws5.txt
+  418  awk -F, '$2 == "United_States" { 
+  419      category = $3; 
+  420      gsub(/ /, "_", category); 
+  421      filename = "United_States/" category ".txt"; 
+  422      system("mkdir -p United_States");
+  423      print $3 >> filename; 
+  424  }' "Global YouTube Statistics.csv"
+  425  awk -F, '$2 == "United_States" { 
+  426      category = $3; 
+  427      gsub(/ /, "_", category); 
+  428      filename = "United_States/" category ".txt"; 
+  429      system("mkdir -p United_States");
+  430      print $3 >> filename; 
+  431  }' "Global YouTube Statistics.csv"
+  432  wc -l "United_States/Music.txt" "United_States/Entertainment.txt" "United_States/Gaming.txt" "United_States/Comedy.txt" > ws5.txt
+  433  awk -F, '$2 == "United_States" {
+  434      category = $3;
+  435      gsub(/ /, "_", category);
+  436      filename = "United_States/" category ".txt";
+  437      print $3 >> filename;
+  438  }' "Global YouTube Statistics.csv"
+  439  wc -l United_States/Music.txt United_States/Entertainment.txt United_States/Gaming.txt United_States/Comedy.txt > ws5.txt
+  440  categories=("Music" "Entertainment" "Gaming" "Comedy")
+  441  # Initialize counts for each category
+  442  for category in "${categories[@]}"; do     count=0;     grep "United States,.*$category" "Global YouTube Statistics.csv" |         awk -F',' '{print $0 > "Workhsheet 5/United States/"$3".txt"; count++}';     echo "Count for $category: $count"; done
+  443  # Count the entries in each category file
+  444  for category in "${categories[@]}"; do     wc -l "Workhsheet 5/United States/$category.txt"; done > ws5.txt
+  445  ls
+  446  mkdir "Worksheet 5/United States"
+  447  mkdir -p "Workhsheet 5/United States"
+  448  categories=("Music" "Entertainment" "Gaming" "Comedy")
+  449  # Initialize counts for each category
+  450  for category in "${categories[@]}"; do     count=0;     grep "United States,.*$category" "Global YouTube Statistics.csv" |         awk -F',' '{print $0 > "Workhsheet 5/United States/"$3".txt"; count++}';     echo "Count for $category: $count"; done
+  451  # Count the entries in each category file
+  452  for category in "${categories[@]}"; do     wc -l "Workhsheet 5/United States/$category.txt"; done > ws5.txt
+  453  mkdir -p "Workhsheet 5/United States"
+  454  categories=("Music" "Entertainment" "Gaming" "Comedy")
+  455  for category in "${categories[@]}"; do     grep -E "United States,.*$category" "Global YouTube Statistics.csv" >> "Workhsheet 5/United States/${category}.txt"; done
+  456  mkdir -p "Workhsheet 5/United States"
+  457  categories=("Music" "Entertainment" "Gaming" "Comedy")
+  458  for category in "${categories[@]}"; do     grep -E "United States,.*$category" "Global YouTube Statistics.csv" >> "Workhsheet 5/United States/${category}.txt"; done
+  459  mkdir -p "Workhsheet 5/United States"
+  460  categories=("Music" "Entertainment" "Gaming" "Comedy")
+  461  for category in "${categories[@]}"; do     grep -E "United States,.*$category" "Global YouTube Statistics.csv" >> "Workhsheet 5/United States/${category}.txt"; done
+  462  mkdir -p "Workhsheet 5/United States" && categories=("Music" "Entertainment" "Gaming" "Comedy") && for category in "${categories[@]}"; do grep -E "United States,.*$category" "Global YouTube Statistics.csv" >> "Workhsheet 5/United States/${category}.txt"; done
+  463  ls
+  464  wc -l "Workhsheet 5/United States/Music.txt" "Workhsheet 5/United States/Entertainment.txt" "Workhsheet 5/United States/Gaming.txt" "Workhsheet 5/United States/Comedy.txt" > ws5.txt
+  465  cat ws5.txt
+  466  mkdir -p "Workhsheet 5/United States" && categories=("Music" "Entertainment" "Gaming" "Comedy") && for category in "${categories[@]}"; do grep -E "United States,.*$category" "Global YouTube Statistics.csv" >> "Workhsheet 5/United States/${category}.txt"; done
+  467  mkdir -p "Workhsheet 5/United States" && categories=("Music" "Entertainment" "Gaming" "Comedy") && for category in "${categories[@]}"; do grep "United States,.*$category" "Global YouTube Statistics.csv" >> "Workhsheet 5/United States/${category}.txt"; done
+  468  wc -l "Workhsheet 5/United States/Music.txt" "Workhsheet 5/United States/Entertainment.txt" "Workhsheet 5/United States/Gaming.txt" "Workhsheet 5/United States/Comedy.txt" > ws5.txt
+  469  cat ws5.txt
+  470  mkdir -p "Workhsheet 5/United States" && categories=("Music" "Entertainment" "Gaming" "Comedy") && for category in "${categories[@]}"; do grep "United States,.*$category" "Global YouTube Statistics.csv" >> "Workhsheet 5/United States/${category}.txt"; done
+  471  wc -l "Workhsheet 5/United States/Music.txt" "Workhsheet 5/United States/Entertainment.txt" "Workhsheet 5/United States/Gaming.txt" "Workhsheet 5/United States/Comedy.txt" > ws5.txt
+  472  vi ws5.txt
+  473  cat ws5.txt
+  474  wc -l "Workhsheet 5/United States/Music.txt" "Workhsheet 5/United States/Entertainment.txt" "Workhsheet 5/United States/Gaming.txt" "Workhsheet 5/United States/Comedy.txt" > ws5.txt
+  475  cat ws5.txt
+  476  history > cmds.log
+  477  cd cs131
+  478  cd Worksheet5
+  479  ls
+  480  cd ..
+  481  ls
+  482  mv Worksheet5 cs131
+  483  ls
+  484  cd cs131
+  485  ls
+  486  cd Worksheet5
+  487  vi script.sh
+  488  nano script.sh
+  489  cat script.sh
+  490  chmod +x script.sh
+  491  ./script.sh
+  492  cat ws5.txt
+  493  vi script.sh
+  494  touch "Workhsheet 5/United States/Gaming.txt"
+  495  cat "Workhsheet 5/United States/Gaming.txt"
+  496  cat ws5.txt
+  497  ./script.sh
+  498  cat ws5.txt
+  499  vi script.sh
+  500  ./script.sh
+  501  cat ws5.txt
+  502  vi script.sh
+  503  ./script.sh
+  504  cat ws5.txt
+  505  vi script.sh
+  506  cat script.sh
+  507  ./script.sh
+  508  chmod +x script.sh
+  509  ./script.sh
+  510  cat ws5.txt
+  511  vi script.sh
+  512  mkdir -p "Workhsheet 5/United States" && music_count=0 && entertainment_count=0 && gaming_count=0 && comedy_count=0 && while IFS=, read -r channel category country; do [ "$country" = "United States" ] && case "$category" in "Music") ((music_count++)) ;; "Entertainment") ((entertainment_count++)) ;; "Gaming") ((gaming_count++)) ;; "Comedy") ((comedy_count++)) ;; esac; done < "Global YouTube Statistics.csv" && echo "Music: $music_count" > ws5.txt && echo "Entertainment: $entertainment_count" >> ws5.txt && echo "Gaming: $gaming_count" >> ws5.txt && echo "Comedy: $comedy_count" >> ws5.txt
+  513  cat ws5.txt
+  514  mkdir -p "Workhsheet 5/United States" && music_count=0 && entertainment_count=0 && gaming_count=0 && comedy_count=0 && while IFS=, read -r channel category country; do [ "$country" = "United States" ] && case "$category" in "Music") ((music_count++)) ;; "Entertainment") ((entertainment_count++)) ;; "Gaming") ((gaming_count++)) ;; "Comedy") ((comedy_count++)) ;; esac; done < "Global YouTube Statistics.csv" && echo "Music: $music_count" > ws5.txt && echo "Entertainment: $entertainment_count" >> ws5.txt && echo "Gaming: $gaming_count" >> ws5.txt && echo "Comedy: $comedy_count" >> ws5.txt
+  515  mkdir -p "Workhsheet 5/United States" && music_count=0 && entertainment_count=0 && gaming_count=0 && comedy_count=0 && while IFS=, read -r channel category country; do [ "$country" = "United States" ] && case "$category" in "Music") ((music_count++)) ;; "Entertainment") ((entertainment_count++)) ;; "Gaming") ((gaming_count++)) ;; "Comedy") ((comedy_count++)) ;; esac; done < "Global YouTube Statistics.csv" && echo "Music: $music_count" > ws55.txt && echo "Entertainment: $entertainment_count" >> ws55.txt && echo "Gaming: $gaming_count" >> ws55.txt && echo "Comedy: $comedy_count" >> ws55.txt
+  516  cat ws55.txt
+  517  ls
+  518  categories=("Music" "Entertainment" "Gaming" "Comedy"); for category in "${categories[@]}"; do awk -F, -v category="$category" '$3 == "United States" && $4 == category {print $0}' "Global YouTube Statistics.csv" > "Workhsheet 5/United States/$category.txt"; done; wc -l "Workhsheet 5/United States/Music.txt" "Workhsheet 5/United States/Entertainment.txt" "Workhsheet 5/United States/Gaming.txt" "Workhsheet 5/United States/Comedy.txt" > ws5.txt
+  519  cat ws5.txt
+  520  categories=("Music" "Entertainment" "Gaming" "Comedy"); for category in "${categories[@]}"; do awk -F, -v category="$category" '$3 == "United States" && $4 == category {print $0}' 'Global YouTube Statistics.csv' > "Workhsheet 5/United States/$category.txt"; done; wc -l "Workhsheet 5/United States/Music.txt" "Workhsheet 5/United States/Entertainment.txt" "Workhsheet 5/United States/Gaming.txt" "Workhsheet 5/United States/Comedy.txt" > ws5.txt
+  521  cat ws5.txt
+  522  ls
+  523  categories=("Music" "Entertainment" "Gaming" "Comedy"); for category in "${categories[@]}"; do awk -F, -v category="$category" '$3 == "United States" && $4 == category {print $0}' 'Global YouTube Statistics.csv' > "Worksheet 5/United States/$category.txt"; done; wc -l "Worksheet 5/United States/Music.txt" "Worksheet 5/United States/Entertainment.txt" "Worksheet 5/United States/Gaming.txt" "Worksheet 5/United States/Comedy.txt" > ws5.txt
+  524  categories=("Music" "Entertainment" "Gaming" "Comedy"); for category in "${categories[@]}"; do awk -F, -v category="$category" '$3 == "United States" && $4 == category {print $0}' 'Global YouTube Statistics.csv' > "Workhsheet 5/United States/$category.txt"; done; wc -l "Workhsheet 5/United States/Music.txt" "Workhsheet 5/United States/Entertainment.txt" "Workhsheet 5/United States/Gaming.txt" "Workhsheet 5/United States/Comedy.txt" > ws5.txt
+  525  cat ws5.txt
+  526  mkdir -p "Worksheet 5/United Stat es' && categories=("Music" "Entertainment" "Gaming" "Comedy") && for category in "${categories[@1}"; do grep "United States, .*category" "Global YouTube Statistics.cv' >> "Workhsheet 5/
+  527  United States/${category}.txt"; done
+  528  mkdir -p "Worksheet 5/United Stat es' && categories=("Music" "Entertainment" "Gaming" "Comedy") && for category in "${categories[@1}"; do grep "United States, .*category" "Global YouTube Statistics.cv' >> "Workhsheet 5/; United States/${category}.txt"; done
+  529  exit
+  530  exit
+  531  quit
+  532  exit
+  533  exit
+  534  eixt
+  535  eixt
+  536  exit
+  537  "wowo"
+  538  'exit'
+  539  exit
+  540  exit
+  541  exit
+  542  mkdir -p "Worksheet 5/United Stat es' && categories=("Music" "Entertainment" "Gaming" "Comedy") && for category in "${categories[@1}"; do grep "United States, .*category" "Global YouTube Statistics.cv' >> "Workhsheet 5/
+  543  mkdir -p "Worksheet 5/United Stat es' && categories=("Music" "Entertainment" "Gaming" "Comedy") && for category in "${categories[@1}"; do grep "United States, .*category" "Global YouTube Statistics.cv' >> "Workhsheet 5/United States/${category}.txt"; done
+  544  mkdir -p "Worksheet 5/United Stat es' && categories=("Music" "Entertainment" "Gaming" "Comedy") && for category in "${categories[@1}"; do grep "United States, .*category" "Global YouTube Statistics.cv' >> "Workhsheet 5/United States/${category}.txt"; done
+  545  cd cs131
+  546  cd Worksheet5
+  547  vi ws5.txt
+  548  input_file="Global YouTube Statistics.csv"
+  549  output_directory="Workhsheet 5/United States"
+  550  mkdir -p "$output_directory"
+  551  categories=("Music" "Entertainment" "Gaming" "Comedy")
+  552  for category in "${categories[@]}"; do     touch "$output_directory/$category.txt"; done
+  553  count_and_write_to_ws5() {     category_name="$1";     category_file="$output_directory/$category_name.txt";     entry_count=$(wc -l < "$category_file");     echo "$category_name: $entry_count" >> "ws5.txt"; }
+  554  IFS=$'\n'
+  555  while read -r line; do
+  556      IFS=',' read -r -a fields <<< "$line";      if [[ "${fields[3]}" == "United States" ]]; then         for category in "${categories[@]}"; do             if [[ "${fields[4]}" == "$category" ]]; then                 echo "$line" >> "$output_directory/$category.txt";             fi;         done;     fi; done < "$input_file"
+  557  for category in "${categories[@]}"; do     count_and_write_to_ws5 "$category"; done
+  558  vi script.sh
+  559  input_file="Global YouTube Statistics.csv"; output_directory="Workhsheet 5/United States"; mkdir -p "$output_directory"; categories=("Music" "Entertainment" "Gaming" "Comedy"); for category in "${categories[@]}"; do touch "$output_directory/$category.txt"; done; count_and_write_to_ws5() { category_name="$1"; category_file="$output_directory/$category_name.txt"; entry_count=$(wc -l < "$category_file"); echo "$category_name: $entry_count" >> "ws5.txt"; }; IFS=$'\n'; while read -r line; do IFS=',' read -r -a fields <<< "$line"; if [[ "${fields[3]}" == "United States" ]]; then for category in "${categories[@]}"; do if [[ "${fields[4]}" == "$category" ]]; then echo "$line" >> "$output_directory/$category.txt"; fi; done; fi; done < "$input_file"; for category in "${categories[@]}"; do count_and_write_to_ws5 "$category"; done
+  560  cat ws5.txt
+  561  ls
+  562  cat 'Global YouTube Statistics.csv'
+  563  grep Music
+  564  touch ws5.txt
+  565  input_file="Global YouTube Statistics.csv"; output_directory="Workhsheet 5/United States"; mkdir -p "$output_directory"; touch "ws5.txt"; categories=("Music" "Entertainment" "Gaming" "Comedy"); for category in "${categories[@]}"; do touch "$output_directory/$category.txt"; done; count_and_write_to_ws5() { category_name="$1"; category_file="$output_directory/$category_name.txt"; entry_count=$(wc -l < "$category_file"); echo "$category_name: $entry_count" >> "ws5.txt"; }; IFS=$'\n'; while read -r line; do IFS=',' read -r -a fields <<< "$line"; if [[ "${fields[3]}" == "United States" ]]; then for category in "${categories[@]}"; do if [[ "${fields[4]}" == "$category" ]]; then echo "$line" >> "$output_directory/$category.txt"; fi; done; fi; done < "$input_file"; for category in "${categories[@]}"; do count_and_write_to_ws5 "$category"; done
+  566  cat ws5.txt
+  567  vi ws5.txt
+  568  cat ws5.txt
+  569  input_file="Global YouTube Statistics.csv"; output_directory="Workhsheet 5/United States"; mkdir -p "$output_directory"; touch "ws5.txt"; categories=("Music" "Entertainment" "Gaming" "Comedy"); for category in "${categories[@]}"; do touch "$output_directory/$category.txt"; done; count_and_write_to_ws5() { category_name="$1"; category_file="$output_directory/$category_name.txt"; entry_count=$(wc -l < "$category_file"); echo "$category_name: $entry_count" >> "ws5.txt"; }; IFS=$'\n'; while read -r line; do IFS=',' read -r -a fields <<< "$line"; if [[ "${fields[3]}" == "United States" ]]; then for category in "${categories[@]}"; do if [[ "${fields[4]}" == "$category" ]]; then echo "$line" >> "$output_directory/$category.txt"; fi; done; fi; done < "$input_file"; for category in "${categories[@]}"; do count_and_write_to_ws5 "$category"; done
+  570  cat ws5.txt
+  571  input_file="Global YouTube Statistics.csv"; output_directory="Workhsheet 5/United States"; mkdir -p "$output_directory"; touch "ws5.txt"; categories=("Music" "Entertainment" "Gaming" "Comedy"); for category in "${categories[@]}"; do touch "$output_directory/$category.txt"; done; IFS=$'\n'; cat "$input_file" | while read -r line; do IFS=',' read -r -a fields <<< "$line"; if [ "${fields[3]}" = "United States" ]; then for category in "${categories[@]}"; do if [ "${fields[4]}" = "$category" ]; then echo "$line" >> "$output_directory/$category.txt"; fi; done; fi; done; for category in "${categories[@]}"; do echo "$category: $(cat "$output_directory/$category.txt" | wc -l)" >> "ws5.txt"; done
+  572  cat ws5.txt
+  573  input_file="Global YouTube Statistics.csv"; output_directory="Workhsheet 5/United States"; mkdir -p "$output_directory"; touch "results.txt"; categories=("Music" "Entertainment" "Gaming" "Comedy"); for category in "${categories[@]}"; do touch "$output_directory/$category.txt"; done; IFS=$'\n'; cat "$input_file" | while read -r line; do IFS=',' read -r -a fields <<< "$line"; if [ "${fields[3]}" = "United States" ]; then for category in "${categories[@]}"; do if [ "${fields[4]}" = "$category" ]; then echo "$line" >> "$output_directory/$category.txt"; fi; done; fi; done; for category in "${categories[@]}"; do echo "$category: $(cat "$output_directory/$category.txt" | wc -l)" >> "results.txt"; done
+  574  cat results.txt
+  575  mkdir -p "Worksheet 5/United Stat es' && categories=("Music" "Entertainment" "Gaming" "Comedy") && for category in "${categories[@1}"; do grep "United States, .*category" "Global YouTube Statistics.cv' >> "Workhsheet 5/ United States/${category}.txt"; done
+  576  mkdir -p "Worksheet 5/Untied States' 
+  577  mkdir -p "Worksheet 5/Untied States" && categories=("Music" "Entertainment" "Gaming" "Comedy") && for category in "${categories[@]}"; do grep "United States,.*$category" "Global Youtube Statistics.csv" >> Worksheet 5/United States/${category}.txt"; done
+  578  ls
+  579  mkdir -p "Worksheet 5/Untied States" && categories=("Music" "Entertainment" "Gaming" "Comedy") && for category in "${categories[@]}"; do grep "United States,.*$category" "Global Youtube Statistics.csv" >> Worksheet 5/United States/${category}.txt"; done
+  580  mkdir -p "Worksheet 5/Untied States" && categories=("Music" "Entertainment" "Gaming" "Comedy") && for category in "${categories[@]}"; do grep "United States,.*$category" "Global Youtube Statistics.csv" >> Worksheet 5/United States/${category}.txt"; done 
+  581  vi script.sh
+  582  ./script.sh
+  583  vi script.sh
+  584  mkdir -p "Worksheet 5/Untied States" && categories=("Music" "Entertainment" "Gaming" "Comedy") && for category in "${categories[@]}"; do grep "United States,.*$category" "Global Youtube Statistics.csv" >> "Worksheet 5/United States/${category}.txt"; done
+  585  mkdir -p "Worksheet 5/United States" && categories=("Music" "Entertainment" "Gaming" "Comedy") && for category in "${categories[@]}"; do grep "United States,.*$category" "Global Youtube Statistics.csv" >> "Worksheet 5/United States/${category}.txt"; done
+  586  ls
+  587  mkdir -p "Worksheet 5/Untied States" && categories=("Music" "Entertainment" "Gaming" "Comedy") && for category in "${categories[@]}"; do grep "United States,.*$category" "Global YouTube Statistics.csv" >> "Worksheet 5/United States/${category}.txt"; done
+  588  cat ws5.txt
+  589  wc -l "Worksheet5/United_States/Music.txt" "Worksheet5/United_States/Entertainment.txt" "Worksheet5/United_States/Gaming.txt" "Worksheet5/United_States/Comedy.txt" > ws5.txt
+  590  wc -w "Worksheet 5/United States/Music.txt" "Worksheet 5/United States/Entertainment.txt" "Worksheet 5/United States/Gaming.txt" "Worksheet 5/United States/Comedy.txt" > ws5.txt
+  591  cat ws5.txt
+  592  vi script.sh
+  593  ./script.sh
+  594  cat ws5.txt
+  595  input_file="Global YouTube Statistics.csv"; mkdir -p "Worksheet 5/United States"; categories=("Music" "Entertainment" "Gaming" "Comedy"); for category in "${categories[@]}"; do count=0; while IFS=',' read -r col1 col2 col3 col4 col5; do if [ "$col4" == "United States" ] && [ "$col5" == "$category" ]; then echo "$col1,$col2,$col3,$col4,$col5" >> "Worksheet 5/United States/$category.txt"; count=$((count+1)); fi; done < "$input_file"; echo "Number of entries in Worksheet 5/United States/$category.txt: $count" >> "ws5.txt"; done
+  596  cat ws5.txt
+  597  awk -F',' 'NR==1 {for (i=1; i<=NF; i++) if ($i == "Entertainment") print "Column " i " is Entertainment"}' "Global YouTube Statistics.csv"
+  598  head -n 1 "Global YouTube Statistics.csv" | tr ',' '\n' | cat -n | grep "Entertainment"
+  599  head -n 1 "Global YouTube Statistics.csv" | tr ',' '\n'| grep "Entertainment"
+  600  head -n 1 'Global YouTube Statistics.csv' | tr ',' '\n' | grep -n 'highest_monthly_earnings'
+  601  head -n 1 'Global YouTube Statistics.csv' | tr ',' '\n' | grep -n 'Entertainment
+  602  head -n 1 'Global YouTube Statistics.csv' | tr ',' '\n' | grep -n 'Entertainment'
+  603  input_file="Global YouTube Statistics.csv"; mkdir -p "Worksheet 5/United States"; categories=("Music" "Entertainment" "Gaming" "Comedy"); for category in "${categories[@]}"; do count=0; while IFS=',' read -r col1 col2 col3 col4 col5; do if [ "$col4" == "United States" ] && [ "$col5" == "$category" ]; then echo "$col1,$col2,$col3,$col4,$col5" >> "Worksheet 5/United States/$category.txt"; count=$((count+1)); fi; done < "$input_file"; echo "Number of entries in Worksheet 5/United States/$category.txt: $count" >> "ws5.txt"; done
+  604  cat ws5.txt
+  605  vi script.sh
+  606  ./script.sh
+  607  vi script.sh
+  608  categories=("Music" "Entertainment" "Gaming" "Comedy"); while IFS=, read -r rank youtuber subscribers video_views category title uploads country abbreviation channel_type video_views_rank country_rank channel_type_rank video_views_for_the_last_30_days lowest_monthly_earnings highest_monthly_earnings lowest_yearly_earnings highest_yearly_earnings subscribers_for_last_30_days created_year created_month created_date gross_tertiary_education_enrollment population unemployment_rate urban_population latitude longitude; do if [[ "$country" == "United States" ]]; then echo "$rank,$youtuber,$subscribers,$video_views,$category,$title,$uploads,$country,$abbreviation,$channel_type,$video_views_rank,$country_rank,$channel_type_rank,$video_views_for_the_last_30_days,$lowest_monthly_earnings,$highest_monthly_earnings,$lowest_yearly_earnings,$highest_yearly_earnings,$subscribers_for_last_30_days,$created_year,$created_month,$created_date,$gross_tertiary_education_enrollment,$population,$unemployment_rate,$urban_population,$latitude,$longitude" >> "Worksheet 5/United States/${category}.txt"; fi; done < "Global YouTube Statistics.csv"; wc -w "Worksheet 5/United States/Entertainment.txt" "Worksheet 5/United States/Gaming.txt" "Worksheet 5/United States/Comedy.txt" "Worksheet 5/United States/Music.txt" >> ws5.txt
+  609  cat ws5.txt
+  610  cat "Worksheet 5/United States/Gaming.txt"
+  611  history > cmds.log
+  612  ls
+  613  cd cs131
+  614  cd Worksheet5
+  615  ./script.sh
+  616  vi script.sh
+  617  cp script.sh oldscript.sh
+  618  cat oldscript.sh
+  619  vi script.sh
+  620  cat script.sh
+  621  chmod +x script.sh
+  622  ./script.sh
+  623  cat ws5.txt
+  624  categories=("Music" "Entertainment" "Gaming" "Comedy"); while IFS=, read -r rank youtuber subscribers video_views category title uploads country abbreviation channel_type video_views_rank country_rank channel_type_rank video_views_for_the_last_30_days lowest_monthly_earnings highest_monthly_earnings lowest_yearly_earnings highest_yearly_earnings subscribers_for_last_30_days created_year created_month created_date gross_tertiary_education_enrollment population unemployment_rate urban_population latitude longitude; do if [[ "$country" == "United States" ]]; then echo "$rank,$youtuber,$subscribers,$video_views,$category,$title,$uploads,$country,$abbreviation,$channel_type,$video_views_rank,$country_rank,$channel_type_rank,$video_views_for_the_last_30_days,$lowest_monthly_earnings,$highest_monthly_earnings,$lowest_yearly_earnings,$highest_yearly_earnings,$subscribers_for_last_30_days,$created_year,$created_month,$created_date,$gross_tertiary_education_enrollment,$population,$unemployment_rate,$urban_population,$latitude,$longitude" >> "Worksheet 5/United States/${category}.txt"; fi; done < "Global YouTube Statistics.csv"; wc -w "Worksheet 5/United States/Entertainment.txt" "Worksheet 5/United States/Gaming.txt" "Worksheet 5/United States/Comedy.txt" "Worksheet 5/United States/Music.txt" >> ws5.txt
+  625  cat script.sh
+  626  ./script.sh
+  627  vi script.sh
+  628  ./script.sh
+  629  cat ws5.txt
+  630  cat "Worksheet 5/United States/Entertainment.txt"
+  631  categories=("Music" "Entertainment" "Gaming" "Comedy"); while IFS=, read -r rank youtuber subscribers video_views category title uploads country abbreviation channel_type video_views_rank country_rank channel_type_rank video_views_for_the_last_30_days lowest_monthly_earnings highest_monthly_earnings lowest_yearly_earnings highest_yearly_earnings subscribers_for_last_30_days created_year created_month created_date gross_tertiary_education_enrollment population unemployment_rate urban_population latitude longitude; do if [[ "$country" == "United States" ]]; then echo "$rank,$youtuber,$subscribers,$video_views,$category,$title,$uploads,$country,$abbreviation,$channel_type,$video_views_rank,$country_rank,$channel_type_rank,$video_views_for_the_last_30_days,$lowest_monthly_earnings,$highest_monthly_earnings,$lowest_yearly_earnings,$highest_yearly_earnings,$subscribers_for_last_30_days,$created_year,$created_month,$created_date,$gross_tertiary_education_enrollment,$population,$unemployment_rate,$urban_population,$latitude,$longitude" >> "Worksheet 5/United States/${category}.txt"; fi; done < "Global YouTube Statistics.csv"; wc -w "Worksheet 5/United States/Entertainment.txt" "Worksheet 5/United States/Gaming.txt" "Worksheet 5/United States/Comedy.txt" "Worksheet 5/United States/Music.txt" >> ws5.txt
+  632  cat ws5/txt
+  633  cat ws5.txt
+  634  vi script.sh
+  635  ./script.sh
+  636  vi ws5.txt
+  637  cat ws5.txt
+  638  cat script.txt
+  639  cat script.sh
+  640  ls
+  641  rmdir 'Worksheet 5'
+  642  rm -r 'Worksheet 5'
+  643  ./script.sh
+  644  mkdir -p "Workhsheet 5/United States"
+  645  ./script
+  646  ./script.sh
+  647  ls
+  648  categories=("Music" "Entertainment" "Gaming" "Comedy"); while IFS=, read -r rank youtuber subscribers video_views category title uploads country abbreviation channel_type video_views_rank country_rank channel_type_rank video_views_for_the_last_30_days lowest_monthly_earnings highest_monthly_earnings lowest_yearly_earnings highest_yearly_earnings subscribers_for_last_30_days created_year created_month created_date gross_tertiary_education_enrollment population unemployment_rate urban_population latitude longitude; do if [[ "$country" == "United States" ]]; then echo "$rank,$youtuber,$subscribers,$video_views,$category,$title,$uploads,$country,$abbreviation,$channel_type,$video_views_rank,$country_rank,$channel_type_rank,$video_views_for_the_last_30_days,$lowest_monthly_earnings,$highest_monthly_earnings,$lowest_yearly_earnings,$highest_yearly_earnings,$subscribers_for_last_30_days,$created_year,$created_month,$created_date,$gross_tertiary_education_enrollment,$population,$unemployment_rate,$urban_population,$latitude,$longitude" >> "Worksheet 5/United States/${category}.txt"; fi; done < "Global YouTube Statistics.csv"; wc -w "Worksheet 5/United States/Entertainment.txt" "Worksheet 5/United States/Gaming.txt" "Worksheet 5/United States/Comedy.txt" "Worksheet 5/United States/Music.txt" >> ws5.txt
+  649  mkdir -p "Worksheet 5/United States"
+  650  ls
+  651  ls -l "Worksheet 5/United States"
+  652  ./script.sh
+  653  ws5.txt
+  654  cat ws5.txt
+  655  cd ..
+  656  git add 
+  657  git add .
+  658  git add Worksheet5
+  659  git status
+  660  cd Worksheet5
+  661  git init
+  662  git commit -m"Worksheet5"
+  663  git add
+  664  git add .
+  665  git init
+  666  git push origin master
+  667  git push -u origin master
+  668  history > cmds.log
+  669  git push origin master
+  670  git push master
+  671  git push master origin
+  672  git status
+  673  git add .
+  674  cd ..
+  675  git add Worksheet5
+  676  cd Worksheet5
+  677  git status
+  678  git push --set-upstream origin master
+  679  git branch
+  680  git checkout -b master
+  681  git checkout master
+  682  git add .
+  683  git commit -m "Initial commit"
+  684  git push --set-upstream origin master
+  685  git commit -m "Your commit message here"
+  686  git push
+  687  git push master origin
+  688  git push origin master
+  689  git push
+  690  git checkout -b origin
+  691  git push master origin
+  692  git push --set-upstream origin master
+  693  git commit -m "Message"
+  694  git push --set-upstream origin master
+  695  Please make sure you have the correct access rights
+  696  and the repository exists.
+  697  [hamzaf23@sjsu Worksheet5]$ 
+  698  [hamzaf23@sjsu Worksheet5]$ git push --set-upstream origin master
+  699  fatal: 'origin' does not appear to be a git repository
+  700  fatal: Could not read from remote repository.
+  701  Please make sure you have the correct access rights
+  702  and the repository exists.Please make sure you have the correct access rights
+  703  and the repository exists.
+  704  [hamzaf23@sjsu Worksheet5]$ 
+  705  [hamzaf23@sjsu Worksheet5]$ git push --set-upstream origin master
+  706  fatal: 'origin' does not appear to be a git repository
+  707  fatal: Could not read from remote repository.
+  708  Please make sure you have the correct access rights
+  709  and the repository exists.
+  710  git remote add origin https://github.com/HKcode22/cs131
+  711  git push --set-upstream origin master
+  712  SHA256:qrEPJjVToUhzA65CLsJekd496eQWIZv9bUl2ZE912R4
+  713  git push --set-upstream origin master
+  714  git fetch origin
+  715  git merge origin/master
+  716  git merge --allow-unrelated-histories origin/master
+  717  git push
+  718  git push --set-upstream origin origin
+  719  git add
+  720  git add .
+  721  git init
+  722  git status
+  723  cd ..
+  724  git add Worksheet5
+  725  cd ..
+  726  cd cs131
+  727  cd Worksheet5
+  728  git push --set-upstream origin origin
+  729  cd ..
+  730  git push --set-upstream origin origi
+  731  git push --set-upstream origin origin
+  732  git push --set-upstream origin
+  733  git push --set-upstream origin origi
+  734  git push --set-upstream origin
+  735  git push origin master
+  736  cd Worksheet5
+  737  git push origin master
+  738  ws5.txt
+  739  cat ws5.txt
+  740  git push --force origin master
+  741  cd ..
+  742  git push --force origin master
+  743  ls
+  744  git add Worksheet5
+  745  git add ,
+  746  git add .
+  747  git status
+  748  git push --force origin master
+  749  cd Wokrshett5
+  750  cd Worksheet5
+  751  git commit -m"add"
+  752  git push origin master
+  753  cd ..
+  754  git push origin master
+  755  git remote set-url origin git@github.com:HKcode22/cs131.git
+  756  git push origin master
+  757  git add .
+  758  git add Worksheet5
+  759  ls
+  760  git push origin master
+  761  cd Worksheet5
+  762  git commit -m"add"
+  763  git add .
+  764  git commit -m"add"
+  765  git push origin master
+  766  git push --force origin master
+  767  cd ..
+  768  git push origin
+  769  git push origin master
+  770  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
+  771  git push --force origin master
+  772  ls
+  773  git add Worksheet5
+  774  mkdir Worksheet0
+  775  git push --force origin master
+  776  git add .
+  777  git add Worksheet0
+  778  git push --force origin master
+  779  git push orign master
+  780  git push --set-upstream origin master
+  781  git commit -m "Message"
+  782  git push --set-upstream origin master
+  783  ls
+  784  cd Worksheet5
+  785  rm -r Wokrhseet1
+  786  ls
+  787  rm -r Worksheet1
+  788  rm -r Worksheet2 | rm -r Worksheet4
+  789  ls
+  790  rm -r Assignment1 | rm -r Assignment2 | rm -r Worksheet3 | rm -r sampleProject
+  791  ls
+  792  git -m"add"
+  793  git commit -m"add"
+  794  cd ..
+  795  git add .
+  796  git add WOrksheet5
+  797  git add Worksheet5
+  798  git commit -m"message"
+  799  git push --set-upstream origin master
+  800  cd cs131
+  801  mkdir Assignment3
+  802  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/awkdata/last.fake
+  803  cd Assignment3
+  804  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/awkdata/last.fake
+  805  wget https://github.com/khanchandaniashish/CS131/blob/main/awkdata/passwd.fake 
+  806  wget https://github.com/khanchandaniashish/CS131/blob/main/awkdata/ps.fake 
+  807  ls
+  808  wc -l last.fake
+  809  grep 'f23' last.fake > lastf23.fake
+  810  wc -l lastf23.fake
+  811  grep 'Sun' lastf23.fake | awk '{print $1}' | sort -u
+  812  awk '$NF >= 23 || $NF <= 4' lastf23.fake | awk '{print $1}' | sort -u
+  813  awk '$NF >= 5 && $NF <= 9' lastf23.fake | awk '{print $1}' | sort -u
+  814  awk '$1 ~ /^t/' lastf23.fake
+  815  awk -F: '$1 ~ /^a/ && $3 % 2 == 0' passwd.fake
+  816  sed -e 's/[a-zA-Z0-9 ]//g' passwd.fake | sort -u
+  817  awk -F: -v OFS="\t" '$1 ~ /^a/ && $3 % 2 == 0' passwd.fake
+  818  wc -l last.fake
+  819  grep 'f23' last.fake > lastf23.fake
+  820  wc -l lastf23.fake
+  821  grep 'Sun' lastf23.fake | awk '{print $1}' | sort | uniq
+  822  awk '$NF ~ /23$/ && $NF >= 11 && $NF <= 4 {print $1}' lastf23.fake | sort | uniq
+  823  awk '$3 == "Sun" {print $1}' lastf23.fake | sort | uniq
+  824  awk '$NF ~ /23$/ && $NF >= 11 && $NF <= 4 {print $1}' lastf23.fake | sort | uniq
+  825  awk -F' ' '{split($6, a, ":"); if ((a[1] >= 23 && a[2] >= 0) || (a[1] <= 4 && a[2] >= 0)) print $1}' lastf23.fake | sort | uniq
+  826  awk '$NF ~ /23$/ && $NF >= 5 && $NF <= 9 {print $1}' lastf23.fake | sort | uniq
+  827  awk -F' ' '{split($6, a, ":"); if ((a[1] >= 5 && a[2] >= 0) && (a[1] <= 9 && a[2] >= 0)) print $1}' lastf23.fake | sort | uniq
+  828  awk '$1 ~ /^t/ {print $1}' lastf23.fake
+  829  awk -F: '$1 ~ /^a/ && $3 % 2 == 0 {print $1}' passwd.fake
+  830  awk -F: '$1 ~ /^a/ {print $1}' passwd.fake
+  831  awk -F: '{print $1}' passwd.fake
+  832  awk -F'{' '{print $1}' passwd.fake | grep -Eo 'a[^{]+' | awk '$1 % 2 == 0 {print}'
+  833  cat passwd.fake
+  834  awk -F'"' '$2 ~ /^a/ && $4 % 2 == 0 {print $2}' passwd.fake
+  835  awk -F: '$1 ~ /^a/ && $3 % 2 == 0' passwd.fake
+  836  awk -F: '$1 ~ /^a/ && $3 % 2 == 0 {print $0}' passwd.fake
+  837  awk -F: '{ if ($1 ~ /^a/ && $3 % 2 == 0) print $0 }' passwd.fake
+  838  awk -F: '$1 ~ /^a/ && $3 % 2 == 0 {print $1}' passwd.fake
+  839  sed -E 's/[a-zA-Z0-9 ]//g' passwd.fake | sort -u
+  840  cat passwd.fake
+  841  grep "a" paawk -F: '$1 ~ /^a/' passwd.fake
+  842  awk -F: '$1 ~ /^a/' passwd.fake
+  843  grep '^a' passwd.fake
+  844  man last
+  845  awk '$4 ~ /Sun/ {print $1}' lastf23.fake | sort | uniq
+  846  awk '$4 ~ /Sun/ {print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "The list of people who worked on Sunday are:"} \
+  847       {print $0} \
+  848       END {print "Kudos to these people for putting in the work"}'
+  849  awk '$4 ~ /Sun/ {print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "The list of people who worked on Sunday are:"} {print $0} END {print "Kudos to these people for putting in the work"}'
+  850  awk '$5 ~ /11:/, $5 ~ /04:/{print $1}' lastf23.fake | sort | uniq
+  851  awk '($5 >= "23:00" || $5 <= "04:00"){print $1}' lastf23.fake | sort | uniq
+  852  awk '($5 >= "23:00" || $5 <= "04:00"){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
+  853  awk '($5 >= "23:00" || ($5 >= "00:00" && $5 <= "04:00")){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
+  854  h
+  855  awk '($5 >= "23:00" || ($5 >= "00:00" && $5 <= "04:00")){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
+  856  awk '($5 >= "05:00" && $5 <= "09:00"){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Early Birds List:"} {print $0} END {print "Early Birds are dope. Please ensure you get enough sleep though."}'
+  857  awk '$5 >= "05:00" && $5 <= "09:00" {print $1}' lastf23.fake | sort | uniq
+  858  awk '$NF ~ /([5-9]:[0-5][0-9]:[0-5][0-9])|(09:00:00)/ {print $1}' last.fake | sort | uniq
+  859  cat last.fake
+  860  awk '$NF >= "05:00:00" && $NF <= "09:00:00" {print $1}' last.fake | sort | uniq
+  861  awk '{split($10, a, ":"); if (a[1] >= 5 && a[1] <= 9) print $1}' last.fake | sort | uniq
+  862  awk '$NF ~ /:[0-9][0-9]:[0-9][0-9]/ && $NF >= ":05:00" && $NF <= ":09:00" {print $1}' last.fake | sort | uniq
+  863  grep -Eo '^[^[:space:]]+' last.fake | awk -F: '$1 >= 5 && $1 <= 9 {print $1}' | sort | uniq
+  864  awk '($5 >= "23:00" || ($5 >= "00:00" && $5 <= "04:00")){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
+  865  awk '($5 >= "05:00" || ($5 <= "09:00")){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
+  866  awk '($5 >= "05:00" && ($5 <= "09:00")){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
+  867  awk '($5 >= "05:00" && $5 <= "09:00"){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Early Birds List:"} {print $0} END {print "Early Birds are dope. Please ensure you get enough sleep though."}'
+  868  awk '$7 >= 5 && $7 <= 9 {print $1}' lastf23.fake | sort -u
+  869  awk '{print $1}' lastf23.fake | sort -u
+  870  cat lastf23.fake
+  871  cat last.fake
+  872  awk '($5 >= "23:00" || ($5 >= "00:00" && $5 <= "04:00")){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
+  873  print $0
+  874  awk '{print $1}' lastf23.fake | sort -u
+  875  awk '{print $0}' lastf23.fake | sort -u
+  876  awk '{print $2}' lastf23.fake | sort -u
+  877  awk '{print $3}' lastf23.fake | sort -u
+  878  awk '{print $4}' lastf23.fake | sort -u
+  879  awk '{print $5}' lastf23.fake | sort -u
+  880  awk '{print $6}' lastf23.fake | sort -u
+  881  awk '{print $7}' lastf23.fake | sort -u
+  882  awk '{print $8}' lastf23.fake | sort -u
+  883  awk '{print $5}' lastf23.fake | sort -u
+  884  awk '($6 >= "23:00" || ($6 >= "00:00" && $6 <= "04:00")){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
+  885  awk '($7 >= "23:00" || ($7 >= "00:00" && $7 <= "04:00")){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
+  886  awk '($7 >= "23:00" || ($7 >= "00:00" && $7 <= "04:00")){print $1}' lastf23.fake | sort | uniq
+  887  awk '{print $1}' lastf23.fake | sort -u
+  888  awk '$4 >= "10:00:00" && $4 <= "12:00:00" { print $1 }' logfile.txt
+  889  awk '$2 >= "10:00" && $2 <= "12:00" { print $1 }' lastf23.fake | sort | uniq
+  890  awk '$2 >= "10:00" && $2 <= "12:00" { print $1 }' lastf23.fake
+  891  awk '$2 >= ("10:00" && $2 <= "12:00") { print $1 }' lastf23.fake
+  892  awk '{print $0}' your_data_file
+  893  cat lastf23.fake
+  894  awk '($7 >= "23:00" && $8 <= "04:00") {print $1}' lastf23.fake | sort -u
+  895  awk '($7 >= "05:00" && $8 <= "09:00") {print $1}' lastf23.fake | sort -u
+  896  awk {print $7}
+  897  awk '{print &7}'
+  898  awk '{print $7}
+  899  awk '{print &7}'
+  900  awk '{print $7}'
+  901  awk '{print $7}' lastf23.fake
+  902  awk '{print $8}' lastf23.fake
+  903  awk '{print $9}' lastf23.fake
+  904  awk '($7 >= "23:00" && $9 <= "04:00") {print $1}' lastf23.fake | sort -u
+  905  awk '($7 >= "23:00" && $8 <= "04:00") {print $1}' lastf23.fake | sort -u
+  906  awk '($7 >= "05:00" && $9 <= "09:00") {print $1}' lastf23.fake | sort -u
+  907  awk '($7 >= "05:00" && $8 <= "09:00") {print $1}' lastf23.fake | sort -u
+  908  cd cs131
+  909  cd Assignment3
+  910  vi Assignment3.txt
+  911  cd cs131
+  912  cd Assignment3
+  913  cd cs131
+  914  cd Assignment3
+  915  vi Assignment3.txt
+  916  vi Assingment3.txt
+  917  cat Assingmnt3.txt
+  918  cat Assignment3.txt
+  919  cat Assingmnt3.txt
+  920  ls
+  921  cat Assingment3.txt
+  922  cp Assingment3.txt Assignment3.txt
+  923  ls
+  924  cat Assignment3.txt
+  925  cd cs131
+  926  cd ..
+  927  git add .
+  928  git add Assignment3
+  929  git status
+  930  cd Assignment3
+  931  history > cmds.log
+  932  ls
+  933  cd ..
+  934  git add .
+  935  git add Assignment3
+  936  git status
+  937  cd Assignment3
+  938  git commit -m"add"
+  939  git push orgin master
+  940  git push --set-upstream origin master
+  941  cd cs131
+  942  cd Assignment3
+  943  awk '{print $1}' lastf23.fake | sort -u
+  944  awk '($5 >= "23:00" || ($5 >= "00:00" && $5 <= "04:00")){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
+  945  awk '($5 >= "23:00" || ($5 >= "00:00" && $5 <= "04:00")){print $1}' lastf23.fake | sort | uniq | awk 'BEGIwc -l last.fakeN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
+  946  wc -l last.fake
+  947  grep 'f23' last.fake > lastf23.fake
+  948  wc -l lastf23.fake
+  949  cat lastf23.fake
+  950  awk '$4=="Sun" {print $1}' lastf23.fake | sort | uniq
+  951  awk '$4==Sun {print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "The list of people who worked on Sunday are:"} {print $0} END {print "Kudos to these people for putting in the work"}'
+  952  '$4==Sun {print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "The list of people who worked on Sunday are:"} {print $0} END {print "Kudos to these people for putting in the work"}'
+  953  The list of people who worked on'$4==Sun {print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "The list of people who worked on Sunday are:"} {print $0} END {print "Kudos to these people for putting in the work"}'
+  954  The list of people who worked on
+  955  awk '($4==Sun) {print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "The list of people who worked on Sunday are:"} {print $0} END {print "Kudos to these people for putting in the work"}'
+  956  awk '($4=="Sun") {print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "The list of people who worked on Sunday are:"} {print $0} END {print "Kudos to these people for putting in the work"}'
+  957  awk '($7 >= "23:00" && $8 <= "04:00") {print $1}' lastf23.fake | sort -uawk '($7 >= "23:00" && $8 <= "04:00"){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
+  958  awk '($7 >= "23:00" && $8 <= "04:00"){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
+  959  awk '($7 >= "05:00" && $8 <= "09:00"){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Early Birds List:"} {print $0} END {print "Early Birds are dope. Please ensure you get enough sleep though."}'
+  960  awk '$1 ~ /^t/' lastf23.fake | sort -u
+  961  awk '$1 ~ /^a/ && $3 % 2 == 0' passwd.fake | sort -u
+  962  awk '($1 ~ /^a/ && $3 % 2 == 0)' passwd.fake | sort -u
+  963  xawk '($1 ~ /^a/ && $3 % 2 == 0)' passwd.fake | sort -u
+  964  awk '($1==/^a/ && $3 % 2 == 0)' passwd.fake | sort -u
+  965  awk '($1 ~ /^a/ && $3 % 2 == 0)' passwd.fake | sort -uawk -F: '$1 ~ /^a/ && $3 % 2 == 0 {print $1}' passwd.fake | sort -u
+  966  awk -F: '$1 ~ /^a/ && $3 % 2 == 0 {print $1}' passwd.fake | sort -u
+  967  awk -F: '($1 ~ /^a/) && ($3 % 2 == 0) {print $1}' passwd.fake | sort -u
+  968  awk -F: '($1 ~ /^a/) && ($2 % 2 == 0) {print $1}' passwd.fake | sort -u
+  969  sed 's/[a-zA-Z0-9 ]//g' passwd.fake | sort -u
+  970  cd cs131
+  971  ls
+  972  mkdir MiniProjectGroup2
+  973  cd MiniProjectGroup2
+  974  https://www.kaggle.com/datasets/alexq1111/imdb-top-rated-english-movies/
+  975  pip install kaggle
+  976  wget how do i donwload https://www.kaggle.com/datasets/alexq1111/imdb-top-rated-english-movies/ to mac book terminal
+  977  wget https://www.kaggle.com/datasets/alexq1111/imdb-top-rated-english-movies/
+  978  ls
+  979  cat index.html
+  980  ls
+  981  index.html.1
+  982  cat index.html.1
+  983  touch Names.txt
+  984  echo -e "Abdul\nHamza\nRogelio" > Names.txt
+  985  history > cmds.log
