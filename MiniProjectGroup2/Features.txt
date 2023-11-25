@@ -1,0 +1,10 @@
+Feature: 
+Feature: Title
+Feature: Certificate
+Feature: Duration
+Feature: Genre
+Feature: Rate
+Feature: Metascore
+Feature: Description
+Feature: Cast
+Feature: Info

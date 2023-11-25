@@ -1,0 +1,10 @@
+
+Title
+Certificate
+Duration
+Genre
+Rate
+Metascore
+Description
+Cast
+Info
