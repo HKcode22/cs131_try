@@ -63,3 +63,37 @@ for index, value in enumerate(genres_count.head(10)['Count']):
 genres_count.set_index('Genre', inplace=True)
 plt.pie(genres_count.head(10)['Count'], labels=genres_count.head(10).index, autopct='%1.1f%%', startangle=90, colors=['skyblue', 'lightcoral', 'lightgreen', 'lightyellow', 'lightpink'])
 plt.show()
+
+
+
+
+
+
+
+
+
+
+
+# Step 1: Extract relevant information for Sci-Fi and History genres
+sci_fi_mask = df['Genre'].str.contains('Sci-Fi')
+history_mask = df['Genre'].str.contains('History')
+
+# Step 2: Calculate the average box office for each genre
+sci_fi_avg_gross = df.loc[sci_fi_mask, 'Info'].str.extract(r'Gross: \$([0-9,.]+)M').astype(float).mean()
+history_avg_gross = df.loc[history_mask, 'Info'].str.extract(r'Gross: \$([0-9,.]+)M').astype(float).mean()
+
+# Handle cases where there are missing or NaN values
+average_gross = [sci_fi_avg_gross.fillna(0).item(), history_avg_gross.fillna(0).item()]
+
+# Check for a non-empty DataFrame
+if any(average_gross):
+    # Step 3: Create a pie chart
+    genres = ['Sci-Fi', 'History']
+    plt.pie(average_gross, labels=genres, autopct='%1.1f%%', startangle=90)
+    plt.title('Average Box Office for Sci-Fi and History Genres')
+    plt.show()
+else:
+    print("No data available for Sci-Fi and History genres.")
+
+
+
