@@ -1,1000 +1,1000 @@
-   55  cat ws5.txt
-   56  vi script.sh
-   57  mkdir -p "Workhsheet 5/United States" && music_count=0 && entertainment_count=0 && gaming_count=0 && comedy_count=0 && while IFS=, read -r channel category country; do [ "$country" = "United States" ] && case "$category" in "Music") ((music_count++)) ;; "Entertainment") ((entertainment_count++)) ;; "Gaming") ((gaming_count++)) ;; "Comedy") ((comedy_count++)) ;; esac; done < "Global YouTube Statistics.csv" && echo "Music: $music_count" > ws5.txt && echo "Entertainment: $entertainment_count" >> ws5.txt && echo "Gaming: $gaming_count" >> ws5.txt && echo "Comedy: $comedy_count" >> ws5.txt
-   58  cat ws5.txt
-   59  mkdir -p "Workhsheet 5/United States" && music_count=0 && entertainment_count=0 && gaming_count=0 && comedy_count=0 && while IFS=, read -r channel category country; do [ "$country" = "United States" ] && case "$category" in "Music") ((music_count++)) ;; "Entertainment") ((entertainment_count++)) ;; "Gaming") ((gaming_count++)) ;; "Comedy") ((comedy_count++)) ;; esac; done < "Global YouTube Statistics.csv" && echo "Music: $music_count" > ws5.txt && echo "Entertainment: $entertainment_count" >> ws5.txt && echo "Gaming: $gaming_count" >> ws5.txt && echo "Comedy: $comedy_count" >> ws5.txt
-   60  mkdir -p "Workhsheet 5/United States" && music_count=0 && entertainment_count=0 && gaming_count=0 && comedy_count=0 && while IFS=, read -r channel category country; do [ "$country" = "United States" ] && case "$category" in "Music") ((music_count++)) ;; "Entertainment") ((entertainment_count++)) ;; "Gaming") ((gaming_count++)) ;; "Comedy") ((comedy_count++)) ;; esac; done < "Global YouTube Statistics.csv" && echo "Music: $music_count" > ws55.txt && echo "Entertainment: $entertainment_count" >> ws55.txt && echo "Gaming: $gaming_count" >> ws55.txt && echo "Comedy: $comedy_count" >> ws55.txt
-   61  cat ws55.txt
-   62  ls
-   63  categories=("Music" "Entertainment" "Gaming" "Comedy"); for category in "${categories[@]}"; do awk -F, -v category="$category" '$3 == "United States" && $4 == category {print $0}' "Global YouTube Statistics.csv" > "Workhsheet 5/United States/$category.txt"; done; wc -l "Workhsheet 5/United States/Music.txt" "Workhsheet 5/United States/Entertainment.txt" "Workhsheet 5/United States/Gaming.txt" "Workhsheet 5/United States/Comedy.txt" > ws5.txt
-   64  cat ws5.txt
-   65  categories=("Music" "Entertainment" "Gaming" "Comedy"); for category in "${categories[@]}"; do awk -F, -v category="$category" '$3 == "United States" && $4 == category {print $0}' 'Global YouTube Statistics.csv' > "Workhsheet 5/United States/$category.txt"; done; wc -l "Workhsheet 5/United States/Music.txt" "Workhsheet 5/United States/Entertainment.txt" "Workhsheet 5/United States/Gaming.txt" "Workhsheet 5/United States/Comedy.txt" > ws5.txt
-   66  cat ws5.txt
+    4  awk '$NF >= "05:00:00" && $NF <= "09:00:00" {print $1}' last.fake | sort | uniq
+    5  awk '{split($10, a, ":"); if (a[1] >= 5 && a[1] <= 9) print $1}' last.fake | sort | uniq
+    6  awk '$NF ~ /:[0-9][0-9]:[0-9][0-9]/ && $NF >= ":05:00" && $NF <= ":09:00" {print $1}' last.fake | sort | uniq
+    7  grep -Eo '^[^[:space:]]+' last.fake | awk -F: '$1 >= 5 && $1 <= 9 {print $1}' | sort | uniq
+    8  awk '($5 >= "23:00" || ($5 >= "00:00" && $5 <= "04:00")){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
+    9  awk '($5 >= "05:00" || ($5 <= "09:00")){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
+   10  awk '($5 >= "05:00" && ($5 <= "09:00")){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
+   11  awk '($5 >= "05:00" && $5 <= "09:00"){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Early Birds List:"} {print $0} END {print "Early Birds are dope. Please ensure you get enough sleep though."}'
+   12  awk '$7 >= 5 && $7 <= 9 {print $1}' lastf23.fake | sort -u
+   13  awk '{print $1}' lastf23.fake | sort -u
+   14  cat lastf23.fake
+   15  cat last.fake
+   16  awk '($5 >= "23:00" || ($5 >= "00:00" && $5 <= "04:00")){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
+   17  print $0
+   18  awk '{print $1}' lastf23.fake | sort -u
+   19  awk '{print $0}' lastf23.fake | sort -u
+   20  awk '{print $2}' lastf23.fake | sort -u
+   21  awk '{print $3}' lastf23.fake | sort -u
+   22  awk '{print $4}' lastf23.fake | sort -u
+   23  awk '{print $5}' lastf23.fake | sort -u
+   24  awk '{print $6}' lastf23.fake | sort -u
+   25  awk '{print $7}' lastf23.fake | sort -u
+   26  awk '{print $8}' lastf23.fake | sort -u
+   27  awk '{print $5}' lastf23.fake | sort -u
+   28  awk '($6 >= "23:00" || ($6 >= "00:00" && $6 <= "04:00")){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
+   29  awk '($7 >= "23:00" || ($7 >= "00:00" && $7 <= "04:00")){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
+   30  awk '($7 >= "23:00" || ($7 >= "00:00" && $7 <= "04:00")){print $1}' lastf23.fake | sort | uniq
+   31  awk '{print $1}' lastf23.fake | sort -u
+   32  awk '$4 >= "10:00:00" && $4 <= "12:00:00" { print $1 }' logfile.txt
+   33  awk '$2 >= "10:00" && $2 <= "12:00" { print $1 }' lastf23.fake | sort | uniq
+   34  awk '$2 >= "10:00" && $2 <= "12:00" { print $1 }' lastf23.fake
+   35  awk '$2 >= ("10:00" && $2 <= "12:00") { print $1 }' lastf23.fake
+   36  awk '{print $0}' your_data_file
+   37  cat lastf23.fake
+   38  awk '($7 >= "23:00" && $8 <= "04:00") {print $1}' lastf23.fake | sort -u
+   39  awk '($7 >= "05:00" && $8 <= "09:00") {print $1}' lastf23.fake | sort -u
+   40  awk {print $7}
+   41  awk '{print &7}'
+   42  awk '{print $7}
+   43  awk '{print &7}'
+   44  awk '{print $7}'
+   45  awk '{print $7}' lastf23.fake
+   46  awk '{print $8}' lastf23.fake
+   47  awk '{print $9}' lastf23.fake
+   48  awk '($7 >= "23:00" && $9 <= "04:00") {print $1}' lastf23.fake | sort -u
+   49  awk '($7 >= "23:00" && $8 <= "04:00") {print $1}' lastf23.fake | sort -u
+   50  awk '($7 >= "05:00" && $9 <= "09:00") {print $1}' lastf23.fake | sort -u
+   51  awk '($7 >= "05:00" && $8 <= "09:00") {print $1}' lastf23.fake | sort -u
+   52  cd cs131
+   53  cd Assignment3
+   54  vi Assignment3.txt
+   55  cd cs131
+   56  cd Assignment3
+   57  cd cs131
+   58  cd Assignment3
+   59  vi Assignment3.txt
+   60  vi Assingment3.txt
+   61  cat Assingmnt3.txt
+   62  cat Assignment3.txt
+   63  cat Assingmnt3.txt
+   64  ls
+   65  cat Assingment3.txt
+   66  cp Assingment3.txt Assignment3.txt
    67  ls
-   68  categories=("Music" "Entertainment" "Gaming" "Comedy"); for category in "${categories[@]}"; do awk -F, -v category="$category" '$3 == "United States" && $4 == category {print $0}' 'Global YouTube Statistics.csv' > "Worksheet 5/United States/$category.txt"; done; wc -l "Worksheet 5/United States/Music.txt" "Worksheet 5/United States/Entertainment.txt" "Worksheet 5/United States/Gaming.txt" "Worksheet 5/United States/Comedy.txt" > ws5.txt
-   69  categories=("Music" "Entertainment" "Gaming" "Comedy"); for category in "${categories[@]}"; do awk -F, -v category="$category" '$3 == "United States" && $4 == category {print $0}' 'Global YouTube Statistics.csv' > "Workhsheet 5/United States/$category.txt"; done; wc -l "Workhsheet 5/United States/Music.txt" "Workhsheet 5/United States/Entertainment.txt" "Workhsheet 5/United States/Gaming.txt" "Workhsheet 5/United States/Comedy.txt" > ws5.txt
-   70  cat ws5.txt
-   71  mkdir -p "Worksheet 5/United Stat es' && categories=("Music" "Entertainment" "Gaming" "Comedy") && for category in "${categories[@1}"; do grep "United States, .*category" "Global YouTube Statistics.cv' >> "Workhsheet 5/
-   72  United States/${category}.txt"; done
-   73  mkdir -p "Worksheet 5/United Stat es' && categories=("Music" "Entertainment" "Gaming" "Comedy") && for category in "${categories[@1}"; do grep "United States, .*category" "Global YouTube Statistics.cv' >> "Workhsheet 5/; United States/${category}.txt"; done
-   74  exit
-   75  exit
-   76  quit
-   77  exit
-   78  exit
-   79  eixt
-   80  eixt
-   81  exit
-   82  "wowo"
-   83  'exit'
-   84  exit
-   85  exit
-   86  exit
-   87  mkdir -p "Worksheet 5/United Stat es' && categories=("Music" "Entertainment" "Gaming" "Comedy") && for category in "${categories[@1}"; do grep "United States, .*category" "Global YouTube Statistics.cv' >> "Workhsheet 5/
-   88  mkdir -p "Worksheet 5/United Stat es' && categories=("Music" "Entertainment" "Gaming" "Comedy") && for category in "${categories[@1}"; do grep "United States, .*category" "Global YouTube Statistics.cv' >> "Workhsheet 5/United States/${category}.txt"; done
-   89  mkdir -p "Worksheet 5/United Stat es' && categories=("Music" "Entertainment" "Gaming" "Comedy") && for category in "${categories[@1}"; do grep "United States, .*category" "Global YouTube Statistics.cv' >> "Workhsheet 5/United States/${category}.txt"; done
-   90  cd cs131
-   91  cd Worksheet5
-   92  vi ws5.txt
-   93  input_file="Global YouTube Statistics.csv"
-   94  output_directory="Workhsheet 5/United States"
-   95  mkdir -p "$output_directory"
-   96  categories=("Music" "Entertainment" "Gaming" "Comedy")
-   97  for category in "${categories[@]}"; do     touch "$output_directory/$category.txt"; done
-   98  count_and_write_to_ws5() {     category_name="$1";     category_file="$output_directory/$category_name.txt";     entry_count=$(wc -l < "$category_file");     echo "$category_name: $entry_count" >> "ws5.txt"; }
-   99  IFS=$'\n'
-  100  while read -r line; do
-  101      IFS=',' read -r -a fields <<< "$line";      if [[ "${fields[3]}" == "United States" ]]; then         for category in "${categories[@]}"; do             if [[ "${fields[4]}" == "$category" ]]; then                 echo "$line" >> "$output_directory/$category.txt";             fi;         done;     fi; done < "$input_file"
-  102  for category in "${categories[@]}"; do     count_and_write_to_ws5 "$category"; done
-  103  vi script.sh
-  104  input_file="Global YouTube Statistics.csv"; output_directory="Workhsheet 5/United States"; mkdir -p "$output_directory"; categories=("Music" "Entertainment" "Gaming" "Comedy"); for category in "${categories[@]}"; do touch "$output_directory/$category.txt"; done; count_and_write_to_ws5() { category_name="$1"; category_file="$output_directory/$category_name.txt"; entry_count=$(wc -l < "$category_file"); echo "$category_name: $entry_count" >> "ws5.txt"; }; IFS=$'\n'; while read -r line; do IFS=',' read -r -a fields <<< "$line"; if [[ "${fields[3]}" == "United States" ]]; then for category in "${categories[@]}"; do if [[ "${fields[4]}" == "$category" ]]; then echo "$line" >> "$output_directory/$category.txt"; fi; done; fi; done < "$input_file"; for category in "${categories[@]}"; do count_and_write_to_ws5 "$category"; done
-  105  cat ws5.txt
-  106  ls
-  107  cat 'Global YouTube Statistics.csv'
-  108  grep Music
-  109  touch ws5.txt
-  110  input_file="Global YouTube Statistics.csv"; output_directory="Workhsheet 5/United States"; mkdir -p "$output_directory"; touch "ws5.txt"; categories=("Music" "Entertainment" "Gaming" "Comedy"); for category in "${categories[@]}"; do touch "$output_directory/$category.txt"; done; count_and_write_to_ws5() { category_name="$1"; category_file="$output_directory/$category_name.txt"; entry_count=$(wc -l < "$category_file"); echo "$category_name: $entry_count" >> "ws5.txt"; }; IFS=$'\n'; while read -r line; do IFS=',' read -r -a fields <<< "$line"; if [[ "${fields[3]}" == "United States" ]]; then for category in "${categories[@]}"; do if [[ "${fields[4]}" == "$category" ]]; then echo "$line" >> "$output_directory/$category.txt"; fi; done; fi; done < "$input_file"; for category in "${categories[@]}"; do count_and_write_to_ws5 "$category"; done
-  111  cat ws5.txt
-  112  vi ws5.txt
-  113  cat ws5.txt
-  114  input_file="Global YouTube Statistics.csv"; output_directory="Workhsheet 5/United States"; mkdir -p "$output_directory"; touch "ws5.txt"; categories=("Music" "Entertainment" "Gaming" "Comedy"); for category in "${categories[@]}"; do touch "$output_directory/$category.txt"; done; count_and_write_to_ws5() { category_name="$1"; category_file="$output_directory/$category_name.txt"; entry_count=$(wc -l < "$category_file"); echo "$category_name: $entry_count" >> "ws5.txt"; }; IFS=$'\n'; while read -r line; do IFS=',' read -r -a fields <<< "$line"; if [[ "${fields[3]}" == "United States" ]]; then for category in "${categories[@]}"; do if [[ "${fields[4]}" == "$category" ]]; then echo "$line" >> "$output_directory/$category.txt"; fi; done; fi; done < "$input_file"; for category in "${categories[@]}"; do count_and_write_to_ws5 "$category"; done
-  115  cat ws5.txt
-  116  input_file="Global YouTube Statistics.csv"; output_directory="Workhsheet 5/United States"; mkdir -p "$output_directory"; touch "ws5.txt"; categories=("Music" "Entertainment" "Gaming" "Comedy"); for category in "${categories[@]}"; do touch "$output_directory/$category.txt"; done; IFS=$'\n'; cat "$input_file" | while read -r line; do IFS=',' read -r -a fields <<< "$line"; if [ "${fields[3]}" = "United States" ]; then for category in "${categories[@]}"; do if [ "${fields[4]}" = "$category" ]; then echo "$line" >> "$output_directory/$category.txt"; fi; done; fi; done; for category in "${categories[@]}"; do echo "$category: $(cat "$output_directory/$category.txt" | wc -l)" >> "ws5.txt"; done
-  117  cat ws5.txt
-  118  input_file="Global YouTube Statistics.csv"; output_directory="Workhsheet 5/United States"; mkdir -p "$output_directory"; touch "results.txt"; categories=("Music" "Entertainment" "Gaming" "Comedy"); for category in "${categories[@]}"; do touch "$output_directory/$category.txt"; done; IFS=$'\n'; cat "$input_file" | while read -r line; do IFS=',' read -r -a fields <<< "$line"; if [ "${fields[3]}" = "United States" ]; then for category in "${categories[@]}"; do if [ "${fields[4]}" = "$category" ]; then echo "$line" >> "$output_directory/$category.txt"; fi; done; fi; done; for category in "${categories[@]}"; do echo "$category: $(cat "$output_directory/$category.txt" | wc -l)" >> "results.txt"; done
-  119  cat results.txt
-  120  mkdir -p "Worksheet 5/United Stat es' && categories=("Music" "Entertainment" "Gaming" "Comedy") && for category in "${categories[@1}"; do grep "United States, .*category" "Global YouTube Statistics.cv' >> "Workhsheet 5/ United States/${category}.txt"; done
-  121  mkdir -p "Worksheet 5/Untied States' 
-  122  mkdir -p "Worksheet 5/Untied States" && categories=("Music" "Entertainment" "Gaming" "Comedy") && for category in "${categories[@]}"; do grep "United States,.*$category" "Global Youtube Statistics.csv" >> Worksheet 5/United States/${category}.txt"; done
-  123  ls
-  124  mkdir -p "Worksheet 5/Untied States" && categories=("Music" "Entertainment" "Gaming" "Comedy") && for category in "${categories[@]}"; do grep "United States,.*$category" "Global Youtube Statistics.csv" >> Worksheet 5/United States/${category}.txt"; done
-  125  mkdir -p "Worksheet 5/Untied States" && categories=("Music" "Entertainment" "Gaming" "Comedy") && for category in "${categories[@]}"; do grep "United States,.*$category" "Global Youtube Statistics.csv" >> Worksheet 5/United States/${category}.txt"; done 
-  126  vi script.sh
-  127  ./script.sh
-  128  vi script.sh
-  129  mkdir -p "Worksheet 5/Untied States" && categories=("Music" "Entertainment" "Gaming" "Comedy") && for category in "${categories[@]}"; do grep "United States,.*$category" "Global Youtube Statistics.csv" >> "Worksheet 5/United States/${category}.txt"; done
-  130  mkdir -p "Worksheet 5/United States" && categories=("Music" "Entertainment" "Gaming" "Comedy") && for category in "${categories[@]}"; do grep "United States,.*$category" "Global Youtube Statistics.csv" >> "Worksheet 5/United States/${category}.txt"; done
-  131  ls
-  132  mkdir -p "Worksheet 5/Untied States" && categories=("Music" "Entertainment" "Gaming" "Comedy") && for category in "${categories[@]}"; do grep "United States,.*$category" "Global YouTube Statistics.csv" >> "Worksheet 5/United States/${category}.txt"; done
-  133  cat ws5.txt
-  134  wc -l "Worksheet5/United_States/Music.txt" "Worksheet5/United_States/Entertainment.txt" "Worksheet5/United_States/Gaming.txt" "Worksheet5/United_States/Comedy.txt" > ws5.txt
-  135  wc -w "Worksheet 5/United States/Music.txt" "Worksheet 5/United States/Entertainment.txt" "Worksheet 5/United States/Gaming.txt" "Worksheet 5/United States/Comedy.txt" > ws5.txt
-  136  cat ws5.txt
-  137  vi script.sh
-  138  ./script.sh
-  139  cat ws5.txt
-  140  input_file="Global YouTube Statistics.csv"; mkdir -p "Worksheet 5/United States"; categories=("Music" "Entertainment" "Gaming" "Comedy"); for category in "${categories[@]}"; do count=0; while IFS=',' read -r col1 col2 col3 col4 col5; do if [ "$col4" == "United States" ] && [ "$col5" == "$category" ]; then echo "$col1,$col2,$col3,$col4,$col5" >> "Worksheet 5/United States/$category.txt"; count=$((count+1)); fi; done < "$input_file"; echo "Number of entries in Worksheet 5/United States/$category.txt: $count" >> "ws5.txt"; done
-  141  cat ws5.txt
-  142  awk -F',' 'NR==1 {for (i=1; i<=NF; i++) if ($i == "Entertainment") print "Column " i " is Entertainment"}' "Global YouTube Statistics.csv"
-  143  head -n 1 "Global YouTube Statistics.csv" | tr ',' '\n' | cat -n | grep "Entertainment"
-  144  head -n 1 "Global YouTube Statistics.csv" | tr ',' '\n'| grep "Entertainment"
-  145  head -n 1 'Global YouTube Statistics.csv' | tr ',' '\n' | grep -n 'highest_monthly_earnings'
-  146  head -n 1 'Global YouTube Statistics.csv' | tr ',' '\n' | grep -n 'Entertainment
-  147  head -n 1 'Global YouTube Statistics.csv' | tr ',' '\n' | grep -n 'Entertainment'
-  148  input_file="Global YouTube Statistics.csv"; mkdir -p "Worksheet 5/United States"; categories=("Music" "Entertainment" "Gaming" "Comedy"); for category in "${categories[@]}"; do count=0; while IFS=',' read -r col1 col2 col3 col4 col5; do if [ "$col4" == "United States" ] && [ "$col5" == "$category" ]; then echo "$col1,$col2,$col3,$col4,$col5" >> "Worksheet 5/United States/$category.txt"; count=$((count+1)); fi; done < "$input_file"; echo "Number of entries in Worksheet 5/United States/$category.txt: $count" >> "ws5.txt"; done
-  149  cat ws5.txt
-  150  vi script.sh
-  151  ./script.sh
-  152  vi script.sh
-  153  categories=("Music" "Entertainment" "Gaming" "Comedy"); while IFS=, read -r rank youtuber subscribers video_views category title uploads country abbreviation channel_type video_views_rank country_rank channel_type_rank video_views_for_the_last_30_days lowest_monthly_earnings highest_monthly_earnings lowest_yearly_earnings highest_yearly_earnings subscribers_for_last_30_days created_year created_month created_date gross_tertiary_education_enrollment population unemployment_rate urban_population latitude longitude; do if [[ "$country" == "United States" ]]; then echo "$rank,$youtuber,$subscribers,$video_views,$category,$title,$uploads,$country,$abbreviation,$channel_type,$video_views_rank,$country_rank,$channel_type_rank,$video_views_for_the_last_30_days,$lowest_monthly_earnings,$highest_monthly_earnings,$lowest_yearly_earnings,$highest_yearly_earnings,$subscribers_for_last_30_days,$created_year,$created_month,$created_date,$gross_tertiary_education_enrollment,$population,$unemployment_rate,$urban_population,$latitude,$longitude" >> "Worksheet 5/United States/${category}.txt"; fi; done < "Global YouTube Statistics.csv"; wc -w "Worksheet 5/United States/Entertainment.txt" "Worksheet 5/United States/Gaming.txt" "Worksheet 5/United States/Comedy.txt" "Worksheet 5/United States/Music.txt" >> ws5.txt
-  154  cat ws5.txt
-  155  cat "Worksheet 5/United States/Gaming.txt"
-  156  history > cmds.log
-  157  ls
-  158  cd cs131
-  159  cd Worksheet5
-  160  ./script.sh
-  161  vi script.sh
-  162  cp script.sh oldscript.sh
-  163  cat oldscript.sh
-  164  vi script.sh
-  165  cat script.sh
-  166  chmod +x script.sh
-  167  ./script.sh
-  168  cat ws5.txt
-  169  categories=("Music" "Entertainment" "Gaming" "Comedy"); while IFS=, read -r rank youtuber subscribers video_views category title uploads country abbreviation channel_type video_views_rank country_rank channel_type_rank video_views_for_the_last_30_days lowest_monthly_earnings highest_monthly_earnings lowest_yearly_earnings highest_yearly_earnings subscribers_for_last_30_days created_year created_month created_date gross_tertiary_education_enrollment population unemployment_rate urban_population latitude longitude; do if [[ "$country" == "United States" ]]; then echo "$rank,$youtuber,$subscribers,$video_views,$category,$title,$uploads,$country,$abbreviation,$channel_type,$video_views_rank,$country_rank,$channel_type_rank,$video_views_for_the_last_30_days,$lowest_monthly_earnings,$highest_monthly_earnings,$lowest_yearly_earnings,$highest_yearly_earnings,$subscribers_for_last_30_days,$created_year,$created_month,$created_date,$gross_tertiary_education_enrollment,$population,$unemployment_rate,$urban_population,$latitude,$longitude" >> "Worksheet 5/United States/${category}.txt"; fi; done < "Global YouTube Statistics.csv"; wc -w "Worksheet 5/United States/Entertainment.txt" "Worksheet 5/United States/Gaming.txt" "Worksheet 5/United States/Comedy.txt" "Worksheet 5/United States/Music.txt" >> ws5.txt
-  170  cat script.sh
-  171  ./script.sh
-  172  vi script.sh
-  173  ./script.sh
-  174  cat ws5.txt
-  175  cat "Worksheet 5/United States/Entertainment.txt"
-  176  categories=("Music" "Entertainment" "Gaming" "Comedy"); while IFS=, read -r rank youtuber subscribers video_views category title uploads country abbreviation channel_type video_views_rank country_rank channel_type_rank video_views_for_the_last_30_days lowest_monthly_earnings highest_monthly_earnings lowest_yearly_earnings highest_yearly_earnings subscribers_for_last_30_days created_year created_month created_date gross_tertiary_education_enrollment population unemployment_rate urban_population latitude longitude; do if [[ "$country" == "United States" ]]; then echo "$rank,$youtuber,$subscribers,$video_views,$category,$title,$uploads,$country,$abbreviation,$channel_type,$video_views_rank,$country_rank,$channel_type_rank,$video_views_for_the_last_30_days,$lowest_monthly_earnings,$highest_monthly_earnings,$lowest_yearly_earnings,$highest_yearly_earnings,$subscribers_for_last_30_days,$created_year,$created_month,$created_date,$gross_tertiary_education_enrollment,$population,$unemployment_rate,$urban_population,$latitude,$longitude" >> "Worksheet 5/United States/${category}.txt"; fi; done < "Global YouTube Statistics.csv"; wc -w "Worksheet 5/United States/Entertainment.txt" "Worksheet 5/United States/Gaming.txt" "Worksheet 5/United States/Comedy.txt" "Worksheet 5/United States/Music.txt" >> ws5.txt
-  177  cat ws5/txt
-  178  cat ws5.txt
-  179  vi script.sh
-  180  ./script.sh
-  181  vi ws5.txt
-  182  cat ws5.txt
-  183  cat script.txt
-  184  cat script.sh
-  185  ls
-  186  rmdir 'Worksheet 5'
-  187  rm -r 'Worksheet 5'
-  188  ./script.sh
-  189  mkdir -p "Workhsheet 5/United States"
-  190  ./script
-  191  ./script.sh
-  192  ls
-  193  categories=("Music" "Entertainment" "Gaming" "Comedy"); while IFS=, read -r rank youtuber subscribers video_views category title uploads country abbreviation channel_type video_views_rank country_rank channel_type_rank video_views_for_the_last_30_days lowest_monthly_earnings highest_monthly_earnings lowest_yearly_earnings highest_yearly_earnings subscribers_for_last_30_days created_year created_month created_date gross_tertiary_education_enrollment population unemployment_rate urban_population latitude longitude; do if [[ "$country" == "United States" ]]; then echo "$rank,$youtuber,$subscribers,$video_views,$category,$title,$uploads,$country,$abbreviation,$channel_type,$video_views_rank,$country_rank,$channel_type_rank,$video_views_for_the_last_30_days,$lowest_monthly_earnings,$highest_monthly_earnings,$lowest_yearly_earnings,$highest_yearly_earnings,$subscribers_for_last_30_days,$created_year,$created_month,$created_date,$gross_tertiary_education_enrollment,$population,$unemployment_rate,$urban_population,$latitude,$longitude" >> "Worksheet 5/United States/${category}.txt"; fi; done < "Global YouTube Statistics.csv"; wc -w "Worksheet 5/United States/Entertainment.txt" "Worksheet 5/United States/Gaming.txt" "Worksheet 5/United States/Comedy.txt" "Worksheet 5/United States/Music.txt" >> ws5.txt
-  194  mkdir -p "Worksheet 5/United States"
-  195  ls
-  196  ls -l "Worksheet 5/United States"
-  197  ./script.sh
-  198  ws5.txt
-  199  cat ws5.txt
-  200  cd ..
-  201  git add 
-  202  git add .
-  203  git add Worksheet5
-  204  git status
-  205  cd Worksheet5
-  206  git init
-  207  git commit -m"Worksheet5"
-  208  git add
-  209  git add .
-  210  git init
-  211  git push origin master
-  212  git push -u origin master
-  213  history > cmds.log
-  214  git push origin master
-  215  git push master
-  216  git push master origin
-  217  git status
-  218  git add .
-  219  cd ..
-  220  git add Worksheet5
-  221  cd Worksheet5
-  222  git status
-  223  git push --set-upstream origin master
-  224  git branch
-  225  git checkout -b master
-  226  git checkout master
-  227  git add .
-  228  git commit -m "Initial commit"
-  229  git push --set-upstream origin master
-  230  git commit -m "Your commit message here"
-  231  git push
-  232  git push master origin
-  233  git push origin master
-  234  git push
-  235  git checkout -b origin
-  236  git push master origin
-  237  git push --set-upstream origin master
-  238  git commit -m "Message"
-  239  git push --set-upstream origin master
-  240  Please make sure you have the correct access rights
-  241  and the repository exists.
-  242  [hamzaf23@sjsu Worksheet5]$ 
-  243  [hamzaf23@sjsu Worksheet5]$ git push --set-upstream origin master
-  244  fatal: 'origin' does not appear to be a git repository
-  245  fatal: Could not read from remote repository.
-  246  Please make sure you have the correct access rights
-  247  and the repository exists.Please make sure you have the correct access rights
-  248  and the repository exists.
-  249  [hamzaf23@sjsu Worksheet5]$ 
-  250  [hamzaf23@sjsu Worksheet5]$ git push --set-upstream origin master
-  251  fatal: 'origin' does not appear to be a git repository
-  252  fatal: Could not read from remote repository.
-  253  Please make sure you have the correct access rights
-  254  and the repository exists.
-  255  git remote add origin https://github.com/HKcode22/cs131
-  256  git push --set-upstream origin master
-  257  SHA256:qrEPJjVToUhzA65CLsJekd496eQWIZv9bUl2ZE912R4
-  258  git push --set-upstream origin master
-  259  git fetch origin
-  260  git merge origin/master
-  261  git merge --allow-unrelated-histories origin/master
-  262  git push
-  263  git push --set-upstream origin origin
-  264  git add
-  265  git add .
-  266  git init
-  267  git status
-  268  cd ..
-  269  git add Worksheet5
-  270  cd ..
-  271  cd cs131
-  272  cd Worksheet5
-  273  git push --set-upstream origin origin
-  274  cd ..
-  275  git push --set-upstream origin origi
-  276  git push --set-upstream origin origin
-  277  git push --set-upstream origin
-  278  git push --set-upstream origin origi
-  279  git push --set-upstream origin
-  280  git push origin master
-  281  cd Worksheet5
-  282  git push origin master
-  283  ws5.txt
-  284  cat ws5.txt
-  285  git push --force origin master
-  286  cd ..
-  287  git push --force origin master
-  288  ls
-  289  git add Worksheet5
-  290  git add ,
-  291  git add .
-  292  git status
-  293  git push --force origin master
-  294  cd Wokrshett5
-  295  cd Worksheet5
-  296  git commit -m"add"
-  297  git push origin master
-  298  cd ..
-  299  git push origin master
-  300  git remote set-url origin git@github.com:HKcode22/cs131.git
-  301  git push origin master
-  302  git add .
-  303  git add Worksheet5
-  304  ls
-  305  git push origin master
-  306  cd Worksheet5
-  307  git commit -m"add"
-  308  git add .
-  309  git commit -m"add"
-  310  git push origin master
-  311  git push --force origin master
-  312  cd ..
-  313  git push origin
-  314  git push origin master
-  315  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
-  316  git push --force origin master
-  317  ls
-  318  git add Worksheet5
-  319  mkdir Worksheet0
-  320  git push --force origin master
-  321  git add .
-  322  git add Worksheet0
-  323  git push --force origin master
-  324  git push orign master
-  325  git push --set-upstream origin master
-  326  git commit -m "Message"
-  327  git push --set-upstream origin master
-  328  ls
-  329  cd Worksheet5
-  330  rm -r Wokrhseet1
-  331  ls
-  332  rm -r Worksheet1
-  333  rm -r Worksheet2 | rm -r Worksheet4
-  334  ls
-  335  rm -r Assignment1 | rm -r Assignment2 | rm -r Worksheet3 | rm -r sampleProject
-  336  ls
-  337  git -m"add"
-  338  git commit -m"add"
-  339  cd ..
-  340  git add .
-  341  git add WOrksheet5
-  342  git add Worksheet5
-  343  git commit -m"message"
-  344  git push --set-upstream origin master
-  345  cd cs131
-  346  mkdir Assignment3
-  347  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/awkdata/last.fake
-  348  cd Assignment3
-  349  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/awkdata/last.fake
-  350  wget https://github.com/khanchandaniashish/CS131/blob/main/awkdata/passwd.fake 
-  351  wget https://github.com/khanchandaniashish/CS131/blob/main/awkdata/ps.fake 
-  352  ls
-  353  wc -l last.fake
-  354  grep 'f23' last.fake > lastf23.fake
-  355  wc -l lastf23.fake
-  356  grep 'Sun' lastf23.fake | awk '{print $1}' | sort -u
-  357  awk '$NF >= 23 || $NF <= 4' lastf23.fake | awk '{print $1}' | sort -u
-  358  awk '$NF >= 5 && $NF <= 9' lastf23.fake | awk '{print $1}' | sort -u
-  359  awk '$1 ~ /^t/' lastf23.fake
-  360  awk -F: '$1 ~ /^a/ && $3 % 2 == 0' passwd.fake
-  361  sed -e 's/[a-zA-Z0-9 ]//g' passwd.fake | sort -u
-  362  awk -F: -v OFS="\t" '$1 ~ /^a/ && $3 % 2 == 0' passwd.fake
-  363  wc -l last.fake
-  364  grep 'f23' last.fake > lastf23.fake
-  365  wc -l lastf23.fake
-  366  grep 'Sun' lastf23.fake | awk '{print $1}' | sort | uniq
-  367  awk '$NF ~ /23$/ && $NF >= 11 && $NF <= 4 {print $1}' lastf23.fake | sort | uniq
-  368  awk '$3 == "Sun" {print $1}' lastf23.fake | sort | uniq
-  369  awk '$NF ~ /23$/ && $NF >= 11 && $NF <= 4 {print $1}' lastf23.fake | sort | uniq
-  370  awk -F' ' '{split($6, a, ":"); if ((a[1] >= 23 && a[2] >= 0) || (a[1] <= 4 && a[2] >= 0)) print $1}' lastf23.fake | sort | uniq
-  371  awk '$NF ~ /23$/ && $NF >= 5 && $NF <= 9 {print $1}' lastf23.fake | sort | uniq
-  372  awk -F' ' '{split($6, a, ":"); if ((a[1] >= 5 && a[2] >= 0) && (a[1] <= 9 && a[2] >= 0)) print $1}' lastf23.fake | sort | uniq
-  373  awk '$1 ~ /^t/ {print $1}' lastf23.fake
-  374  awk -F: '$1 ~ /^a/ && $3 % 2 == 0 {print $1}' passwd.fake
-  375  awk -F: '$1 ~ /^a/ {print $1}' passwd.fake
-  376  awk -F: '{print $1}' passwd.fake
-  377  awk -F'{' '{print $1}' passwd.fake | grep -Eo 'a[^{]+' | awk '$1 % 2 == 0 {print}'
-  378  cat passwd.fake
-  379  awk -F'"' '$2 ~ /^a/ && $4 % 2 == 0 {print $2}' passwd.fake
-  380  awk -F: '$1 ~ /^a/ && $3 % 2 == 0' passwd.fake
-  381  awk -F: '$1 ~ /^a/ && $3 % 2 == 0 {print $0}' passwd.fake
-  382  awk -F: '{ if ($1 ~ /^a/ && $3 % 2 == 0) print $0 }' passwd.fake
-  383  awk -F: '$1 ~ /^a/ && $3 % 2 == 0 {print $1}' passwd.fake
-  384  sed -E 's/[a-zA-Z0-9 ]//g' passwd.fake | sort -u
-  385  cat passwd.fake
-  386  grep "a" paawk -F: '$1 ~ /^a/' passwd.fake
-  387  awk -F: '$1 ~ /^a/' passwd.fake
-  388  grep '^a' passwd.fake
-  389  man last
-  390  awk '$4 ~ /Sun/ {print $1}' lastf23.fake | sort | uniq
-  391  awk '$4 ~ /Sun/ {print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "The list of people who worked on Sunday are:"} \
-  392       {print $0} \
-  393       END {print "Kudos to these people for putting in the work"}'
-  394  awk '$4 ~ /Sun/ {print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "The list of people who worked on Sunday are:"} {print $0} END {print "Kudos to these people for putting in the work"}'
-  395  awk '$5 ~ /11:/, $5 ~ /04:/{print $1}' lastf23.fake | sort | uniq
-  396  awk '($5 >= "23:00" || $5 <= "04:00"){print $1}' lastf23.fake | sort | uniq
-  397  awk '($5 >= "23:00" || $5 <= "04:00"){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
-  398  awk '($5 >= "23:00" || ($5 >= "00:00" && $5 <= "04:00")){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
-  399  h
-  400  awk '($5 >= "23:00" || ($5 >= "00:00" && $5 <= "04:00")){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
-  401  awk '($5 >= "05:00" && $5 <= "09:00"){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Early Birds List:"} {print $0} END {print "Early Birds are dope. Please ensure you get enough sleep though."}'
-  402  awk '$5 >= "05:00" && $5 <= "09:00" {print $1}' lastf23.fake | sort | uniq
-  403  awk '$NF ~ /([5-9]:[0-5][0-9]:[0-5][0-9])|(09:00:00)/ {print $1}' last.fake | sort | uniq
-  404  cat last.fake
-  405  awk '$NF >= "05:00:00" && $NF <= "09:00:00" {print $1}' last.fake | sort | uniq
-  406  awk '{split($10, a, ":"); if (a[1] >= 5 && a[1] <= 9) print $1}' last.fake | sort | uniq
-  407  awk '$NF ~ /:[0-9][0-9]:[0-9][0-9]/ && $NF >= ":05:00" && $NF <= ":09:00" {print $1}' last.fake | sort | uniq
-  408  grep -Eo '^[^[:space:]]+' last.fake | awk -F: '$1 >= 5 && $1 <= 9 {print $1}' | sort | uniq
-  409  awk '($5 >= "23:00" || ($5 >= "00:00" && $5 <= "04:00")){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
-  410  awk '($5 >= "05:00" || ($5 <= "09:00")){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
-  411  awk '($5 >= "05:00" && ($5 <= "09:00")){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
-  412  awk '($5 >= "05:00" && $5 <= "09:00"){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Early Birds List:"} {print $0} END {print "Early Birds are dope. Please ensure you get enough sleep though."}'
-  413  awk '$7 >= 5 && $7 <= 9 {print $1}' lastf23.fake | sort -u
-  414  awk '{print $1}' lastf23.fake | sort -u
-  415  cat lastf23.fake
-  416  cat last.fake
-  417  awk '($5 >= "23:00" || ($5 >= "00:00" && $5 <= "04:00")){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
-  418  print $0
-  419  awk '{print $1}' lastf23.fake | sort -u
-  420  awk '{print $0}' lastf23.fake | sort -u
-  421  awk '{print $2}' lastf23.fake | sort -u
-  422  awk '{print $3}' lastf23.fake | sort -u
-  423  awk '{print $4}' lastf23.fake | sort -u
-  424  awk '{print $5}' lastf23.fake | sort -u
-  425  awk '{print $6}' lastf23.fake | sort -u
-  426  awk '{print $7}' lastf23.fake | sort -u
-  427  awk '{print $8}' lastf23.fake | sort -u
-  428  awk '{print $5}' lastf23.fake | sort -u
-  429  awk '($6 >= "23:00" || ($6 >= "00:00" && $6 <= "04:00")){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
-  430  awk '($7 >= "23:00" || ($7 >= "00:00" && $7 <= "04:00")){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
-  431  awk '($7 >= "23:00" || ($7 >= "00:00" && $7 <= "04:00")){print $1}' lastf23.fake | sort | uniq
-  432  awk '{print $1}' lastf23.fake | sort -u
-  433  awk '$4 >= "10:00:00" && $4 <= "12:00:00" { print $1 }' logfile.txt
-  434  awk '$2 >= "10:00" && $2 <= "12:00" { print $1 }' lastf23.fake | sort | uniq
-  435  awk '$2 >= "10:00" && $2 <= "12:00" { print $1 }' lastf23.fake
-  436  awk '$2 >= ("10:00" && $2 <= "12:00") { print $1 }' lastf23.fake
-  437  awk '{print $0}' your_data_file
-  438  cat lastf23.fake
-  439  awk '($7 >= "23:00" && $8 <= "04:00") {print $1}' lastf23.fake | sort -u
-  440  awk '($7 >= "05:00" && $8 <= "09:00") {print $1}' lastf23.fake | sort -u
-  441  awk {print $7}
-  442  awk '{print &7}'
-  443  awk '{print $7}
-  444  awk '{print &7}'
-  445  awk '{print $7}'
-  446  awk '{print $7}' lastf23.fake
-  447  awk '{print $8}' lastf23.fake
-  448  awk '{print $9}' lastf23.fake
-  449  awk '($7 >= "23:00" && $9 <= "04:00") {print $1}' lastf23.fake | sort -u
-  450  awk '($7 >= "23:00" && $8 <= "04:00") {print $1}' lastf23.fake | sort -u
-  451  awk '($7 >= "05:00" && $9 <= "09:00") {print $1}' lastf23.fake | sort -u
-  452  awk '($7 >= "05:00" && $8 <= "09:00") {print $1}' lastf23.fake | sort -u
-  453  cd cs131
-  454  cd Assignment3
-  455  vi Assignment3.txt
-  456  cd cs131
-  457  cd Assignment3
-  458  cd cs131
-  459  cd Assignment3
-  460  vi Assignment3.txt
-  461  vi Assingment3.txt
-  462  cat Assingmnt3.txt
-  463  cat Assignment3.txt
-  464  cat Assingmnt3.txt
-  465  ls
-  466  cat Assingment3.txt
-  467  cp Assingment3.txt Assignment3.txt
-  468  ls
-  469  cat Assignment3.txt
-  470  cd cs131
-  471  cd ..
-  472  git add .
-  473  git add Assignment3
-  474  git status
-  475  cd Assignment3
-  476  history > cmds.log
-  477  ls
-  478  cd ..
-  479  git add .
-  480  git add Assignment3
-  481  git status
-  482  cd Assignment3
-  483  git commit -m"add"
-  484  git push orgin master
-  485  git push --set-upstream origin master
-  486  cd cs131
-  487  cd Assignment3
-  488  awk '{print $1}' lastf23.fake | sort -u
-  489  awk '($5 >= "23:00" || ($5 >= "00:00" && $5 <= "04:00")){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
-  490  awk '($5 >= "23:00" || ($5 >= "00:00" && $5 <= "04:00")){print $1}' lastf23.fake | sort | uniq | awk 'BEGIwc -l last.fakeN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
-  491  wc -l last.fake
-  492  grep 'f23' last.fake > lastf23.fake
-  493  wc -l lastf23.fake
-  494  cat lastf23.fake
-  495  awk '$4=="Sun" {print $1}' lastf23.fake | sort | uniq
-  496  awk '$4==Sun {print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "The list of people who worked on Sunday are:"} {print $0} END {print "Kudos to these people for putting in the work"}'
-  497  '$4==Sun {print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "The list of people who worked on Sunday are:"} {print $0} END {print "Kudos to these people for putting in the work"}'
-  498  The list of people who worked on'$4==Sun {print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "The list of people who worked on Sunday are:"} {print $0} END {print "Kudos to these people for putting in the work"}'
-  499  The list of people who worked on
-  500  awk '($4==Sun) {print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "The list of people who worked on Sunday are:"} {print $0} END {print "Kudos to these people for putting in the work"}'
-  501  awk '($4=="Sun") {print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "The list of people who worked on Sunday are:"} {print $0} END {print "Kudos to these people for putting in the work"}'
-  502  awk '($7 >= "23:00" && $8 <= "04:00") {print $1}' lastf23.fake | sort -uawk '($7 >= "23:00" && $8 <= "04:00"){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
-  503  awk '($7 >= "23:00" && $8 <= "04:00"){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
-  504  awk '($7 >= "05:00" && $8 <= "09:00"){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Early Birds List:"} {print $0} END {print "Early Birds are dope. Please ensure you get enough sleep though."}'
-  505  awk '$1 ~ /^t/' lastf23.fake | sort -u
-  506  awk '$1 ~ /^a/ && $3 % 2 == 0' passwd.fake | sort -u
-  507  awk '($1 ~ /^a/ && $3 % 2 == 0)' passwd.fake | sort -u
-  508  xawk '($1 ~ /^a/ && $3 % 2 == 0)' passwd.fake | sort -u
-  509  awk '($1==/^a/ && $3 % 2 == 0)' passwd.fake | sort -u
-  510  awk '($1 ~ /^a/ && $3 % 2 == 0)' passwd.fake | sort -uawk -F: '$1 ~ /^a/ && $3 % 2 == 0 {print $1}' passwd.fake | sort -u
-  511  awk -F: '$1 ~ /^a/ && $3 % 2 == 0 {print $1}' passwd.fake | sort -u
-  512  awk -F: '($1 ~ /^a/) && ($3 % 2 == 0) {print $1}' passwd.fake | sort -u
-  513  awk -F: '($1 ~ /^a/) && ($2 % 2 == 0) {print $1}' passwd.fake | sort -u
-  514  sed 's/[a-zA-Z0-9 ]//g' passwd.fake | sort -u
-  515  cd cs131
-  516  ls
-  517  mkdir MiniProjectGroup2
-  518  cd MiniProjectGroup2
-  519  https://www.kaggle.com/datasets/alexq1111/imdb-top-rated-english-movies/
-  520  pip install kaggle
-  521  wget how do i donwload https://www.kaggle.com/datasets/alexq1111/imdb-top-rated-english-movies/ to mac book terminal
-  522  wget https://www.kaggle.com/datasets/alexq1111/imdb-top-rated-english-movies/
-  523  ls
-  524  cat index.html
-  525  ls
-  526  index.html.1
-  527  cat index.html.1
-  528  touch Names.txt
-  529  echo -e "Abdul\nHamza\nRogelio" > Names.txt
-  530  history > cmds.log
-  531  cd ..
-  532  git add .
-  533  git add MiniPojectGroup2
-  534  git add MiniProjectGroup2
-  535  git status
-  536  cd MiniProjectGroup2
-  537  git commit -m"added"
-  538  git push origin master
-  539  cd cs131
-  540  ls
-  541  cd MiniProjectGroup2
-  542  ls
-  543  rm *.html
-  544  ls
-  545  rm index.html.1
-  546  ls
-  547  wget -O topmovies.csv
-  548  wget topmovies.csv https://www.kaggle.com/datasets/omarhanyy/imdb-top-1000
-  549  ls
-  550  cat imdb-top-1000
-  551  ls
-  552  rm imdb-top-1000
-  553  cat topmovies.csv
-  554  cd ~/Downloads
-  555  cat /path/to/your/local/Downloads/file.csv
-  556  wget https://www.kaggle.com/omarhanyy/imdb-top-1000/raw/master/topmovies.csv
-  557  ls
-  558  wget https://www.kaggle.com/omarhanyy/imdb-top-1000/raw/master/topmovies.csv
-  559  curl -O https://www.kaggle.com/omarhanyy/imdb-top-1000/raw/master/topmovies.csv
-  560  ls
-  561  cat topmovies.csv
-  562  curl -O https://www.kaggle.com/omarhanyy/imdb-top-1000/raw/master/topmovies.csv
-  563  ls
-  564  curl -I https://www.kaggle.com/omarhanyy/imdb-top-1000/raw/master/topmovies.csv
-  565  cat topmovies.csv
-  566  pip install kaggle
-  567  sudo apt-get update
-  568  pip install kaggle
-  569  wget -O "IMDB_top_1000.csv" "https://www.kaggle.com/omarhanyy/imdb-top-1000/download"
-  570  ls
-  571  cat IMDB_top_1000.csv
-  572  wget --cookies=on --header "Cookie: _kaggle_session=$(curl -s -b cookies.txt https://www.kaggle.com/account/login?returnUrl=%2Fdatasets%2Fomarhanyy%2Fimdb-top-1000 | grep -o 'csrf_token" content="[a-z0-9]\+"' | grep -o '[a-z0-9]\+' | head -n 1)" -O "IMDB_top_1000.csv" "https://www.kaggle.com/omarhanyy/imdb-top-1000/download"
-  573  .s
-  574  ls
-  575  cat IMDB_top_1000.csv
-  576  curl -LJO https://www.kaggle.com/datasets/omarhanyy/imdb-top-1000/download/IMDB%20top%201000.csv
-  577  wget --content-disposition https://www.kaggle.com/datasets/omarhanyy/imdb-top-1000/download/IMDB%20top%201000.csv
-  578  ls
-  579  cat IMDB%20top%201000.csv
-  580  ls
-  581  cat IMDB_top_1000.csv
-  582  ls
-  583  pip install kaggle
-  584  kaggle login
-  585  pip3 install kaggle
-  586  kaggle login
-  587  pip install kaggle
-  588  pip3 install --upgrade pip
-  589  pip3 install --force-reinstall kaggle
-  590  pip install kaggle
-  591  kaggle login
-  592  brew install python3
-  593  pip3 install kaggle
-  594  python3 -m kaggle
-  595  python -m kaggle
-  596  kaggle login
-  597  export PATH="/mnt/scratch/FA23_CS131_Ashish/hamzaf23/.local/bin:$PATH"
-  598  source ~/.bashrc   # or source ~/.zshrc if you're using Zsh
-  599  kaggle login
-  600  export KAGGLE_USERNAME=hamzakhansjsu
-  601  export KAGGLE_KEY=8a24a58f5bd43a51354fb2a7a66184d0
-  602  kaggle login
-  603  kaggle competitions list
-  604  export KAGGLE_USERNAME=hamzakhansjsu
-  605  export KAGGLE_KEY=8a24a58f5bd43a51354fb2a7a66184d0
-  606  pip3 install --upgrade kaggle
-  607  kaggle competitions list
-  608  pip install kaggle
-  609  chmod 600 ~/.kaggle/kaggle.json
-  610  kaggle datasets download -d omarhanyy/imdb-top-1000
-  611  unzip imdb-top-1000.zip
-  612  ls
-  613  cat 'IMDB top 1000.csv'
-  614  ls
-  615  cat IMDB%20top%201000.csv
-  616  ls
-  617  rm IMDB%20top%201000.csv
+   68  cat Assignment3.txt
+   69  cd cs131
+   70  cd ..
+   71  git add .
+   72  git add Assignment3
+   73  git status
+   74  cd Assignment3
+   75  history > cmds.log
+   76  ls
+   77  cd ..
+   78  git add .
+   79  git add Assignment3
+   80  git status
+   81  cd Assignment3
+   82  git commit -m"add"
+   83  git push orgin master
+   84  git push --set-upstream origin master
+   85  cd cs131
+   86  cd Assignment3
+   87  awk '{print $1}' lastf23.fake | sort -u
+   88  awk '($5 >= "23:00" || ($5 >= "00:00" && $5 <= "04:00")){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
+   89  awk '($5 >= "23:00" || ($5 >= "00:00" && $5 <= "04:00")){print $1}' lastf23.fake | sort | uniq | awk 'BEGIwc -l last.fakeN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
+   90  wc -l last.fake
+   91  grep 'f23' last.fake > lastf23.fake
+   92  wc -l lastf23.fake
+   93  cat lastf23.fake
+   94  awk '$4=="Sun" {print $1}' lastf23.fake | sort | uniq
+   95  awk '$4==Sun {print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "The list of people who worked on Sunday are:"} {print $0} END {print "Kudos to these people for putting in the work"}'
+   96  '$4==Sun {print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "The list of people who worked on Sunday are:"} {print $0} END {print "Kudos to these people for putting in the work"}'
+   97  The list of people who worked on'$4==Sun {print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "The list of people who worked on Sunday are:"} {print $0} END {print "Kudos to these people for putting in the work"}'
+   98  The list of people who worked on
+   99  awk '($4==Sun) {print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "The list of people who worked on Sunday are:"} {print $0} END {print "Kudos to these people for putting in the work"}'
+  100  awk '($4=="Sun") {print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "The list of people who worked on Sunday are:"} {print $0} END {print "Kudos to these people for putting in the work"}'
+  101  awk '($7 >= "23:00" && $8 <= "04:00") {print $1}' lastf23.fake | sort -uawk '($7 >= "23:00" && $8 <= "04:00"){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
+  102  awk '($7 >= "23:00" && $8 <= "04:00"){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Night Owls List:"} {print $0} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
+  103  awk '($7 >= "05:00" && $8 <= "09:00"){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN {print "Early Birds List:"} {print $0} END {print "Early Birds are dope. Please ensure you get enough sleep though."}'
+  104  awk '$1 ~ /^t/' lastf23.fake | sort -u
+  105  awk '$1 ~ /^a/ && $3 % 2 == 0' passwd.fake | sort -u
+  106  awk '($1 ~ /^a/ && $3 % 2 == 0)' passwd.fake | sort -u
+  107  xawk '($1 ~ /^a/ && $3 % 2 == 0)' passwd.fake | sort -u
+  108  awk '($1==/^a/ && $3 % 2 == 0)' passwd.fake | sort -u
+  109  awk '($1 ~ /^a/ && $3 % 2 == 0)' passwd.fake | sort -uawk -F: '$1 ~ /^a/ && $3 % 2 == 0 {print $1}' passwd.fake | sort -u
+  110  awk -F: '$1 ~ /^a/ && $3 % 2 == 0 {print $1}' passwd.fake | sort -u
+  111  awk -F: '($1 ~ /^a/) && ($3 % 2 == 0) {print $1}' passwd.fake | sort -u
+  112  awk -F: '($1 ~ /^a/) && ($2 % 2 == 0) {print $1}' passwd.fake | sort -u
+  113  sed 's/[a-zA-Z0-9 ]//g' passwd.fake | sort -u
+  114  cd cs131
+  115  ls
+  116  mkdir MiniProjectGroup2
+  117  cd MiniProjectGroup2
+  118  https://www.kaggle.com/datasets/alexq1111/imdb-top-rated-english-movies/
+  119  pip install kaggle
+  120  wget how do i donwload https://www.kaggle.com/datasets/alexq1111/imdb-top-rated-english-movies/ to mac book terminal
+  121  wget https://www.kaggle.com/datasets/alexq1111/imdb-top-rated-english-movies/
+  122  ls
+  123  cat index.html
+  124  ls
+  125  index.html.1
+  126  cat index.html.1
+  127  touch Names.txt
+  128  echo -e "Abdul\nHamza\nRogelio" > Names.txt
+  129  history > cmds.log
+  130  cd ..
+  131  git add .
+  132  git add MiniPojectGroup2
+  133  git add MiniProjectGroup2
+  134  git status
+  135  cd MiniProjectGroup2
+  136  git commit -m"added"
+  137  git push origin master
+  138  cd cs131
+  139  ls
+  140  cd MiniProjectGroup2
+  141  ls
+  142  rm *.html
+  143  ls
+  144  rm index.html.1
+  145  ls
+  146  wget -O topmovies.csv
+  147  wget topmovies.csv https://www.kaggle.com/datasets/omarhanyy/imdb-top-1000
+  148  ls
+  149  cat imdb-top-1000
+  150  ls
+  151  rm imdb-top-1000
+  152  cat topmovies.csv
+  153  cd ~/Downloads
+  154  cat /path/to/your/local/Downloads/file.csv
+  155  wget https://www.kaggle.com/omarhanyy/imdb-top-1000/raw/master/topmovies.csv
+  156  ls
+  157  wget https://www.kaggle.com/omarhanyy/imdb-top-1000/raw/master/topmovies.csv
+  158  curl -O https://www.kaggle.com/omarhanyy/imdb-top-1000/raw/master/topmovies.csv
+  159  ls
+  160  cat topmovies.csv
+  161  curl -O https://www.kaggle.com/omarhanyy/imdb-top-1000/raw/master/topmovies.csv
+  162  ls
+  163  curl -I https://www.kaggle.com/omarhanyy/imdb-top-1000/raw/master/topmovies.csv
+  164  cat topmovies.csv
+  165  pip install kaggle
+  166  sudo apt-get update
+  167  pip install kaggle
+  168  wget -O "IMDB_top_1000.csv" "https://www.kaggle.com/omarhanyy/imdb-top-1000/download"
+  169  ls
+  170  cat IMDB_top_1000.csv
+  171  wget --cookies=on --header "Cookie: _kaggle_session=$(curl -s -b cookies.txt https://www.kaggle.com/account/login?returnUrl=%2Fdatasets%2Fomarhanyy%2Fimdb-top-1000 | grep -o 'csrf_token" content="[a-z0-9]\+"' | grep -o '[a-z0-9]\+' | head -n 1)" -O "IMDB_top_1000.csv" "https://www.kaggle.com/omarhanyy/imdb-top-1000/download"
+  172  .s
+  173  ls
+  174  cat IMDB_top_1000.csv
+  175  curl -LJO https://www.kaggle.com/datasets/omarhanyy/imdb-top-1000/download/IMDB%20top%201000.csv
+  176  wget --content-disposition https://www.kaggle.com/datasets/omarhanyy/imdb-top-1000/download/IMDB%20top%201000.csv
+  177  ls
+  178  cat IMDB%20top%201000.csv
+  179  ls
+  180  cat IMDB_top_1000.csv
+  181  ls
+  182  pip install kaggle
+  183  kaggle login
+  184  pip3 install kaggle
+  185  kaggle login
+  186  pip install kaggle
+  187  pip3 install --upgrade pip
+  188  pip3 install --force-reinstall kaggle
+  189  pip install kaggle
+  190  kaggle login
+  191  brew install python3
+  192  pip3 install kaggle
+  193  python3 -m kaggle
+  194  python -m kaggle
+  195  kaggle login
+  196  export PATH="/mnt/scratch/FA23_CS131_Ashish/hamzaf23/.local/bin:$PATH"
+  197  source ~/.bashrc   # or source ~/.zshrc if you're using Zsh
+  198  kaggle login
+  199  export KAGGLE_USERNAME=hamzakhansjsu
+  200  export KAGGLE_KEY=8a24a58f5bd43a51354fb2a7a66184d0
+  201  kaggle login
+  202  kaggle competitions list
+  203  export KAGGLE_USERNAME=hamzakhansjsu
+  204  export KAGGLE_KEY=8a24a58f5bd43a51354fb2a7a66184d0
+  205  pip3 install --upgrade kaggle
+  206  kaggle competitions list
+  207  pip install kaggle
+  208  chmod 600 ~/.kaggle/kaggle.json
+  209  kaggle datasets download -d omarhanyy/imdb-top-1000
+  210  unzip imdb-top-1000.zip
+  211  ls
+  212  cat 'IMDB top 1000.csv'
+  213  ls
+  214  cat IMDB%20top%201000.csv
+  215  ls
+  216  rm IMDB%20top%201000.csv
+  217  ls
+  218  cat 'IMDB top 1000.csv'
+  219  ls
+  220  cat  IMDB_top_1000.csv
+  221  ls
+  222  rm  IMDB_top_1000.csv
+  223  ls
+  224  cat imdb-top-1000.zip
+  225  1;2c
+  226  ls
+  227  rm imdb-top-1000.zip
+  228  ls
+  229  cat 'login?titleType=dataset-downloads&showDatasetDownloadSkip=False&messageId=datasetsWelcome&returnUrl=%2Fdatasets%2Fomarhanyy%2Fimdb-top-1000?resource=download'
+  230  ls
+  231  rm 'login?titleType=dataset-downloads&showDatasetDownloadSkip=False&messageId=datasetsWelcome&returnUrl=%2Fdatasets%2Fomarhanyy%2Fimdb-top-1000?resource=download'
+  232  ls
+  233  cat topmovies.csv
+  234  rm topmovies.csv
+  235  ls
+  236  cat 'IMDB top 1000.csv'
+  237  history > cmds.log
+  238  cd ..
+  239  git add .
+  240  git add MiniProjectGroup2
+  241  git status
+  242  cd MiniProjectGroup2
+  243  git commit -m"added"
+  244  git push origin master
+  245  cd cs131
+  246  ls
+  247  cd MiniProjectGroup2
+  248  wc -l "IMDB top 1000.csv"
+  249  ls
+  250  head -n 1 "IMDB top 1000.csv" | tr ',' '\n' | nl
+  251  awk -F ',' 'NR>1 {for(i=1; i<=NF; i++) print $i}' "IMDB top 1000.csv" | sort -n | uniq -c
+  252  # Identify average rating and most common genres
+  253  awk -F ',' '{sum+=$5; count[$4]++} END {print "Average Rating:", sum/NR; print "Most Common Genres:"; for(genre in count) print genre, count[genre]}' "IMDB top 1000.csv"
+  254  awk -F ',' 'NR>1 {for(i=1; i<=NF; i++) print $i}' "IMDB top 1000.csv" | sort -n | uniq -c
+  255  cd cs131
+  256  cd ​​ssh hamzaf23@172.20.25.9
+  257  ls
+  258  cd MiniProjectGroup2
+  259  awk -F ',' 'NR>1 {for(i=1; i<=NF; i++) print "Column "i": "$i}' "IMDB top 1000.csv" | sort | uniq -c
+  260  wc -l IMDb\ top\ 1000.csv
+  261  head -n 1 'IMDB top 1000.csv'
+  262  wc -l 'IMDB top 1000.csv'
+  263  # Explore unique values in the 'Certificate' column
+  264  awk -F',' '{print $2}' 'IMDB top 1000.csv' | sort | uniq -c
+  265  # Calculate the average rating
+  266  awk -F',' '{sum += $5} END {print "Average Rating:", sum/NR}' 'IMDB top 1000.csv'
+  267  awk -F',' '{print $2}' 'IMDB top 1000.csv'
+  268  awk -F',' '{print $1}' 'IMDB top 1000.csv'
+  269  awk -F',' '{print $3}' 'IMDB top 1000.csv'
+  270  awk -F',' '{print $2}' 'IMDB top 1000.csv' 
+  271  awk -F',' '{print $3}' 'IMDB top 1000.csv' | sort | uniq -c
+  272  awk -F',' '{print $2}' 'IMDB top 1000.csv' | sort | uniq -c
+  273  awk -F',' '{print $1, $2, $3, $4}' 'IMDB top 1000.csv' | sort | uniq -c
+  274  awk -F',' '{print $3, $4}' 'IMDB top 1000.csv' | sort | uniq -c
+  275  awk -F',' '{print $2, $3, $4}' 'IMDB top 1000.csv' | sort | uniq -c
+  276  awk -F',' '{sum += $5} END {print "Average Rating:", sum/NR}' 'IMDB top 1000.csv'
+  277  awk -F',' '{sum += $4} END {print "Average Rating:", sum/NR}' 'IMDB top 1000.csv'
+  278  awk -F',' '{sum += $5} END {print "Average Rating:", sum/NR}' 'IMDB top 1000.csv'
+  279  awk -F',' '{sum += $4} END {printawk -F',' '{print $2, $3, $4}' 'IMDB top 1000.csv' | sort | uniq -c "Average Rating:", sum/NR}' 'IMDB top 1000.csv'
+  280  awk -F',' '{print $2, $3}' 'IMDB top 1000.csv' | sort | uniq -c
+  281  awk -F',' '{print $2, $3, $4}' 'IMDB top 1000.csv' | sort
+  282  awk -F',' '{print $5}' 'IMDB top 1000.csv' | sort
+  283  awk -F',' '{print $6}' 'IMDB top 1000.csv' | sort
+  284  awk -F',' '{print $7}' 'IMDB top 1000.csv' | sort
+  285  awk -F',' '{print $7}' 'IMDB top 1000.csv'
+  286  awk -F',' '{print $6}' 'IMDB top 1000.csv'
+  287  awk -F',' '{print $1 $2 $3 $4 $5 $6 $7 $8}' 'IMDB top 1000.csv' | sort
+  288  awk -F',' '{print $8}' 'IMDB top 1000.csv' | sort
+  289  awk -F',' '{print $7}' 'IMDB top 1000.csv' | sort
+  290  awk -F',' '{print $5}' "IMDB top 1000.csv"
+  291  awk -F',' '{gsub(/"/, "", $5); print $5}' "IMDB top 1000.csv"
+  292  awk -F',' '{print $0}' "IMDB top 1000.csv"
+  293  awk -F',' '{print $9}' "IMDB top 1000.csv"
+  294  awk -F',' '{print $5}' "IMDB top 1000.csv"
+  295  cut -d',' -f5 "IMDB top 1000.csv" | awk -F'"' '{sum+=$1; count+=1} END {print "Average Rating:", sum/count}'
+  296  cut -d',' -f5 "IMDB top 1000.csv"
+  297  cut -d',' -f1 "IMDB top 1000.csv"
+  298  cut -d',' -f6 "IMDB top 1000.csv"
+  299  cut -d',' -f7 "IMDB top 1000.csv"
+  300  cut -d',' -f "IMDB top 1000.csv"
+  301  cut -d',' -f5 "IMDB top 1000.csv"
+  302  cut -d',' -f5 "IMDB top 1000.csv" | grep -oP '\d+\.\d+' 
+  303  cut -d',' -f5 "IMDB top 1000.csv" | grep -oP '\d+\.\d+' | awk '{ sum += $1 } END { if (NR > 0) print "Average Rating:", sum/NR; else print "No Ratings found" }'
+  304  cut -d',' -f5 'IMDB top 1000.csv' | grep -oP '\d+\.\d+' 
+  305  cut -d',' -f5 'IMDB top 1000.csv' | grep -oP '\d+\.\d+' | awk '{ sum += $1 } END { if (NR > 0) print "Average Rating:", sum/NR; else print "No Ratings found" }'
+  306  $1
+  307  print $1
+  308  csvcut -c "Rate" "IMDB top 1000.csv"
+  309  cut -d',' -f5 "IMDB top 1000.csv" | grep -oP '\d+\.\d+' | awk '{ sum += $1 } END { if (NR > 0) print "Average Rating:", sum/NR; else print "No Ratings found" }'
+  310  cut -d ',' -f5 'IMDB top 1000.csv' | awk '{ print $5}'
+  311  awk -F',' '{print $5}' "IMDB top 1000.csv"
+  312  grep -Eo '"[0-9]+(\.[0-9]+)?"' "IMDB top 1000.csv"
+  313  awk -F'","' '{print $5}' "IMDB top 1000.csv" | sed 's/"//g'
+  314  csvcut -n "IMDB top 1000.csv"
+  315  csvcut -c 5 "IMDB top 1000.csv" | sed 's/"//g'
+  316  awk -F, '{gsub(/"/, "", $5); print $5}' "IMDB top 1000.csv"
+  317  awk -F, '{gsub(/"/, "", $6); print $6}' "IMDB top 1000.csv"
+  318  ction
+  319  Action
+  320  Drama
+  321  Biography
+  322  Action
+  323  Drama
+  324  Action
+  325  Biography
+  326  Drama
+  327  Action
+  328  Drama
+  329  Action
+  330  Drama
+  331  Action
+  332  Drama
+  333  Action
+  334  Animation
+  335  Biography
+  336  Adventure
+  337  Action
+  338  Crime
+  339  Biography
+  340  Adventure
+  341  Animation
+  342  Action
+  343  Drama
+  344   Winter... and Spring (2003)
+  345  Biography
+  346  Comedy
+  347  Action
+  348  Adventure
+  349  Animation
+  350  Comedy
+  351  Crime
+  352  Comedy
+  353  Drama
+  354  92 min
+  355  Drama
+  356  Crime
+  357  Drama
+  358  Biography
+  359  Animation
+  360  Drama
+  361  Animation
+  362  Action
+  363  Drama
+  364  Comedy
+  365  Mystery
+  366  Animation
+  367  Comedy
+  368  180 min
+  369  Actionawk -F, '{gsub(/"/, "", $5); print $5}' "IMDB top 1000.csv"
+  370  awk -F, '{gsub(/"/, "", $5); print $5}' "IMDB top 1000.csv"
+  371  awk -F, '{gsub(/"/, "", $6); print $6}' "IMDB top 1000.csv"
+  372  awk -F, 'NR > 1 && $6 ~ /^[0-9]+(\.[0-9]+)?$/ {gsub(/"/, "", $6); print $6}' "IMDB top 1000.csv"
+  373  awk -F ',' '{print $6}' "IMDB top 1000.csv" | grep -oE '[0-9]+(\.[0-9]+)?'
+  374  awk -F ',' '{print $6}' "IMDB top 1000.csv" | grep -oE '[0-9]+(\.[0-9]+)?' > ratings.txt
+  375  cat ratings.txt
+  376  awk -F ',' 'NR > 1 {gsub(/"/, "", $6); print $6}' "IMDB top 1000.csv" | grep -oE '[0-9]+(\.[0-9]+)?' | sort | uniq -c
+  377  # Assuming your dataset is in CSV format
+  378  wc -l "IMDB top 1000.csv"
+  379  # Assuming your dataset is in CSV format
+  380  head -n 1 "IMDB top 1000.csv" | tr ',' '\n' | wc -l
+  381  awk -F ',' 'NR > 1 && $6 != "" {gsub(/"/, "", $6); print $6}' "IMDB top 1000.csv" | grep -oE '[0-9]+(\.[0-9]+)?'
+  382  awk -F ',' 'NR > 1 && $6 ~ /^[0-9]+(\.[0-9]+)?$/ {gsub(/"/, "", $6); print $6}' "IMDB top 1000.csv"
+  383  awk -F ',' 'NR > 1 {gsub(/"/, "", $6); if($6 == "") print "Empty rate at line " NR; print $6}' "IMDB top 1000.csv"
+  384  awk -F ','  {print $6}' "IMDB top 1000.csv"
+  385  awk -F ',' '{print $6}' 'IMDb top 1000.csv'
+  386  awk -F ',' '{print $6}' 'IMDB top 1000.csv'
+  387  awk -F ',' '{print $7}' 'IMDB top 1000.csv'
+  388  awk -F ',' '{print $1}' 'IMDB top 1000.csv'
+  389  awk -F ',' '{print $3}' 'IMDB top 1000.csv'
+  390  awk -F ',' '{print $4}' 'IMDB top 1000.csv'
+  391  awk -F ',' '{print $6}' 'IMDB top 1000.csv'
+  392  cat 'IMDB top 1000.csv'
+  393  awk -F ',' '{print $5}' 'IMDB top 1000.csv'
+  394  head "IMDB top 1000.csv"
+  395  awk -F ',' 'NR > 1 {gsub(/"/, ""); print $7}' "IMDB top 1000.csv"
+  396  awk -F ',' 'NR > 1 {gsub(/"/, ""); print $6}' "IMDB top 1000.csv"
+  397  awk -F ',' 'NR > 1 {gsub(/"/, ""); print $6}' "IMDB top 1000.csv" | grep -oE '[0-9]+(\.[0-9]+)?'
+  398  pip install csvkit
+  399  sudo apt-get update
+  400  python3 -m venv myenv
+  401  source myenv/bin/activate
+  402  pip install csvkit
+  403  python3
+  404  cd..
+  405  cd cs131
+  406  (myenv) [hamzaf23@sjsu MiniProjectGroup2]$ deactivate
+  407  deactivate
+  408  csvcut -c "Rate" "IMDB top 1000.csv" | tail -n +2
+  409  pip install csvkit
+  410  sudo apt-get update
+  411  python3 -m pip install --user csvkit
+  412  pip install csvkit
+  413  python3 -m pip install --user csvkit
+  414  csvcut -n "IMDB top 1000.csv"
+  415  python3 --version
+  416  python3 -c 'import csv; with open("IMDB top 1000.csv", "r") as file: data = csv.reader(file); print(next(data))'
+  417  wc -l "IMDB top 1000.csv" > numberofentries.txt
+  418  head -n 1 "IMDB top 1000.csv" | tr ',' '\n' > featurescolumnames.txt
+  419  csvcut -n "IMDB top 1000.csv"
+  420  import matplotlib.pyplot as plt 
+  421  python
+  422  python3
+  423  python3 script.py
+  424  python script.py
+  425  script.py
+  426  sudo apt update
+  427  python3 --version
+  428  python3 visualize_data.py
+  429  ls
+  430  cd cs131
+  431  ls
+  432  cd MiniProjectGroup2
+  433  chmod +x visualize_data.py
+  434  ls visualize_data.py
+  435  nano visualize_data.py
+  436  ls
+  437  vi vd.py
+  438  ls
+  439  chmod +x visualize_data.py
+  440  chmod +x vd.py
+  441  python3 visualize_data.py
+  442  python3 vd.py
+  443  vi vd.py
+  444  fg
+  445  cd cs131
+  446  ls
+  447  cd MiniProjectGroup2
+  448  ls
+  449  vi vd.py
+  450  python3 vd.py
+  451  vi vd.py
+  452  python3 vd.py
+  453  install pandas
+  454  pip install pandas
+  455  pip3 install pandas
+  456  pip install --upgrade pip
+  457  pip3 install pandas
+  458  sudo apt-get install python3-dev
+  459  pip3 install --user pandas
+  460  pip3 install --user matplotlib
+  461  sudo apt-get install python3-dev
+  462  pip3 install --user python3-dev
+  463  pip3 install --user pandas
+  464  pip3 install --user numpy
+  465  pip3 install --user numpy pandas
+  466  pip3 install --user --no-build-isolation numpy pandas
+  467  pip3 install --user --no-build-isolation tomli
+  468  pip3 install --user --no-build-isolation numpy pandas
+  469  pip3 install --user --no-build-isolation tomli
+  470  pip3 install --user --no-build-isolation numpy pandas
+  471  pip3 install --user --no-build-isolation packaging
+  472  pip3 install --user --no-build-isolation numpy pandas
+  473  brew install pandas
+  474  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  475  brew install pandas
+  476  vi test1.py
+  477  python3 test1.py
+  478  cd cs131
+  479  ls
+  480  cd MiniProjectGroup2
+  481  pip install kaggle
+  482  pip3 install --upgrade kaggle
+  483  pip3 install --user numpy
+  484  sudo yum install python3-devel
+  485  su -
+  486  pip3 install --user numpy pandas
+  487  python3 -m venv myenv
+  488  source myenv/bin/activate
+  489  pip install numpy pandas
+  490  source myenv/bin/activate
+  491  pip install numpy pandas
+  492  sudo yum install python3-dev
+  493  source myenv/bin/activate
+  494  pip install numpy pandas
+  495  -m pip install --upgrade pip
+  496  pip install --upgrade pip
+  497  source myenv/bin/activate
+  498  pip install numpy pandas
+  499  deactivate
+  500  ls
+  501  python3 vd.py
+  502  vi vd.py
+  503  python3 vd.py
+  504  source myenv/bin/activate
+  505  pip install pandas
+  506  deactivate
+  507  # Example: Creating a Bar Chart with gnuplot
+  508  echo -e "Action 10\nDrama 20\nComedy 15" | gnuplot -p -e "set title 'Movie Genre Distribution'; set style fill solid; set boxwidth 0.5; set terminal dumb; plot '-' using 2:xticlabels(1) with boxes"
+  509  wc 'animation' 'IMDB top 1000.csv
+  510  wc 'animation' 'IMDB top 1000.csv'
+  511  wc "animation" 'IMDB top 1000.csv
+  512  wc "animation" 'IMDB top 1000.csv'
+  513  wc "animation" 'IMDB top 1000.csv'
+  514  grep -o -i 'animation' your_file.csv | wc -l
+  515  grep -o -i 'animation' 'IMDB top 1000.csv' | wc -l
+  516  grep -o -i 'drama' 'IMDB top 1000.csv' | wc -l
+  517  grep -o -i 'crime' 'IMDB top 1000.csv' | wc -l
+  518  grep 'crime' 'IMDB top 1000.csv
+  519  grep 'crime' 'IMDB top 1000.csv' | wc -l
+  520  grep -o 'crime' 'IMDB top 1000.csv' | wc -l 
+  521  grep -o -i 'crime' 'IMDB top 1000.csv' | wc -l
+  522  grep -o -i 'Crime' 'IMDB top 1000.csv' | wc -l
+  523  grep -o -i 'mystery' 'IMDB top 1000.csv' | wc -l
+  524  grep -o -i 'biography' 'IMDB top 1000.csv' | wc -l
+  525  grep -o -i 'romance' 'IMDB top 1000.csv' | wc -l
+  526  grep -o -i 'animation' 'IMDB top 1000.csv' | wc -l
+  527  grep -o -i 'crime' 'IMDB top 1000.csv' | wc -l
+  528  grep -o -i 'mystery' 'IMDB top 1000.csv' | wc -l
+  529  grep -o -i 'biography' 'IMDB top 1000.csv' | wc -l
+  530  grep -o -i 'thriller' 'IMDB top 1000.csv' | wc -l
+  531  grep -o -i 'crime' 'IMDB top 1000.csv' | wc -l
+  532  grep -o -i 'action' 'IMDB top 1000.csv' | wc -l
+  533  grep -o -i 'comedy' 'IMDB top 1000.csv' | wc -l
+  534  grep -o -i 'adventure' 'IMDB top 1000.csv' | wc -l
+  535  grep -o -i 'drama' 'IMDB top 1000.csv' | wc -l
+  536  num_entries=$(wc -l < "IMDB top 1000.csv")
+  537  echo "Number of entries: $num_entries"
+  538  head -n 1 "IMDB top 1000.csv" | tr ',' '\n' | awk '{print "Feature: " $1}'
+  539  value_ranges=$(awk -F',' 'NR>1 {print $4}' "IMDB top 1000.csv" | sort | uniq)
+  540  echo "Value ranges for Genre: $value_ranges"
+  541  value_ranges=$(awk -F',' 'NR>1 {print $5}' "IMDB top 1000.csv" | sort | uniq)
+  542  echo "Value ranges for Genre: $value_ranges"
+  543  $4
+  544  awk '{print $4}'
+  545  awk -F',' ' {print $5}' "IMDB top 1000.csv" | sort | uniq
+  546  awk -F',' ' {print $5}' "IMDB top 1000.csv" | sort
+  547  awk -F',' ' {print $4}' "IMDB top 1000.csv" | sort
+  548  value_ranges=$(awk -F',' 'NR>1 {print $4}' "IMDB top 1000.csv" | sort | uniq)
+  549  echo "Value ranges for Genre: $value_ranges"
+  550  genre_ranges=$(awk -F',' 'NR>1 {print $4}' "IMDB top 1000.csv" | sort | uniq)
+  551  echo "Value ranges for Genre: $genre_ranges"
+  552  head -n 5 "IMDB top 1000.csv" | cat -n
+  553  genre_ranges=$(awk -F',' 'NR>1 {print $5}' "IMDB top 1000.csv" | sort | uniq)
+  554  echo "Value ranges for Genre: $genre_ranges"
+  555  genre_ranges=$(awk -F',' 'NR>1 {gsub(/"/, "", $5); print $5}' "IMDB top 1000.csv" | sort | uniq)
+  556  echo "Value ranges for Genre: $genre_ranges"
+  557  genre_ranges=$(awk -F',' 'NR>1 {gsub(/"/, "", $5); print $5}' "IMDB top 1000.csv" | grep -v '[0-9]' | sort | uniq)
+  558  echo "Value ranges for Genre: $genre_ranges"
+  559  grep -o -i 'adventure' 'IMDB top 1000.csv' | wc -l
+  560  genre_ranges=$(awk -F',' 'NR>1 {gsub(/"/, "", $5); print $5}' "IMDB top 1000.csv" | grep -vE '[0-9]|Winter\.\.\. and Spring' | sort | uniq)
+  561  echo "Value ranges for Genre: $genre_ranges"
+  562  genre_ranges=$(awk -F',' 'NR>1 {gsub(/"/, "", $5); print $5}' "IMDB top 1000.csv" | grep -vE '[0-10]|Winter\.\.\. and Spring' | sort | uniq)
+  563  echo "Value ranges for Genre: $genre_ranges"
+  564  genre_ranges=$(awk -F',' 'NR>1 {gsub(/"/, "", $5); print $5}' "IMDB top 1000.csv" | grep -vE '[0-9]|Winter\.\.\. and Spring' | sort | uniq)
+  565  echo "Value ranges for Genre: $genre_ranges"
+  566  awk -F',' 'NR>1 {gsub(/"/, "", $5); print $5}' "IMDB top 1000.csv" | sort | uniq
+  567  genre_ranges=$(awk -F',' 'NR>1 {gsub(/"/, "", $5); print $5}' "IMDB top 1000.csv" | grep -vE '[0-9]|Winter\.\.\. and Spring' | sort | uniq)
+  568  echo "Value ranges for Genre: $genre_ranges"
+  569  awk -F',' 'NR>1 {gsub(/"/, "", $5); if ($5 !~ /^[0-9]/) print $5}' "IMDB top 1000.csv" | sort | uniq
+  570  cd cs131
+  571  ;s
+  572  ls
+  573  cd MiniProjectGroup2
+  574  awk -F',' 'NR>1 {gsub(/"/, "", $5); print $5}' "IMDB top 1000.csv" | sort | uniq
+  575  awk -F',' 'NR>1 {gsub(/"/, "", $5); if ($5 !~ /^[0-9]/) print $5}' "IMDB top 1000.csv" | sort | uniq
+  576  awk -F',' 'NR>1 {gsub(/"/, "", $5); if ($5 !~ /^[0-9]/) genres[$5]} END {for (genre in genres) print genre}' "IMDB top 1000.csv"
+  577  awk -F',' 'NR>1 {gsub(/"/, "", $5); print gensub(/^[0-9]+ /, "", "g", $5)}' "IMDB top 1000.csv" | sort | uniq
+  578  awk -F',' 'NR>1 {gsub(/"/, "", $5); split($5, genres, /, */); for (i in genres) print gensub(/^[0-9]+ /, "", "g", genres[i])}' "IMDB top 1000.csv" | sort | uniq
+  579  awk -F',' 'NR>1 {gsub(/"/, "", $5); split($5, genres, /, */); for (i in genres) print gensub(/^[0-9]+ /, "", "g", genres[i])}' "IMDB top 1000.csv" | sort 
+  580  awk -F',' 'NR>1 {gsub(/"/, "", $5); split($5, genres, /, /); for (i in genres) print genres[i]}' "IMDB top 1000.csv" | sort | uniq
+  581  awk -F',' 'NR>1 {gsub(/"/, "", $5); gsub(/, /, "\n", $5); print $5}' "IMDB top 1000.csv" | tr -d '"' | sort | uniq
+  582  awk -F',' 'NR>1 {gsub(/"/, "", $5); gsub(/, /, "\n", $5); print $5}' "IMDB top 1000.csv" | tr -d '"' | sort
+  583  awk -F',' 'NR>1 {gsub(/"/, "", $5); gsub(/, /, "\n", $5); print $5}' "IMDB top 1000.csv" | tr -d '"' | sort | uniq
+  584  awk -F',' 'NR>1 {gsub(/"/, "", $5); gsub(/, /, "\n", $5); gsub(/[^a-zA-Z, -]/, "", $5); gsub(/,/, "\n", $5); print $5}' "IMDB top 1000.csv" | sort | uniq
+  585  awk -F',' 'NR>1 {gsub(/"/, "", $5); gsub(/, /, "\n", $5); gsub(/[^a-zA-Z, -]/, "", $5); gsub(/,[^a-zA-Z]/, "\n", $5); gsub(/[^a-zA-Z],/, "\n", $5); print $5}' "IMDB top 1000.csv" | sort | uniq
+  586  awk -F',' 'NR>1 {gsub(/"/, "", $5); gsub(/, /, "\n", $5); gsub(/[^a-zA-Z, -]/, "", $5); gsub(/,[^a-zA-Z]/, "\n", $5); gsub(/[^a-zA-Z],/, "\n", $5); if ($5 !~ /min|Winter and Spring/) print $5}' "IMDB top 1000.csv" | sort | uniq
+  587  awk -F',' 'NR>1 {gsub(/"/, "", $5); gsub(/[^a-zA-Z, -]/, "", $5); gsub(/,/, "\n", $5); gsub(/^ */, "", $5); if ($5 !~ /[0-9]/) print $5}' "IMDB top 1000.csv" | sort | uniq
+  588  awk -F',' 'NR>1 {gsub(/"/, "", $5); split($5, genres, /, */); for (i in genres) print genres[i]}' "IMDB top 1000.csv" | sort | uniq
+  589  awk -F',' 'NR>1 {gsub(/"/, "", $5); split($5, genres, /, */); for (i in genres) { genre = tolower(genres[i]); if (genre != "") print genre }}' "IMDB top 1000.csv" | sort | uniq
+  590  awk -F',' 'NR>1 {gsub(/"/, "", $5); split($5, genres, /, */); for (i in genres) { genre = tolower(genres[i]); if (genre != "") print genre }}' "IMDB top 1000.csv" | sort | uniq -c | sort -nr | head -n 20
+  591  awk -F',' 'NR>1 {gsub(/"/, "", $5); split($5, genres, /, */); for (i in genres) { genre = tolower(genres[i]); if (genre != "" && genre !~ /^[0-9]+ min$/ && genre !~ /\(/) print genre }}' "IMDB top 1000.csv" | sort | uniq -c | sort -nr | head -n 20
+  592  awk -F',' 'NR>1 {gsub(/"/, "", $5); split($5, genres, /, */); for (i in genres) { genre = tolower(genres[i]); if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+ min$/ && genre !~ /\(/) print genre }}' "IMDB top 1000.csv" | sort | uniq -c | sort -nr | head -n 20
+  593  awk -F',' 'NR>1 {gsub(/"/, "", $5); split($5, genres, /, */); for (i in genres) { genre = tolower(genres[i]); if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+ min$/ && genre !~ /\(/) print genre }}' "IMDB top 1000.csv" | sed 's/^[ \t]*//;s/[ \t]*$//' | sort | uniq -c | sort -nr | head -n 20
+  594  awk -F',' 'NR>1 {gsub(/"/, "", $5); split($5, genres, /, */); for (i in genres) { genre = tolower(genres[i]); if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+ min$/ && genre !~ /\(/) print genre }}' "IMDB top 1000.csv" | tr -d '[:space:]' | sort | uniq -c | sort -nr | head -n 20
+  595  awk -F',' 'NR>1 {gsub(/"/, "", $5); gsub(/, /, ","); gsub(/ /, ""); split($5, genres, ","); for (i in genres) { genre = tolower(genres[i]); if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+min$/ && genre !~ /\(/) print genre }}' "IMDB top 1000.csv" | sort | uniq -c | sort -nr | head -n 20
+  596  awk -F',' 'NR>1 {gsub(/"/, "", $5); gsub(/, /, ","); gsub(/ /, ""); split($5, genres, ","); for (i in genres) { genre = tolower(genres[i]); if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+min$/ && genre !~ /\(/) print genre }}' "IMDB top 1000.csv" | sort | uniq -c | sort -nr
+  597  cut -d ',' -f 2 data.csv | sort | uniq -c
+  598  cut -d ',' -f 4 'IMDB top 1000.csv' | sort | uniq -c
+  599  cut -d ',' -f 5 'IMDB top 1000.csv' | sort | uniq -c
+  600  cut -d ',' -f 5 'IMDB top 1000.csv' | sort | uniq
+  601  cut -d ',' -f 6 'IMDB top 1000.csv' | sort | uniq
+  602  awk -F',' 'NR>1 {gsub(/"/, ""); gsub(/, /, ","); gsub(/ /, ""); split($5 "," $6, genres, ","); for (i in genres) { genre = tolower(genres[i]); if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+min$/ && genre !~ /\(/) print genre }}' "IMDB top 1000.csv" | sort | uniq -c | sort -nr
+  603  awk -F',' 'NR>1 {gsub(/"/, ""); gsub(/, /, ","); gsub(/ /, ""); split($3 "," $5 "," $6 "," $7, genres, ","); for (i in genres) { genre = genres[i]; if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+min$/ && genre !~ /\(/) print genre }}' "IMDB top 1000.csv" | sort | uniq -c | sort -nr
+  604  awk -F',' 'NR>1 {gsub(/"/, ""); gsub(/, /, ","); gsub(/ /, ""); split($3 "," $5 "," $6 "," $7, genres, ","); for (i in genres) { genre = genres[i]; if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+min$/ && genre !~ /\(/) print genre }}' "IMDB top 1000.csv" | sort | uniq | sort -nr
+  605  awk -F ',' '{print $5, $6, $7}' 'IMDB top 1000.csv'
+  606  awk -F ',' '{print $5, $6, $7}' 'IMDB top 1000.csv' | tr -d '"' | tr ',' '\n' | sort -u
+  607  awk -F ',' '{print $5, $6, $7}' 'IMDB top 1000.csv' | tr -d '"' | tr ',' '\n' | grep -E -v '^[0-9]+(\.[0-9]+)?$' | grep -v 'Winter... and Spring (2003) R 103 min' | sort -u
+  608  awk -F ',' '!/^[0-9]+(\.[0-9]+)?$|Winter\.\.\. and Spring \(2003\) R 103 min/{gsub(/"/, ""); gsub(/, /, ","); split($5, genres, ","); for (i in genres) { genre = genres[i]; if (genre != "") { gsub(/[0-9]+min/, "", genre); print tolower(genre) }}}' 'IMDB top 1000.csv' | sort -u
+  609  echo "Number of Entries:"
+  610  wc -l imdb_dataset.csv | awk '{print $1}'echo "Number of Entries:"
+  611  wc -l imdb_dataset.csv | awk '{print $1}'awk 'NR>1 {count++} END {print "Number of Entries: " count}' 'IMDB top 1000.csv' > entries.txt
+  612  awk 'NR>1 {count++} END {print "Number of Entries: " count}' 'IMDB top 1000.csv' > entries.txt
+  613  cat entries.txt
+  614  awk -F ',' '{print $5}' 'IMDB top 1000.csv' | tr -d '"' | tr ',' '\n' | sort -u | grep -v '^$' 
+  615  head -n 1 "IMDB top 1000.csv" | tr ',' '\n' | awk '{print "Feature: " $1}'
+  616  num_entries=$(wc -l < "IMDB top 1000.csv")
+  617  echo "Number of entries: $num_entries"
   618  ls
-  619  cat 'IMDB top 1000.csv'
-  620  ls
-  621  cat  IMDB_top_1000.csv
-  622  ls
-  623  rm  IMDB_top_1000.csv
-  624  ls
-  625  cat imdb-top-1000.zip
-  626  1;2c
-  627  ls
-  628  rm imdb-top-1000.zip
-  629  ls
-  630  cat 'login?titleType=dataset-downloads&showDatasetDownloadSkip=False&messageId=datasetsWelcome&returnUrl=%2Fdatasets%2Fomarhanyy%2Fimdb-top-1000?resource=download'
-  631  ls
-  632  rm 'login?titleType=dataset-downloads&showDatasetDownloadSkip=False&messageId=datasetsWelcome&returnUrl=%2Fdatasets%2Fomarhanyy%2Fimdb-top-1000?resource=download'
-  633  ls
-  634  cat topmovies.csv
-  635  rm topmovies.csv
-  636  ls
-  637  cat 'IMDB top 1000.csv'
-  638  history > cmds.log
-  639  cd ..
-  640  git add .
-  641  git add MiniProjectGroup2
-  642  git status
-  643  cd MiniProjectGroup2
-  644  git commit -m"added"
-  645  git push origin master
-  646  cd cs131
-  647  ls
-  648  cd MiniProjectGroup2
-  649  wc -l "IMDB top 1000.csv"
-  650  ls
-  651  head -n 1 "IMDB top 1000.csv" | tr ',' '\n' | nl
-  652  awk -F ',' 'NR>1 {for(i=1; i<=NF; i++) print $i}' "IMDB top 1000.csv" | sort -n | uniq -c
-  653  # Identify average rating and most common genres
-  654  awk -F ',' '{sum+=$5; count[$4]++} END {print "Average Rating:", sum/NR; print "Most Common Genres:"; for(genre in count) print genre, count[genre]}' "IMDB top 1000.csv"
-  655  awk -F ',' 'NR>1 {for(i=1; i<=NF; i++) print $i}' "IMDB top 1000.csv" | sort -n | uniq -c
-  656  cd cs131
-  657  cd ​​ssh hamzaf23@172.20.25.9
-  658  ls
-  659  cd MiniProjectGroup2
-  660  awk -F ',' 'NR>1 {for(i=1; i<=NF; i++) print "Column "i": "$i}' "IMDB top 1000.csv" | sort | uniq -c
-  661  wc -l IMDb\ top\ 1000.csv
-  662  head -n 1 'IMDB top 1000.csv'
-  663  wc -l 'IMDB top 1000.csv'
-  664  # Explore unique values in the 'Certificate' column
-  665  awk -F',' '{print $2}' 'IMDB top 1000.csv' | sort | uniq -c
-  666  # Calculate the average rating
-  667  awk -F',' '{sum += $5} END {print "Average Rating:", sum/NR}' 'IMDB top 1000.csv'
-  668  awk -F',' '{print $2}' 'IMDB top 1000.csv'
-  669  awk -F',' '{print $1}' 'IMDB top 1000.csv'
-  670  awk -F',' '{print $3}' 'IMDB top 1000.csv'
-  671  awk -F',' '{print $2}' 'IMDB top 1000.csv' 
-  672  awk -F',' '{print $3}' 'IMDB top 1000.csv' | sort | uniq -c
-  673  awk -F',' '{print $2}' 'IMDB top 1000.csv' | sort | uniq -c
-  674  awk -F',' '{print $1, $2, $3, $4}' 'IMDB top 1000.csv' | sort | uniq -c
-  675  awk -F',' '{print $3, $4}' 'IMDB top 1000.csv' | sort | uniq -c
-  676  awk -F',' '{print $2, $3, $4}' 'IMDB top 1000.csv' | sort | uniq -c
-  677  awk -F',' '{sum += $5} END {print "Average Rating:", sum/NR}' 'IMDB top 1000.csv'
-  678  awk -F',' '{sum += $4} END {print "Average Rating:", sum/NR}' 'IMDB top 1000.csv'
-  679  awk -F',' '{sum += $5} END {print "Average Rating:", sum/NR}' 'IMDB top 1000.csv'
-  680  awk -F',' '{sum += $4} END {printawk -F',' '{print $2, $3, $4}' 'IMDB top 1000.csv' | sort | uniq -c "Average Rating:", sum/NR}' 'IMDB top 1000.csv'
-  681  awk -F',' '{print $2, $3}' 'IMDB top 1000.csv' | sort | uniq -c
-  682  awk -F',' '{print $2, $3, $4}' 'IMDB top 1000.csv' | sort
-  683  awk -F',' '{print $5}' 'IMDB top 1000.csv' | sort
-  684  awk -F',' '{print $6}' 'IMDB top 1000.csv' | sort
-  685  awk -F',' '{print $7}' 'IMDB top 1000.csv' | sort
-  686  awk -F',' '{print $7}' 'IMDB top 1000.csv'
-  687  awk -F',' '{print $6}' 'IMDB top 1000.csv'
-  688  awk -F',' '{print $1 $2 $3 $4 $5 $6 $7 $8}' 'IMDB top 1000.csv' | sort
-  689  awk -F',' '{print $8}' 'IMDB top 1000.csv' | sort
-  690  awk -F',' '{print $7}' 'IMDB top 1000.csv' | sort
-  691  awk -F',' '{print $5}' "IMDB top 1000.csv"
-  692  awk -F',' '{gsub(/"/, "", $5); print $5}' "IMDB top 1000.csv"
-  693  awk -F',' '{print $0}' "IMDB top 1000.csv"
-  694  awk -F',' '{print $9}' "IMDB top 1000.csv"
-  695  awk -F',' '{print $5}' "IMDB top 1000.csv"
-  696  cut -d',' -f5 "IMDB top 1000.csv" | awk -F'"' '{sum+=$1; count+=1} END {print "Average Rating:", sum/count}'
-  697  cut -d',' -f5 "IMDB top 1000.csv"
-  698  cut -d',' -f1 "IMDB top 1000.csv"
-  699  cut -d',' -f6 "IMDB top 1000.csv"
-  700  cut -d',' -f7 "IMDB top 1000.csv"
-  701  cut -d',' -f "IMDB top 1000.csv"
-  702  cut -d',' -f5 "IMDB top 1000.csv"
-  703  cut -d',' -f5 "IMDB top 1000.csv" | grep -oP '\d+\.\d+' 
-  704  cut -d',' -f5 "IMDB top 1000.csv" | grep -oP '\d+\.\d+' | awk '{ sum += $1 } END { if (NR > 0) print "Average Rating:", sum/NR; else print "No Ratings found" }'
-  705  cut -d',' -f5 'IMDB top 1000.csv' | grep -oP '\d+\.\d+' 
-  706  cut -d',' -f5 'IMDB top 1000.csv' | grep -oP '\d+\.\d+' | awk '{ sum += $1 } END { if (NR > 0) print "Average Rating:", sum/NR; else print "No Ratings found" }'
-  707  $1
-  708  print $1
-  709  csvcut -c "Rate" "IMDB top 1000.csv"
-  710  cut -d',' -f5 "IMDB top 1000.csv" | grep -oP '\d+\.\d+' | awk '{ sum += $1 } END { if (NR > 0) print "Average Rating:", sum/NR; else print "No Ratings found" }'
-  711  cut -d ',' -f5 'IMDB top 1000.csv' | awk '{ print $5}'
-  712  awk -F',' '{print $5}' "IMDB top 1000.csv"
-  713  grep -Eo '"[0-9]+(\.[0-9]+)?"' "IMDB top 1000.csv"
-  714  awk -F'","' '{print $5}' "IMDB top 1000.csv" | sed 's/"//g'
-  715  csvcut -n "IMDB top 1000.csv"
-  716  csvcut -c 5 "IMDB top 1000.csv" | sed 's/"//g'
-  717  awk -F, '{gsub(/"/, "", $5); print $5}' "IMDB top 1000.csv"
-  718  awk -F, '{gsub(/"/, "", $6); print $6}' "IMDB top 1000.csv"
-  719  ction
-  720  Action
-  721  Drama
-  722  Biography
-  723  Action
-  724  Drama
-  725  Action
-  726  Biography
-  727  Drama
-  728  Action
-  729  Drama
-  730  Action
-  731  Drama
-  732  Action
-  733  Drama
-  734  Action
-  735  Animation
-  736  Biography
-  737  Adventure
-  738  Action
-  739  Crime
-  740  Biography
-  741  Adventure
-  742  Animation
-  743  Action
-  744  Drama
-  745   Winter... and Spring (2003)
-  746  Biography
-  747  Comedy
-  748  Action
-  749  Adventure
-  750  Animation
-  751  Comedy
-  752  Crime
-  753  Comedy
-  754  Drama
-  755  92 min
-  756  Drama
-  757  Crime
-  758  Drama
-  759  Biography
-  760  Animation
-  761  Drama
-  762  Animation
-  763  Action
-  764  Drama
-  765  Comedy
-  766  Mystery
-  767  Animation
-  768  Comedy
-  769  180 min
-  770  Actionawk -F, '{gsub(/"/, "", $5); print $5}' "IMDB top 1000.csv"
-  771  awk -F, '{gsub(/"/, "", $5); print $5}' "IMDB top 1000.csv"
-  772  awk -F, '{gsub(/"/, "", $6); print $6}' "IMDB top 1000.csv"
-  773  awk -F, 'NR > 1 && $6 ~ /^[0-9]+(\.[0-9]+)?$/ {gsub(/"/, "", $6); print $6}' "IMDB top 1000.csv"
-  774  awk -F ',' '{print $6}' "IMDB top 1000.csv" | grep -oE '[0-9]+(\.[0-9]+)?'
-  775  awk -F ',' '{print $6}' "IMDB top 1000.csv" | grep -oE '[0-9]+(\.[0-9]+)?' > ratings.txt
-  776  cat ratings.txt
-  777  awk -F ',' 'NR > 1 {gsub(/"/, "", $6); print $6}' "IMDB top 1000.csv" | grep -oE '[0-9]+(\.[0-9]+)?' | sort | uniq -c
-  778  # Assuming your dataset is in CSV format
-  779  wc -l "IMDB top 1000.csv"
-  780  # Assuming your dataset is in CSV format
-  781  head -n 1 "IMDB top 1000.csv" | tr ',' '\n' | wc -l
-  782  awk -F ',' 'NR > 1 && $6 != "" {gsub(/"/, "", $6); print $6}' "IMDB top 1000.csv" | grep -oE '[0-9]+(\.[0-9]+)?'
-  783  awk -F ',' 'NR > 1 && $6 ~ /^[0-9]+(\.[0-9]+)?$/ {gsub(/"/, "", $6); print $6}' "IMDB top 1000.csv"
-  784  awk -F ',' 'NR > 1 {gsub(/"/, "", $6); if($6 == "") print "Empty rate at line " NR; print $6}' "IMDB top 1000.csv"
-  785  awk -F ','  {print $6}' "IMDB top 1000.csv"
-  786  awk -F ',' '{print $6}' 'IMDb top 1000.csv'
-  787  awk -F ',' '{print $6}' 'IMDB top 1000.csv'
-  788  awk -F ',' '{print $7}' 'IMDB top 1000.csv'
-  789  awk -F ',' '{print $1}' 'IMDB top 1000.csv'
-  790  awk -F ',' '{print $3}' 'IMDB top 1000.csv'
-  791  awk -F ',' '{print $4}' 'IMDB top 1000.csv'
-  792  awk -F ',' '{print $6}' 'IMDB top 1000.csv'
-  793  cat 'IMDB top 1000.csv'
-  794  awk -F ',' '{print $5}' 'IMDB top 1000.csv'
-  795  head "IMDB top 1000.csv"
-  796  awk -F ',' 'NR > 1 {gsub(/"/, ""); print $7}' "IMDB top 1000.csv"
-  797  awk -F ',' 'NR > 1 {gsub(/"/, ""); print $6}' "IMDB top 1000.csv"
-  798  awk -F ',' 'NR > 1 {gsub(/"/, ""); print $6}' "IMDB top 1000.csv" | grep -oE '[0-9]+(\.[0-9]+)?'
-  799  pip install csvkit
-  800  sudo apt-get update
-  801  python3 -m venv myenv
-  802  source myenv/bin/activate
-  803  pip install csvkit
-  804  python3
-  805  cd..
-  806  cd cs131
-  807  (myenv) [hamzaf23@sjsu MiniProjectGroup2]$ deactivate
-  808  deactivate
-  809  csvcut -c "Rate" "IMDB top 1000.csv" | tail -n +2
-  810  pip install csvkit
-  811  sudo apt-get update
-  812  python3 -m pip install --user csvkit
-  813  pip install csvkit
-  814  python3 -m pip install --user csvkit
-  815  csvcut -n "IMDB top 1000.csv"
-  816  python3 --version
-  817  python3 -c 'import csv; with open("IMDB top 1000.csv", "r") as file: data = csv.reader(file); print(next(data))'
-  818  wc -l "IMDB top 1000.csv" > numberofentries.txt
-  819  head -n 1 "IMDB top 1000.csv" | tr ',' '\n' > featurescolumnames.txt
-  820  csvcut -n "IMDB top 1000.csv"
-  821  import matplotlib.pyplot as plt 
-  822  python
-  823  python3
-  824  python3 script.py
-  825  python script.py
-  826  script.py
-  827  sudo apt update
-  828  python3 --version
-  829  python3 visualize_data.py
-  830  ls
-  831  cd cs131
-  832  ls
-  833  cd MiniProjectGroup2
-  834  chmod +x visualize_data.py
-  835  ls visualize_data.py
-  836  nano visualize_data.py
-  837  ls
-  838  vi vd.py
-  839  ls
-  840  chmod +x visualize_data.py
-  841  chmod +x vd.py
-  842  python3 visualize_data.py
-  843  python3 vd.py
-  844  vi vd.py
-  845  fg
-  846  cd cs131
-  847  ls
-  848  cd MiniProjectGroup2
-  849  ls
-  850  vi vd.py
-  851  python3 vd.py
-  852  vi vd.py
-  853  python3 vd.py
-  854  install pandas
-  855  pip install pandas
-  856  pip3 install pandas
-  857  pip install --upgrade pip
-  858  pip3 install pandas
-  859  sudo apt-get install python3-dev
-  860  pip3 install --user pandas
-  861  pip3 install --user matplotlib
-  862  sudo apt-get install python3-dev
-  863  pip3 install --user python3-dev
-  864  pip3 install --user pandas
-  865  pip3 install --user numpy
-  866  pip3 install --user numpy pandas
-  867  pip3 install --user --no-build-isolation numpy pandas
-  868  pip3 install --user --no-build-isolation tomli
-  869  pip3 install --user --no-build-isolation numpy pandas
-  870  pip3 install --user --no-build-isolation tomli
-  871  pip3 install --user --no-build-isolation numpy pandas
-  872  pip3 install --user --no-build-isolation packaging
-  873  pip3 install --user --no-build-isolation numpy pandas
-  874  brew install pandas
-  875  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  876  brew install pandas
-  877  vi test1.py
-  878  python3 test1.py
-  879  cd cs131
-  880  ls
-  881  cd MiniProjectGroup2
-  882  pip install kaggle
-  883  pip3 install --upgrade kaggle
-  884  pip3 install --user numpy
-  885  sudo yum install python3-devel
-  886  su -
-  887  pip3 install --user numpy pandas
-  888  python3 -m venv myenv
-  889  source myenv/bin/activate
-  890  pip install numpy pandas
-  891  source myenv/bin/activate
-  892  pip install numpy pandas
-  893  sudo yum install python3-dev
-  894  source myenv/bin/activate
-  895  pip install numpy pandas
-  896  -m pip install --upgrade pip
-  897  pip install --upgrade pip
-  898  source myenv/bin/activate
-  899  pip install numpy pandas
-  900  deactivate
-  901  ls
-  902  python3 vd.py
-  903  vi vd.py
-  904  python3 vd.py
-  905  source myenv/bin/activate
-  906  pip install pandas
-  907  deactivate
-  908  # Example: Creating a Bar Chart with gnuplot
-  909  echo -e "Action 10\nDrama 20\nComedy 15" | gnuplot -p -e "set title 'Movie Genre Distribution'; set style fill solid; set boxwidth 0.5; set terminal dumb; plot '-' using 2:xticlabels(1) with boxes"
-  910  wc 'animation' 'IMDB top 1000.csv
-  911  wc 'animation' 'IMDB top 1000.csv'
-  912  wc "animation" 'IMDB top 1000.csv
-  913  wc "animation" 'IMDB top 1000.csv'
-  914  wc "animation" 'IMDB top 1000.csv'
-  915  grep -o -i 'animation' your_file.csv | wc -l
-  916  grep -o -i 'animation' 'IMDB top 1000.csv' | wc -l
-  917  grep -o -i 'drama' 'IMDB top 1000.csv' | wc -l
-  918  grep -o -i 'crime' 'IMDB top 1000.csv' | wc -l
-  919  grep 'crime' 'IMDB top 1000.csv
-  920  grep 'crime' 'IMDB top 1000.csv' | wc -l
-  921  grep -o 'crime' 'IMDB top 1000.csv' | wc -l 
-  922  grep -o -i 'crime' 'IMDB top 1000.csv' | wc -l
-  923  grep -o -i 'Crime' 'IMDB top 1000.csv' | wc -l
-  924  grep -o -i 'mystery' 'IMDB top 1000.csv' | wc -l
-  925  grep -o -i 'biography' 'IMDB top 1000.csv' | wc -l
-  926  grep -o -i 'romance' 'IMDB top 1000.csv' | wc -l
-  927  grep -o -i 'animation' 'IMDB top 1000.csv' | wc -l
-  928  grep -o -i 'crime' 'IMDB top 1000.csv' | wc -l
-  929  grep -o -i 'mystery' 'IMDB top 1000.csv' | wc -l
-  930  grep -o -i 'biography' 'IMDB top 1000.csv' | wc -l
-  931  grep -o -i 'thriller' 'IMDB top 1000.csv' | wc -l
-  932  grep -o -i 'crime' 'IMDB top 1000.csv' | wc -l
-  933  grep -o -i 'action' 'IMDB top 1000.csv' | wc -l
-  934  grep -o -i 'comedy' 'IMDB top 1000.csv' | wc -l
-  935  grep -o -i 'adventure' 'IMDB top 1000.csv' | wc -l
-  936  grep -o -i 'drama' 'IMDB top 1000.csv' | wc -l
-  937  num_entries=$(wc -l < "IMDB top 1000.csv")
-  938  echo "Number of entries: $num_entries"
-  939  head -n 1 "IMDB top 1000.csv" | tr ',' '\n' | awk '{print "Feature: " $1}'
-  940  value_ranges=$(awk -F',' 'NR>1 {print $4}' "IMDB top 1000.csv" | sort | uniq)
-  941  echo "Value ranges for Genre: $value_ranges"
-  942  value_ranges=$(awk -F',' 'NR>1 {print $5}' "IMDB top 1000.csv" | sort | uniq)
-  943  echo "Value ranges for Genre: $value_ranges"
-  944  $4
-  945  awk '{print $4}'
-  946  awk -F',' ' {print $5}' "IMDB top 1000.csv" | sort | uniq
-  947  awk -F',' ' {print $5}' "IMDB top 1000.csv" | sort
-  948  awk -F',' ' {print $4}' "IMDB top 1000.csv" | sort
-  949  value_ranges=$(awk -F',' 'NR>1 {print $4}' "IMDB top 1000.csv" | sort | uniq)
-  950  echo "Value ranges for Genre: $value_ranges"
-  951  genre_ranges=$(awk -F',' 'NR>1 {print $4}' "IMDB top 1000.csv" | sort | uniq)
-  952  echo "Value ranges for Genre: $genre_ranges"
-  953  head -n 5 "IMDB top 1000.csv" | cat -n
-  954  genre_ranges=$(awk -F',' 'NR>1 {print $5}' "IMDB top 1000.csv" | sort | uniq)
-  955  echo "Value ranges for Genre: $genre_ranges"
-  956  genre_ranges=$(awk -F',' 'NR>1 {gsub(/"/, "", $5); print $5}' "IMDB top 1000.csv" | sort | uniq)
-  957  echo "Value ranges for Genre: $genre_ranges"
-  958  genre_ranges=$(awk -F',' 'NR>1 {gsub(/"/, "", $5); print $5}' "IMDB top 1000.csv" | grep -v '[0-9]' | sort | uniq)
-  959  echo "Value ranges for Genre: $genre_ranges"
-  960  grep -o -i 'adventure' 'IMDB top 1000.csv' | wc -l
-  961  genre_ranges=$(awk -F',' 'NR>1 {gsub(/"/, "", $5); print $5}' "IMDB top 1000.csv" | grep -vE '[0-9]|Winter\.\.\. and Spring' | sort | uniq)
-  962  echo "Value ranges for Genre: $genre_ranges"
-  963  genre_ranges=$(awk -F',' 'NR>1 {gsub(/"/, "", $5); print $5}' "IMDB top 1000.csv" | grep -vE '[0-10]|Winter\.\.\. and Spring' | sort | uniq)
-  964  echo "Value ranges for Genre: $genre_ranges"
-  965  genre_ranges=$(awk -F',' 'NR>1 {gsub(/"/, "", $5); print $5}' "IMDB top 1000.csv" | grep -vE '[0-9]|Winter\.\.\. and Spring' | sort | uniq)
-  966  echo "Value ranges for Genre: $genre_ranges"
-  967  awk -F',' 'NR>1 {gsub(/"/, "", $5); print $5}' "IMDB top 1000.csv" | sort | uniq
-  968  genre_ranges=$(awk -F',' 'NR>1 {gsub(/"/, "", $5); print $5}' "IMDB top 1000.csv" | grep -vE '[0-9]|Winter\.\.\. and Spring' | sort | uniq)
-  969  echo "Value ranges for Genre: $genre_ranges"
-  970  awk -F',' 'NR>1 {gsub(/"/, "", $5); if ($5 !~ /^[0-9]/) print $5}' "IMDB top 1000.csv" | sort | uniq
-  971  cd cs131
-  972  ;s
-  973  ls
-  974  cd MiniProjectGroup2
-  975  awk -F',' 'NR>1 {gsub(/"/, "", $5); print $5}' "IMDB top 1000.csv" | sort | uniq
-  976  awk -F',' 'NR>1 {gsub(/"/, "", $5); if ($5 !~ /^[0-9]/) print $5}' "IMDB top 1000.csv" | sort | uniq
-  977  awk -F',' 'NR>1 {gsub(/"/, "", $5); if ($5 !~ /^[0-9]/) genres[$5]} END {for (genre in genres) print genre}' "IMDB top 1000.csv"
-  978  awk -F',' 'NR>1 {gsub(/"/, "", $5); print gensub(/^[0-9]+ /, "", "g", $5)}' "IMDB top 1000.csv" | sort | uniq
-  979  awk -F',' 'NR>1 {gsub(/"/, "", $5); split($5, genres, /, */); for (i in genres) print gensub(/^[0-9]+ /, "", "g", genres[i])}' "IMDB top 1000.csv" | sort | uniq
-  980  awk -F',' 'NR>1 {gsub(/"/, "", $5); split($5, genres, /, */); for (i in genres) print gensub(/^[0-9]+ /, "", "g", genres[i])}' "IMDB top 1000.csv" | sort 
-  981  awk -F',' 'NR>1 {gsub(/"/, "", $5); split($5, genres, /, /); for (i in genres) print genres[i]}' "IMDB top 1000.csv" | sort | uniq
-  982  awk -F',' 'NR>1 {gsub(/"/, "", $5); gsub(/, /, "\n", $5); print $5}' "IMDB top 1000.csv" | tr -d '"' | sort | uniq
-  983  awk -F',' 'NR>1 {gsub(/"/, "", $5); gsub(/, /, "\n", $5); print $5}' "IMDB top 1000.csv" | tr -d '"' | sort
-  984  awk -F',' 'NR>1 {gsub(/"/, "", $5); gsub(/, /, "\n", $5); print $5}' "IMDB top 1000.csv" | tr -d '"' | sort | uniq
-  985  awk -F',' 'NR>1 {gsub(/"/, "", $5); gsub(/, /, "\n", $5); gsub(/[^a-zA-Z, -]/, "", $5); gsub(/,/, "\n", $5); print $5}' "IMDB top 1000.csv" | sort | uniq
-  986  awk -F',' 'NR>1 {gsub(/"/, "", $5); gsub(/, /, "\n", $5); gsub(/[^a-zA-Z, -]/, "", $5); gsub(/,[^a-zA-Z]/, "\n", $5); gsub(/[^a-zA-Z],/, "\n", $5); print $5}' "IMDB top 1000.csv" | sort | uniq
-  987  awk -F',' 'NR>1 {gsub(/"/, "", $5); gsub(/, /, "\n", $5); gsub(/[^a-zA-Z, -]/, "", $5); gsub(/,[^a-zA-Z]/, "\n", $5); gsub(/[^a-zA-Z],/, "\n", $5); if ($5 !~ /min|Winter and Spring/) print $5}' "IMDB top 1000.csv" | sort | uniq
-  988  awk -F',' 'NR>1 {gsub(/"/, "", $5); gsub(/[^a-zA-Z, -]/, "", $5); gsub(/,/, "\n", $5); gsub(/^ */, "", $5); if ($5 !~ /[0-9]/) print $5}' "IMDB top 1000.csv" | sort | uniq
-  989  awk -F',' 'NR>1 {gsub(/"/, "", $5); split($5, genres, /, */); for (i in genres) print genres[i]}' "IMDB top 1000.csv" | sort | uniq
-  990  awk -F',' 'NR>1 {gsub(/"/, "", $5); split($5, genres, /, */); for (i in genres) { genre = tolower(genres[i]); if (genre != "") print genre }}' "IMDB top 1000.csv" | sort | uniq
-  991  awk -F',' 'NR>1 {gsub(/"/, "", $5); split($5, genres, /, */); for (i in genres) { genre = tolower(genres[i]); if (genre != "") print genre }}' "IMDB top 1000.csv" | sort | uniq -c | sort -nr | head -n 20
-  992  awk -F',' 'NR>1 {gsub(/"/, "", $5); split($5, genres, /, */); for (i in genres) { genre = tolower(genres[i]); if (genre != "" && genre !~ /^[0-9]+ min$/ && genre !~ /\(/) print genre }}' "IMDB top 1000.csv" | sort | uniq -c | sort -nr | head -n 20
-  993  awk -F',' 'NR>1 {gsub(/"/, "", $5); split($5, genres, /, */); for (i in genres) { genre = tolower(genres[i]); if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+ min$/ && genre !~ /\(/) print genre }}' "IMDB top 1000.csv" | sort | uniq -c | sort -nr | head -n 20
-  994  awk -F',' 'NR>1 {gsub(/"/, "", $5); split($5, genres, /, */); for (i in genres) { genre = tolower(genres[i]); if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+ min$/ && genre !~ /\(/) print genre }}' "IMDB top 1000.csv" | sed 's/^[ \t]*//;s/[ \t]*$//' | sort | uniq -c | sort -nr | head -n 20
-  995  awk -F',' 'NR>1 {gsub(/"/, "", $5); split($5, genres, /, */); for (i in genres) { genre = tolower(genres[i]); if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+ min$/ && genre !~ /\(/) print genre }}' "IMDB top 1000.csv" | tr -d '[:space:]' | sort | uniq -c | sort -nr | head -n 20
-  996  awk -F',' 'NR>1 {gsub(/"/, "", $5); gsub(/, /, ","); gsub(/ /, ""); split($5, genres, ","); for (i in genres) { genre = tolower(genres[i]); if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+min$/ && genre !~ /\(/) print genre }}' "IMDB top 1000.csv" | sort | uniq -c | sort -nr | head -n 20
-  997  awk -F',' 'NR>1 {gsub(/"/, "", $5); gsub(/, /, ","); gsub(/ /, ""); split($5, genres, ","); for (i in genres) { genre = tolower(genres[i]); if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+min$/ && genre !~ /\(/) print genre }}' "IMDB top 1000.csv" | sort | uniq -c | sort -nr
-  998  cut -d ',' -f 2 data.csv | sort | uniq -c
-  999  cut -d ',' -f 4 'IMDB top 1000.csv' | sort | uniq -c
- 1000  cut -d ',' -f 5 'IMDB top 1000.csv' | sort | uniq -c
- 1001  cut -d ',' -f 5 'IMDB top 1000.csv' | sort | uniq
- 1002  cut -d ',' -f 6 'IMDB top 1000.csv' | sort | uniq
- 1003  awk -F',' 'NR>1 {gsub(/"/, ""); gsub(/, /, ","); gsub(/ /, ""); split($5 "," $6, genres, ","); for (i in genres) { genre = tolower(genres[i]); if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+min$/ && genre !~ /\(/) print genre }}' "IMDB top 1000.csv" | sort | uniq -c | sort -nr
- 1004  awk -F',' 'NR>1 {gsub(/"/, ""); gsub(/, /, ","); gsub(/ /, ""); split($3 "," $5 "," $6 "," $7, genres, ","); for (i in genres) { genre = genres[i]; if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+min$/ && genre !~ /\(/) print genre }}' "IMDB top 1000.csv" | sort | uniq -c | sort -nr
- 1005  awk -F',' 'NR>1 {gsub(/"/, ""); gsub(/, /, ","); gsub(/ /, ""); split($3 "," $5 "," $6 "," $7, genres, ","); for (i in genres) { genre = genres[i]; if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+min$/ && genre !~ /\(/) print genre }}' "IMDB top 1000.csv" | sort | uniq | sort -nr
- 1006  awk -F ',' '{print $5, $6, $7}' 'IMDB top 1000.csv'
- 1007  awk -F ',' '{print $5, $6, $7}' 'IMDB top 1000.csv' | tr -d '"' | tr ',' '\n' | sort -u
- 1008  awk -F ',' '{print $5, $6, $7}' 'IMDB top 1000.csv' | tr -d '"' | tr ',' '\n' | grep -E -v '^[0-9]+(\.[0-9]+)?$' | grep -v 'Winter... and Spring (2003) R 103 min' | sort -u
- 1009  awk -F ',' '!/^[0-9]+(\.[0-9]+)?$|Winter\.\.\. and Spring \(2003\) R 103 min/{gsub(/"/, ""); gsub(/, /, ","); split($5, genres, ","); for (i in genres) { genre = genres[i]; if (genre != "") { gsub(/[0-9]+min/, "", genre); print tolower(genre) }}}' 'IMDB top 1000.csv' | sort -u
- 1010  echo "Number of Entries:"
- 1011  wc -l imdb_dataset.csv | awk '{print $1}'echo "Number of Entries:"
- 1012  wc -l imdb_dataset.csv | awk '{print $1}'awk 'NR>1 {count++} END {print "Number of Entries: " count}' 'IMDB top 1000.csv' > entries.txt
- 1013  awk 'NR>1 {count++} END {print "Number of Entries: " count}' 'IMDB top 1000.csv' > entries.txt
- 1014  cat entries.txt
- 1015  awk -F ',' '{print $5}' 'IMDB top 1000.csv' | tr -d '"' | tr ',' '\n' | sort -u | grep -v '^$' 
- 1016  head -n 1 "IMDB top 1000.csv" | tr ',' '\n' | awk '{print "Feature: " $1}'
- 1017  num_entries=$(wc -l < "IMDB top 1000.csv")
- 1018  echo "Number of entries: $num_entries"
- 1019  ls
- 1020  head -n 1 "IMDB top 1000.csv" | tr ',' '\n' | awk '{print "Feature: " $1}'
- 1021  head -n 1 "IMDB top 1000.csv" | tr ',' '\n' | awk '{print "Feature: " $1}' > Features.txt
- 1022  # Extract and sort unique values for the "genre" feature
- 1023  awk -F ',' 'NR>1 {gsub(/"/, "", $5); gsub(/, /, ","); gsub(/ /, ""); split($5, genres, ","); for (i in genres) { genre = genres[i]; if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+min$/ && genre !~ /\(/) print genre }}' 'IMDB top 1000.csv' | sort -u > genre_values.txt
- 1024  awk -F ',' 'NR>1 {gsub(/"/, "", $5); gsub(/, /, ","); gsub(/ /, ""); split($5, genres, ","); for (i in genres) { genre = genres[i]; if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+min$/ && genre !~ /\(/) print genre }}' 'IMDB top 1000.csv' | sort -u
- 1025  awk -F',' 'NR>1 {gsub(/"/, ""); gsub(/, /, ","); gsub(/ /, ""); split($3 "," $5 "," $6 "," $7, genres, ","); for (i in genres) { genre = genres[i]; if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+min$/ && genre !~ /\(/ && genre !~ /^(Passed|NotRated|GP|G|Approved)$/ && length(genre) > 1) print genre }}' "IMDB top 1000.csv" | sort | uniq | sort -nr
- 1026  awk -F',' 'NR>1 {gsub(/"/, ""); gsub(/, /, ","); gsub(/ /, ""); split($3 "," $5 "," $6 "," $7, genres, ","); for (i in genres) { genre = genres[i]; if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+min$/ && genre !~ /\(/ && genre !~ /^(Passed|NotRated|GP|G|Approved|TV-PG|TV-MA|TV-14)$/ && length(genre) > 1) print genre }}' "IMDB top 1000.csv" | sort | uniq | sort -nr
- 1027  awk -F',' 'NR>1 {gsub(/"/, ""); gsub(/, /, ","); gsub(/ /, ""); split($3 "," $5 "," $6 "," $7, genres, ","); for (i in genres) { genre = genres[i]; if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+min$/ && genre !~ /\(/ && genre !~ /^(Passed|NotRated|GP|G|Approved|TV-PG|TV-MA|TV-14|PG-13|PG|Summer)$/ && length(genre) > 1) print genre }}' "IMDB top 1000.csv" | sort | uniq | sort -nr
- 1028  awk -F',' 'NR>1 {gsub(/"/, ""); gsub(/, /, ","); gsub(/ /, ""); split($3 "," $5 "," $6 "," $7, genres, ","); for (i in genres) { genre = genres[i]; if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+min$/ && genre !~ /\(/ && genre !~ /^(Passed|NotRated|GP|G|Approved|TV-PG|TV-MA|TV-14|PG-13|PG|Summer)$/ && length(genre) > 1 && genre !~ /^[0-9.]+$/) print genre }}' "IMDB top 1000.csv" | sort | uniq | sort -nr
- 1029  awk -F',' 'NR>1 {gsub(/"/, ""); gsub(/, /, ","); gsub(/ /, ""); split($3 "," $5 "," $6 "," $7, genres, ","); for (i in genres) { genre = genres[i]; if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+min$/ && genre !~ /\(/ && genre !~ /^(Passed|NotRated|GP|G|Approved|TV-PG|TV-MA|TV-14|PG-13|PG|Summer)$/ && length(genre) > 1 && genre !~ /^[0-9.]+$/) print genre }}' "IMDB top 1000.csv" | sort | uniq | sort -nr > valuerange1.txt
- 1030  vi ourscript.sh
- 1031  cat valuerange1.txt
- 1032  vi outscrip.sh
- 1033  vi ourscript.sh
- 1034  chmod +x myscript.sh
- 1035  chmod +x ourscript.sh
- 1036  ./ourscript.sh
- 1037  vi ourscript.sh
- 1038  ./ourscript.sh
- 1039  ls
- 1040  cat ratings.txt
- 1041  ls
- 1042  cat valuerange1.txt
- 1043  ls
- 1044  cat Features.txt
- 1045  cat feature.txt
- 1046  cat ourscript.sh
- 1047  ls
- 1048  cat feature.txt
- 1049  cat entries.txt
- 1050  awk -F',' 'NR>1 {gsub(/"/, ""); print $12}' "IMDB top 1000.csv" | awk 'NF' | sort | uniq -c | sort -nr
- 1051  awk -F',' 'NR>1 {gsub(/"/, ""); gsub(/, /, ","); gsub(/ /, ""); split($3 "," $5 "," $6 "," $7, genres, ","); for (i in genres) { genre = genres[i]; if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+min$/ && genre !~ /\(/ && genre !~ /^(Passed|NotRated|GP|G|Approved|TV-PG|TV-MA|TV-14|PG-13|PG|Summer)$/ && length(genre) > 1) print genre "," $8 }}' "IMDB top 1000.csv" | awk -F',' '{ sum[$1] += $2; count[$1]++ } END { for (genre in sum) print genre "," sum[genre] / count[genre] }' | sort -t, -k2,2nr
- 1052  ls
- 1053  cat valuerange1.txt
- 1054  history > cmds.log
+  619  head -n 1 "IMDB top 1000.csv" | tr ',' '\n' | awk '{print "Feature: " $1}'
+  620  head -n 1 "IMDB top 1000.csv" | tr ',' '\n' | awk '{print "Feature: " $1}' > Features.txt
+  621  # Extract and sort unique values for the "genre" feature
+  622  awk -F ',' 'NR>1 {gsub(/"/, "", $5); gsub(/, /, ","); gsub(/ /, ""); split($5, genres, ","); for (i in genres) { genre = genres[i]; if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+min$/ && genre !~ /\(/) print genre }}' 'IMDB top 1000.csv' | sort -u > genre_values.txt
+  623  awk -F ',' 'NR>1 {gsub(/"/, "", $5); gsub(/, /, ","); gsub(/ /, ""); split($5, genres, ","); for (i in genres) { genre = genres[i]; if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+min$/ && genre !~ /\(/) print genre }}' 'IMDB top 1000.csv' | sort -u
+  624  awk -F',' 'NR>1 {gsub(/"/, ""); gsub(/, /, ","); gsub(/ /, ""); split($3 "," $5 "," $6 "," $7, genres, ","); for (i in genres) { genre = genres[i]; if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+min$/ && genre !~ /\(/ && genre !~ /^(Passed|NotRated|GP|G|Approved)$/ && length(genre) > 1) print genre }}' "IMDB top 1000.csv" | sort | uniq | sort -nr
+  625  awk -F',' 'NR>1 {gsub(/"/, ""); gsub(/, /, ","); gsub(/ /, ""); split($3 "," $5 "," $6 "," $7, genres, ","); for (i in genres) { genre = genres[i]; if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+min$/ && genre !~ /\(/ && genre !~ /^(Passed|NotRated|GP|G|Approved|TV-PG|TV-MA|TV-14)$/ && length(genre) > 1) print genre }}' "IMDB top 1000.csv" | sort | uniq | sort -nr
+  626  awk -F',' 'NR>1 {gsub(/"/, ""); gsub(/, /, ","); gsub(/ /, ""); split($3 "," $5 "," $6 "," $7, genres, ","); for (i in genres) { genre = genres[i]; if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+min$/ && genre !~ /\(/ && genre !~ /^(Passed|NotRated|GP|G|Approved|TV-PG|TV-MA|TV-14|PG-13|PG|Summer)$/ && length(genre) > 1) print genre }}' "IMDB top 1000.csv" | sort | uniq | sort -nr
+  627  awk -F',' 'NR>1 {gsub(/"/, ""); gsub(/, /, ","); gsub(/ /, ""); split($3 "," $5 "," $6 "," $7, genres, ","); for (i in genres) { genre = genres[i]; if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+min$/ && genre !~ /\(/ && genre !~ /^(Passed|NotRated|GP|G|Approved|TV-PG|TV-MA|TV-14|PG-13|PG|Summer)$/ && length(genre) > 1 && genre !~ /^[0-9.]+$/) print genre }}' "IMDB top 1000.csv" | sort | uniq | sort -nr
+  628  awk -F',' 'NR>1 {gsub(/"/, ""); gsub(/, /, ","); gsub(/ /, ""); split($3 "," $5 "," $6 "," $7, genres, ","); for (i in genres) { genre = genres[i]; if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+min$/ && genre !~ /\(/ && genre !~ /^(Passed|NotRated|GP|G|Approved|TV-PG|TV-MA|TV-14|PG-13|PG|Summer)$/ && length(genre) > 1 && genre !~ /^[0-9.]+$/) print genre }}' "IMDB top 1000.csv" | sort | uniq | sort -nr > valuerange1.txt
+  629  vi ourscript.sh
+  630  cat valuerange1.txt
+  631  vi outscrip.sh
+  632  vi ourscript.sh
+  633  chmod +x myscript.sh
+  634  chmod +x ourscript.sh
+  635  ./ourscript.sh
+  636  vi ourscript.sh
+  637  ./ourscript.sh
+  638  ls
+  639  cat ratings.txt
+  640  ls
+  641  cat valuerange1.txt
+  642  ls
+  643  cat Features.txt
+  644  cat feature.txt
+  645  cat ourscript.sh
+  646  ls
+  647  cat feature.txt
+  648  cat entries.txt
+  649  awk -F',' 'NR>1 {gsub(/"/, ""); print $12}' "IMDB top 1000.csv" | awk 'NF' | sort | uniq -c | sort -nr
+  650  awk -F',' 'NR>1 {gsub(/"/, ""); gsub(/, /, ","); gsub(/ /, ""); split($3 "," $5 "," $6 "," $7, genres, ","); for (i in genres) { genre = genres[i]; if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+min$/ && genre !~ /\(/ && genre !~ /^(Passed|NotRated|GP|G|Approved|TV-PG|TV-MA|TV-14|PG-13|PG|Summer)$/ && length(genre) > 1) print genre "," $8 }}' "IMDB top 1000.csv" | awk -F',' '{ sum[$1] += $2; count[$1]++ } END { for (genre in sum) print genre "," sum[genre] / count[genre] }' | sort -t, -k2,2nr
+  651  ls
+  652  cat valuerange1.txt
+  653  history > cmds.log
+  654  cd ..
+  655  git add.
+  656  git add .
+  657  git status
+  658  git add MiniProjectGroup2
+  659  git status
+  660  cd MiniProjectGroup2
+  661  git commit -m"project"
+  662  git push origin master
+  663  cd cs131
+  664  ls
+  665  cd MiniProjectGroup2
+  666  vi GoogleCollabPython.py
+  667  ls
+  668  cd ..
+  669  git add .
+  670  git add MiniProjectGroup2
+  671  git commit -m "Add"
+  672  git push origin master
+  673  cd MiniProjectGroup2
+  674  git commit -m "add"
+  675  cd ..
+  676  ls
+  677  cd cs131
+  678  ls
+  679  cd MiniProjectGroup2
+  680  awk -F',' 'NR>1 {print $2}' "IMDB top 1000.csv" | sort | uniq -c | sort -n
+  681  awk -F',' 'NR>1 {gsub(/"/, ""); gsub(/, /, ","); gsub(/ /, ""); split($3 "," $5 "," $6 "," $7, genres, ","); for (i in genres) { genre = genres[i]; if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+min$/ && genre !~ /\(/ && genre !~ /^(Passed|NotRated|GP|G|Approved|TV-PG|TV-MA|TV-14|PG-13|PG|Summer)$/ && length(genre) > 1 && genre !~ /^[0-9.]+$/) print genre "," $8 } }' "IMDB top 1000.csv" | sort | uniq | sort -nr > valuerange1.txt
+  682  cat valuerange1.txt
+  683  ls
+  684  awk -F',' 'NR>1 {gsub(/"/, ""); gsub(/, /, ","); gsub(/ /, ""); split($3 "," $5 "," $6 "," $7, genres, ","); for (i in genres) { genre = genres[i]; if (genre != "" && genre !~ /^[0-9]+$/ && genre !~ /^[0-9]+min$/ && genre !~ /\(/ && genre !~ /^(Passed|NotRated|GP|G|Approved|TV-PG|TV-MA|TV-14|PG-13|PG|Summer)$/ && length(genre) > 1 && genre !~ /^[0-9.]+$/) print genre }}' "IMDB top 1000.csv" | sort | uniq | sort -nr > valuerange.txt
+  685  cat valuerange.txt
+  686  awk -F',' 'NR>1 {print $2}' "IMDB top 1000.csv" | sort | uniq -c | sort -n
+  687  awk -F',' 'NR>1 {print $3}' "IMDB top 1000.csv" | sort | uniq -c | sort -n
+  688  awk -F',' 'NR>1 {print $9}' "IMDB top 1000.csv" | sort | uniq -c | sort -n
+  689     1 8. 12 Angry Men (1957)
+  690        1 81. Sunset Blvd. (1950)
+  691        1 82. The Great Dictator (1940)
+  692        1 83. 1917 (2019)
+  693        1 84. Uri: The Surgical Strike (2019)
+  694        1 85. Tumbbad (2018)
+  695        1 86. Andhadhun (2018)
+  696        1 87. Drishyam (2013)
+  697        1 88. The Hunt (2012)
+  698        1 89. A Separation (2011)
+  699        1 90. Incendies (2010)
+  700        1 91. 7 Kogustaki Mucize (2019)
+  701        1 92. My Father and My Son (2005)
+  702        1 93. Toy Story 3 (2010)
+  703        1 94. Inglourious Basterds (2009)
+  704        1 95. Eternal Sunshine of the Spotless Mind (2004)
+  705        1 96. Amélie (2001)
+  706        1 97. Snatch (2000)
+  707        1 98. Requiem for a Dream (2000)
+  708        1 99. American Beauty (1999)
+  709        1 9. Inception (2010)
+  710        7 303. The Bridge on the River Kwai (1957)
+  711        7 304. On the Waterfront (1954)
+  712        7 305. The Wages of Fear (1953)
+  713        7 306. Ace in the Hole (1951)
+  714        7 307. White Heat (1949)
+  715        7 308. The Third Man (1949)
+  716        7 309. The Red Shoes (1948)
+  717        7 310. The Shop Around the Corner (1940)
+  718        7 311. Rebecca (1940)
+  719        7 312. Mr. Smith Goes to Washington (1939)
+  720        7 313. Gone with the Wind (1939)
+  721        7 314. La Grande Illusion (1937)
+  722        7 315. It Happened One Night (1934)
+  723        7 316. The Passion of Joan of Arc (1928)
+  724        7 317. The Circus (1928)
+  725        7 318. Sunrise (1927)
+  726        7 319. The General (1926)
+  727        7 320. The Cabinet of Dr. Caligari (1920)
+  728        7 321. Shoplifters (2018)
+  729        7 322. Badhaai Ho (2018)
+  730        7 323. Marriage Story (2019)
+  731        7 324. Togo (2019)
+  732        7 325. Airlift (2016)
+  733        7 326. Bajrangi Bhaijaan (2015)
+  734        7 327. Baby (I) (2015)
+  735        7 328. La La Land (2016)
+  736        7 329. Lion (2016)
+  737        7 330. The Martian (2015)
+  738        7 331. Zootopia (2016)
+  739        7 332. The Tale of The Princess Kaguya (2013)
+  740        7 333. Wonder (I) (2017)
+  741        7 334. Special 26 (2013)
+  742        7 335. Short Term 12 (2013)
+  743        7 336. The Raid 2 (2014)
+  744        7 337. The Imitation Game (2014)
+  745        7 338. Guardians of the Galaxy (2014)
+  746        7 339. Blade Runner 2049 (2017)
+  747        7 340. Her (2013)
+  748        7 341. Bohemian Rhapsody (2018)
+  749        7 342. The Revenant (2015)
+  750        7 343. The Perks of Being a Wallflower (2012)
+  751        7 344. Elite Squad 2: The Enemy Within (2010)
+  752        7 345. The King's Speech (2010)
+  753        7 346. The Help (2011)
+  754        7 347. Deadpool (2016)
+  755        7 348. Darbareye Elly (2009)
+  756        7 349. Dev.D (2009)
+  757        7 350. Ip Man (2008)
+  758        7 351. My Name Is Khan (2010)
+  759        7 352. The Breath (2009)
+  760        7 353. Slumdog Millionaire (2008)
+  761        7 354. Black Swan (2010)
+  762        7 355. The Avengers (2012)
+  763        7 356. Persepolis (2007)
+  764        7 357. Dallas Buyers Club (2013)
+  765        7 358. The Pursuit of Happyness (2006)
+  766        7 359. Blood Diamond (2006)
+  767        7 360. The Bourne Ultimatum (2007)
+  768        7 361. 3-Iron (2004)
+  769        7 362. Sin City (2005)
+  770        7 363. The Diving Bell and the Butterfly (2007)
+  771        7 364. G.O.R.A. (2004)
+  772        7 365. Ratatouille (2007)
+  773        7 366. Casino Royale (2006)
+  774        7 367. Kill Bill: Vol. 2 (2004)
+  775        7 368. The Return (2003)
+  776        7 "369. Spring
+  777        7 370. The Sea Inside (I) (2004)
+  778        7 371. Cinderella Man (2005)
+  779        7 372. Kal ho naa ho (2003)
+  780        7 373. Infernal Affairs (2002)
+  781        7 374. Pirates of the Caribbean: The Curse of the Black Pearl (2003)
+  782        7 375. Big Fish (2003)
+  783        7 376. The Incredibles (2004)
+  784        7 377. My Sassy Girl (2001)
+  785        7 378. Dogville (2003)
+  786        7 379. Vizontele (2001)
+  787        7 380. Donnie Darko (2001)
+  788        7 "381. Monsters
+  789        7 382. Magnolia (1999)
+  790        7 383. Dancer in the Dark (2000)
+  791        7 384. Mulholland Drive (2001)
+  792        7 385. The Straight Story (1999)
+  793        7 386. Perfect Blue (1997)
+  794        7 387. The Celebration (1998)
+  795        7 388. Central Station (1998)
+  796        7 389. The Iron Giant (1999)
+  797        7 390. Knockin' on Heaven's Door (1997)
+  798        7 391. Sling Blade (1996)
+  799        7 392. Secrets & Lies (1996)
+  800        7 393. 12 Monkeys (1995)
+  801        7 394. Ghost in the Shell (1995)
+  802        7 395. The Nightmare Before Christmas (1993)
+  803        7 396. Groundhog Day (1993)
+  804        7 "397. Blood In
+  805        7 398. Scent of a Woman (1992)
+  806        7 399. Aladdin (1992)
+  807        7 400. JFK (1991)
+  808        8 301. Nights of Cabiria (1957)
+  809        8 302. Throne of Blood (1957)bghhgg
+  810  awk -F',' 'NR>1 {print $2}' "IMDB top 1000.csv" | sort | uniq -c | sort -n
+  811  awk -F',' 'NR>1 {print $2}' "Iawk -F',' 'NR>1 {print $2}' "IMDB top 1000.csv" | sort | uniq -c | sort -nMDB top 1000.csv" | sort | uniq -c | sort -n
+  812  awk -F',' 'NR>1 {print $2}' "IMDB top 1000.csv" | sort | uniq -c | sort -n
+  813  awk -F',' 'NR>1 {print $1}' "IMDB top 1000.csv" | sort | uniq -c | sort -n
+  814  awk -F',' 'NR>1 {print $1}' "IMDB top 1000.csv" | sort | uniq -c
+  815  awk -F',' 'NR>1 {print $1}' "IMDB top 1000.csv" | sort
+  816  ls
+  817  tail -n +2 'IMDB top 1000.csv' | cut -d ',' -f 3 | sort -nr | head -n 1
+  818  tail -n +2 'IMDB top 1000.csv' | cut -d ',' -f 3 | sort -n | head -n 1
+  819  grep -Eo '[0-9]{4}' 'IMDB top 1000.csv' | awk 'NR == 1 { min = max = $1 } { if ($1 < min) min = $1; if ($1 > max) max = $1 } END { print "Min Year:", min, "\nMax Year:", max }'
+  820  awk -F',' 'NR>1 {print $3 " - " $0}' 'IMDB top 1000.csv'
+  821  awk -F',' 'NR>1 {print $2 " - " $1}' 'IMDB top 1000.csv'
+  822  awk -F',' 'NR>1 {print $2}' 'IMDB top 1000.csv'
+  823  awk -F',' 'NR>1 {print $3}' 'IMDB top 1000.csv' | grep -E '^[0-9]{4}$'
+  824  cut -d',' -f3 'IMDB top 1000.csv' | grep -oE '[0-9]{4}' | sort -n | uniq
+  825  awk -F',' 'NR > 1 {print $3 ". " $1 " (" $2 ")"}' 'IMDB top 1000.csv'
+  826  awk -F',' 'NR > 1 {print $2}' 'IMDB top 1000.csv'
+  827  awk -F',' 'NR > 1 {print $1 }' 'IMDB top 1000.csv'
+  828  awk -F',' 'NR > 1 {print $1 ", " $2 ", " $3}' 'IMDB top 1000.csv'
+  829  awk -F', ' 'NR > 1 {gsub(/[^0-9]/, "", $2); print $2}' 'IMDB top 1000.csv'
+  830  awk -F',' 'NR > 1 {print $1 ", " $2 ", " $3}' 'IMDB top 1000.csv'awk -F',' 'NR > 1 {gsub(/[^0-9, ]/, "", $2); print $2}' 'IMDB top 1000.csv'
+  831  awk -F',' 'NR > 1 {gsub(/[^0-9, ]/, "", $2); print $2}' 'IMDB top 1000.csv'
+  832  awk -F',' 'NR > 1 {gsub(/[^0-9, ]/, "", $2); print NR - 1, $2}' 'IMDB top 1000.csv'
+  833  awk -F',' 'NR > 1 {gsub(/[^0-9, ]/, "", $2); if ($2 ~ /^[0-9]{4}$/) print ++count, $2}' 'IMDB top 1000.csv'
+  834  awk -F',' 'NR > 1 {gsub(/[^0-9, ]/, "", $2); if ($2 ~ /^[0-9]{4}$/) { print ++count, $2 }}' 'IMDB top 1000.csv'
+  835  awk -F',' 'NR > 1 {gsub(/[^0-9]/, "", $3); if ($3 ~ /^[0-9]{4}$/) { print ++count, $3 }}' 'IMDB top 1000.csv'
+  836  awk -F',' 'NR > 1 {gsub(/[^0-9]/, "", $1); if ($2 ~ /^[0-9]{4}$/) { print ++count, $2 }}' 'IMDB top 1000.csv'
+  837  awk -F',' 'NR > 1 {gsub(/[^0-9]/, "", $1); if ($2 ~ /^[0-9]{4}$/) { print ++count, $2 }}' 'IMDB top 1000.csv'awk -F',' 'NR > 1 {gsub(/[^0-9, ]/, "", $2); print NR - 1, $2}' 'IMDB top 1000.csv'
+  838  awk -F',' 'NR > 1 {gsub(/[^0-9, ]/, "", $2); print NR - 1, $2}' 'IMDB top 1000.csv'
+  839  awk -F',' 'NR > 1 {print $1 ", " $2 ", " $3}' 'IMDB top 1000.csv'
+  840  awk -F',' 'NR > 1 {print $0 ", " $1 ", " $2, $3, $4, $5}' 'IMDB top 1000.csv'
+  841  awk -F',' 'NR > 1 {print $0 ", " $1 ", " $2, $3, $4}' 'IMDB top 1000.csv'
+  842  awk -F',' 'NR > 1 {print $0 ", " $1 ", " $2, $3, }' 'IMDB top 1000.csv'
+  843  awk -F',' 'NR > 1 {print $0 ", " $1 ", " $2, $3 }' 'IMDB top 1000.csv'
+  844  awk -F',' 'NR > 1 {print $1 ", " $2, $3, $4, $5}' 'IMDB top 1000.csv'
+  845  awk -F',' 'NR > 1 {print $1 ", " $2}' 'IMDB top 1000.csv'
+  846  awk -F',' 'NR > 1 {print $2}' 'IMDB top 1000.csv'
+  847  awk -F',' 'NR > 1 {print $2}' 'IMDB top 1000.csv'awk -F',' 'NR > 1 {gsub(/[^0-9]/, "", $2); if ($2 ~ /^[0-9]{4}$/) { print ++count, $2 }}' 'IMDB top 1000.csv'
+  848  awk -F',' 'NR > 1 {gsub(/[^0-9]/, "", $2); if ($2 ~ /^[0-9]{4}$/) { print ++count, $2 }}' 'IMDB top 1000.csv'
+  849  awk -F'[,()]' 'NR > 1 {print $3}' 'IMDB top 1000.csv'
+  850  awk -F'[,()]' 'NR > 1 {print $2}' 'IMDB top 1000.csv'
+  851  awk -F',' '{gsub(/[^0-9]/,"",$2); print $2}' awk -F ',' '{gsub(/[^0-9]/,"",$2); print $2}' 'IMDB top 1000.csv'
+  852  awk -F ',' '{gsub(/[^0-9]/,"",$2); print $2}' 'IMDB top 1000.csv'
+  853  awk -F ',' '{gsub(/[^0-9]/,"   ",$2); print $2}' 'IMDB top 1000.csv'
+  854  ls
+  855  awk -F, '{gsub(/[^0-9]/, " ", $2)}; {split($2, a, " ")}; {for(i=1; i<=length(a); i++) if (length(a[i])==4) print a[i]}' 'IMDB top 1000.csv'
+  856  awk -F, '{gsub(/[^0-9]/, " ", $2)}; {split($2, a, " ")}; {for(i=1; i<=length(a); i++) if (length(a[i])==4) print a[i]}' 'IMDB top 1000.csv' | sort -n | awk '{print NR".", $0} END {print "Lowest Year:", $1; print "Highest Year:", $NF}'
+  857  awk -F, '{gsub(/[^0-9()]/, " ", $2)}; {split($2, a, " ")}; {for(i=1; i<=length(a); i++) if (length(a[i])==4 && substr(a[i], 1, 1) == "(" && substr(a[i], length(a[i]), 1) == ")") print a[i]}' 'IMDB top 1000.csv' | sort -n | awk '{print NR".", $0} END {print "Lowest Year:", $1; print "Highest Year:", $NF}'
+  858  awk -F, '{gsub(/[^0-9()]/, " ", $2)}; {split($2, a, " ")}; {for(i=1; i<=length(a); i++) if (length(a[i])==4 && substr(a[i], 1, 1) == "(" && substr(a[i], length(a[i]), 1) == ")") print a[i]}' 'IMDB top 1000.csv' | sort -n | awk '{print NR".", $2} END {print "Lowest Year:", $2; print "Highest Year:", $NF}'
+  859  awk -F, '{gsub(/[^0-9()]/, " ", $2); print $2}' 'IMDB top 1000.csv' | awk '/\([0-9]{4}\)/ {gsub(/[()]/,"",$0); print}' | sort -n | awk '{print NR".", $0} END {print "Lowest Year:", $1; print "Highest Year:", $NF}'
+  860  awk -F, '{gsub(/[^0-9()]/, " ", $2); print $2}' 'IMDB top 1000.csv' | awk '/\([0-9]{4}\)/ {gsub(/[()]/,"",$0); print}' | sort -n | awk '{print NR".", $0} END {print "Lowest Year:", $1; print "Hiawk -F, '{gsub(/[^0-9()]/, " ", $2); print $2}' 'IMDB top 1000.csv' | awk '/\([0-9]{4}\)/ {gsub(/[()]/,"",$2); print}' | sort -n | awk '{print NR".", $2} END {print "Lowest Year:", $1; print "Highest Year:", $NF}'ghest Year:", $NF}'
+  861  awk -F, '{gsub(/[^0-9()]/, " ", $2); print $2}' 'IMDB top 1000.csv' | awk '/\([0-9]{4}\)/ {gsub(/[()]/,"",$2); print}' | sort -n | awk '{print NR".", $2} END {print "Lowest Year:", $1; print "Highest Year:", $NF}'
+  862  awk -F ',' '{gsub(/[^0-9]/,"",$2); print $2}' imdb.csv
+  863  awk -F ',' '{gsub(/[^0-9]/,"",$2); print $2}' 'IMDB top 1000.csv'
+  864  awk -F',' 'NR > 1 {print $2 }' 'IMDB top 1000.csv'
+  865  awk -F',' 'NR > 1 {print $2 }' 'IMDB top 1000.csv'awk -F',' 'NR > 1 {if (match($2, /\([0-9]{4}\)/)) print substr($2, RSTART+1, RLENGTH-2)}' 'IMDB top 1000.csv'
+  866  awk -F',' 'NR > 1 {if (match($2, /\([0-9]{4}\)/)) print substr($2, RSTART+1, RLENGTH-2)}' 'IMDB top 1000.csv'
+  867  awk -F',' 'NR > 1 && match($2, /\([0-9]{4}\)/) { year = substr($2, RSTART+1, RLENGTH-2); if (!min_year || year < min_year) min_year = year; if (!max_year || year > max_year) max_year = year; print year } END { print "Lowest Year:", min_year; print "Highest Year:", max_year }' 'IMDB top 1000.csv'
+  868  awk -F',' 'NR > 1 && match($2, /\([0-9]{4}\)/) { year = substr($2, RSTART+1, RLENGTH-2); if (!min_year || year < min_year) min_year = year; if (!max_year || year > max_year) max_year = year; print year } END { print "Lowest Year:", min_year; print "Highest Year:", max_year }' 'IMDB top 1000.csv' | cat -n
+  869  awk -F',' 'NR > 1 && match($2, /\([0-9]{4}\)/) { year = substr($2, RSTART+1, RLENGTH-2); print year }' 'IMDB top 1000.csv' | sort -n | awk '{print NR".", $1}' | cat -n
+  870  awk -F',' 'NR > 1 && match($2, /\([0-9]{4}\)/) { year = substr($2, RSTART+1, RLENGTH-2); if (!min_year || year < min_year) min_year = year; if (!max_year || year > max_year) max_year = year; print NR".", year } END { print "Lowest Year:", min_year; print "Highest Year:", max_year }' 'IMDB top 1000.csv'
+  871  awk -F',' 'NR > 1 && match($2, /\([0-9]{4}\)/) { year = substr($2, RSTART+1, RLENGTH-2); if (!min_year || year < min_year) min_year = year; if (!max_year || year > max_year) max_year = year; print year } END { print "Lowest Year:", min_year; print "Highest Year:", max_year }' 'IMDB top 1000.csv' | sort -n | awk '{print NR".", $1}'
+  872  awk -F',' 'NR > 1 && match($2, /\([0-9]{4}\)/) { year = substr($2, RSTART+1, RLENGTH-2); if (!min_year || year < min_year) min_year = year; if (!max_year || year > max_year) max_year = year; print year } END { print "Lowest Year:", min_year; print "Highest Year:", max_year }' 'IMDB top 1000.csv' | sort -n | awk '{print NR".", $0}'
+  873  awk -F',' 'NR > 1 {if (match($2, /\([0-9]{4}\)/)) print substr($2, RSTART+1, RLENGTH-2)}' 'IMDB top 1000.csv' | sort -n | awk '{print NR".", $0}'
+  874  awk -F',' 'NR > 1 && match($2, /\([0-9]{4}\)/) { year = substr($2, RSTART+1, RLENGTH-2); if (!min_year || year < min_year) min_year = year; if (!max_year || year > max_year) max_year = year; print year } END { print "Lowest Year:", min_year; print "Highest Year:", max_year }' 'IMDB top 1000.csv' | cat -n
+  875  awk -F',' 'NR > 1 && match($2, /\([0-9]{4}\)/) { year = substr($2, RSTART+1, RLENGTH-2); if (!min_year || year < min_year) min_year = year; if (!max_year || year > max_year) max_year = year; print year } END { print "Lowest Year:", min_year; print "Highest Year:", max_year }' 'IMDB top 1000.csv'
+  876  awk -F',' 'NR > 1 && match($2, /\([0-9]{4}\)/) { year = substr($2, RSTART+1, RLENGTH-2); if (!min_year || year < min_year) min_year = year; if (!max_year || year > max_year) max_year = year; print year } END { print "Lowest Year:", min_year; print "Highest Year:", max_year }' 'IMDB top 1000.csv' | cat -n
+  877  awk -F',' 'NR > 1 && match($2, /\([0-9]{4}\)/) { year = substr($2, RSTART+1, RLENGTH-2); print year }' 'IMDB top 1000.csv' | sort -n | awk '{print NR".", $1}' | cat -n
+  878  awk -F',' 'NR > 1 && match($2, /\([0-9]{4}\)/) { year = substr($2, RSTART+1, RLENGTH-2); if (!min_year || year < min_year) min_year = year; if (!max_year || year > max_year) max_year = year; print year } END { print "Lowest Year:", min_year; print "Highest Year:", max_year }' 'IMDB top 1000.csv'
+  879  awk -F',' 'NR > 1 && match($2, /\([0-9]{4}\)/) { year = substr($2, RSTART+1, RLENGTH-2); if (!min_year || year < min_year) min_year = year; if (!max_year || year > max_year) max_year = year; print year } END { print "Lowest Year:", min_year; print "Highest Year:", max_year }' 'IMDB top 1000.csv' | sort -n | cat -n
+  880  awk -F',' 'NR > 1 && match($2, /\([0-9]{4}\)/) { year = substr($2, RSTART+1, RLENGTH-2); print NR".", year; if (!min_year || year < min_year) min_year = year; if (!max_year || year > max_year) max_year = year; } END { print "Lowest Year:", min_year; print "Highest Year:", max_year }' 'IMDB top 1000.csv'
+  881  awk -F',' 'NR > 1 && match($2, /\([0-9]{4}\)/) { year = substr($2, RSTART+1, RLENGTH-2); print NR".", year; if (!min_year || year < min_year) min_year = year; if (!max_year || year > max_year) max_year = year; } END { print "Lowest Year:", min_year; print "Highest Year:", max_year }' 'IMDB top 1000.csv' > years.txt
+  882  cat years.txt
+  883  ls
+  884  awk -F ',' '{print $2} ' imdb.csv
+  885  awk -F ',' '{print $2}
+  886  awk -F ',' '{print $2} 'IMDB top 1000.csv'
+  887  awk -F ',' {print $2} 'IMDB top 1000.csv'
+  888  awk -F',' 'NR > 1 {print $2 ","  $3 "," $4 "," $5 "," $6 ", }' 'IMDB top 1000.csv'
+  889  awk -F',' 'NR > 1 {print $2 ","  $3 "," $4 "," $5 "," $6 "," $7 }' 'IMDB top 1000.csv'
+  890  awk -F',' 'NR > 1 {print $2 ", "  $3 ", " $4 ", " $5 ", " $6 ", " $7 ", " $8 ", " $9 ", " $10 ", " $11 }' 'IMDB top 1000.csv'
+  891  awk -F',' 'NR > 1 {print $2 ", "  $3 ", " $4 ", " $5 ", " $6 ", " $7 ", " $8 ", " $9 ", " $10 ", " $11, ", " $12 ", " $13 ", " $14 ", " $15 ", " $16 ", " $17 ", " $18 ", " $19 ", " $20 ", " }' 'IMDB top 1000.csv'
+  892  awk -F',' 'NR > 1 {print $2 "         "  $3 "         " $4 "        " $5 "        " $6 "        " $7 "         " $8 "         " $9 "        " $10 "         " $11  "             " $12 "               " $13 "            " $14 "          " $15 "     " $16 "    " $17 "     " $18 "     " $19 "    " $20 "       " }' 'IMDB top 1000.csv'
+  893  awk -F',' 'NR > 1 {print $2 "         "  $3 "         " $4 "        " $5 "        " $6 "        " $7 "         " $8 "         " $9 "        " $10 "         " $11  "             " $12 "               " $13 "            " $14 "          " $15 "     " $16 "    " $17 "     " $18 "     " $19 "    " $20 "       " $21 "        "     $22 "        " $23 "            $24 "                               " }' 'IMDB top 1000.csv'
+  894  awk -F',' 'NR > 1 {print $2 "         "  $3 "         " $4 "        " $5 "        " $6 "        " $7 "         " $8 "         " $9 "        " $10 "         " $11  "             " $12 "               " $13 "            " $14 "          " $15 "     " $16 "    " $17 "     " $18 "     " $19 "    " $20 "       " $21 "        "     $22 "        " $23 "          "  $24 "                               " }' 'IMDB top 1000.csv'
+  895  awk -F',' 'NR > 1 {print $2 "         "  $3 "         " $4 "        " $5 "        " $6 "        " $7 "         " $8 "         " $9 "        " $10 "         " $11  "             " $12 "               " $13 "            " $14 "          " $15 "     " $16 "    " $17 "     " $18 "     " $19 "    " $20 "       " $21 "        "     $22 "        " $23 "                  "  $24 "               " $25  "----------------------------------------------------------------------------------------------------------------------------- " }' 'IMDB top 1000.csv'
+  896  awk -F',' 'NR > 1 {print $2 "         "  $3 "         " $4 "        " $5 "        " $6 "        " $7 "         " $8 "         " $9 "        " $10 "         " $11  "             " $12 "               " $13 "            " $14 "          " $15 "     " $16 "    " $17 "     " $18 "     " $19 "    " $20 "       " $21 "        "     $22 "        " $23 "                  "  $24 "               " $25  "----------------------------------------------------------------------------------------------------------------------------- " }' 'IMDB top 1000.csv'r
+  897  ok so looking at scifi movies and hisotry movies there are 63 scifi movie and 66 history movies, these are very similar number of recrods so can we still find which of these generes have a average of a highest box office to infer which genre might be popular coomparing these two, and whats cool is that there is no movie that has these two genres in one movie because there is no similarity between these two genres. use 'IMDB top 1000.csv', and also what if we make a awk command that goes through all 1001 lines and conditions is to find every record that has scifi as the genre and history as the genre, lets get that printed out first. And also please be prepared use all the infromation and knowkegde prior to our entire conversation in this chat.
+  898  awk -F',' 'NR > 1 {print $2 "         "  $3 "         " $4 "        " $5 "        " $6 "        " $7 "         " $8 "         " $9 "        " $10 "         " $11  "             " $12 "               " $13 "            " $14 "          " $15 "     " $16 "    " $17 "     " $18 "     " $19 "    " $20 "       " $21 "        "     $22 "        " $23 "                  "  $24 "               " $25  "----------------------------------------------------------------------------------------------------------------------------- " }' 'IMDB top 1000.csv'r
+  899  awk -F',' 'NR > 1 {print $2 "         "  $3 "         " $4 "        " $5 "        " $6 "        " $7 "         " $8 "         " $9 "        " $10 "         " $11  "             " $12 "               " $13 "            " $14 "          " $15 "     " $16 "    " $17 "     " $18 "     " $19 "    " $20 "       " $21 "        "     $22 "        " $23 "                  "  $24 "               " $25  "----------------------------------------------------------------------------------------------------------------------------- " }' 'IMDB top 1000.csv'
+  900  awk -F ',' {print $30} 'IMDB top 1000.csv'
+  901  awk -F',' 'NR > 1 {print $40 }' 'IMDB top 1000.csv'
+  902  awk -F',' 'NR > 1 {print $20 }' 'IMDB top 1000.csv'
+  903  awk -F',' 'NR > 1 {print $19 }' 'IMDB top 1000.c
+  904  awk -F',' 'NR > 1 {print $25 }' 'IMDB top 1000.csv'
+  905  awk -F',' 'NR > 1 {print $24 }' 'IMDB top 1000.csv'
+  906  awk -F',' 'NR > 1 {print $23 }' 'IMDB top 1000.csv'
+  907  awk -F',' 'NR > 1 {print $2 "         "  $3 "         " $4 "        " $5 "        " $6 "        " $7 "         " $8 "         " $9 "        " $10 "         " $11  "             " $12 "               " $13 "            " $14 "          " $15 "     " $16 "    " $17 "     " $18 "     " $19 "    " $20 "       " $21 "        "     $22 "        " $23   "------------------------------------------------------------------------------------- " }' 'IMDB top 1000.csv'
+  908  awk -F',' 'NR > 1 {print $2 "         "  $3 "         " $4 "        " $5 "        " $6 "        " $7 "         " $8 "         " $9 "        " $10 "         " $11  "             " $12 "               " $13 "            " $14 "          " $15 "     " $16 "    " $17 "     " $18 "     " $19 "    " $20 "       " $21 "        "     $22 "        " $23   "------------------------------------------------------------------- " }' 'IMDB top 1000.csv'
+  909  awk -F',' 'NR > 1 {print $2 "         "  $3 "         " $4 "        " $5 "        " $6 "        " $7 "         " $8 "         " $9 "        " $10 "         " $11  "             " $12 "               " $13 "            " $14 "          " $15 "     " $16 "    " $17 "     " $18 "     " $19 "    " $20 "       " $21 "        "     $22 "        " $23   "---------------------------------------------------- " }' 'IMDB top 1000.csv'
+  910  awk -F',' 'NR > 1 {print $2 "         "  $3 "         " $4 "        " $5 "        " $6 "        " $7 "         " $8 "         " $9 "        " $10 "         " $11  "             " $12 "               " $13 "            " $14 "          " $15 "     " $16 "    " $17 "     " $18 "     " $19 "    " $20 "       " $21 "        "     $22 "        " $23   "---------------------------------------------------------------------- " }' 'IMDB top 1000.csv'
+  911  awk -F',' 'NR > 1 {print $2 "         "  $3 "         " $4 "        " $5 "        " $6 "        " $7 "         " $8 "         " $9 "        " $10 "         " $11  "             " $12 "               " $13 "            " $14 "          " $15 "     " $16 "    " $17 "     " $18 "     " $19 "    " $20 "       " $21 "        "     $22 "        "   "---------------------------------------------------------------------- " }' 'IMDB top 1000.csv'
+  912  awk -F',' 'NR > 1 {print $2 "         "  $3 "         " $4 "        " $5 "        " $6 "        " $7 "         " $8 "         " $9 "        " $10 "         " $11  "             " $12 "               " $13 "            " $14 "          " $15 "     " $16 "    " $17 "     " $18 "     " $19 "    " $20 "       " $21 "        "     $22 "        "   "------------- " }' 'IMDB top 1000.csv'
+  913  awk -F',' 'NR > 1 {print $2 "         "  $3 "         " $4 "        " $5 "        " $6 "        " $7 "         " $8 "         " $9 "        " $10 "         " $11  "             " $12 "               " $13 "            " $14 "          " $15 "     " $16 "    " $17 "     " $18 "     " $19 "    " $20 "       " $21 "        "     $22   $23 $24 $25 $26 $27 $28 $29 $30 $31 $32 "        "   "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ " }' 'IMDB top 1000.csv'
+  914  awk -F',' 'NR > 1 && $10 == "History" { sum += $16; count++ } END { history_average = sum / count; print "History Average Box Office,", history_average }' 'IMDB top 1000.csv'
+  915  awk -F',' 'NR > 1 && $10 == "History" { sum += $16; count++ } END { if (count > 0) history_average = sum / count; else history_average = 0; print "History Average Box Office,", history_average }' 'IMDB top 1000.csv'
+  916  awk '{print}' 'IMDB top 1000.csv'
+  917  awk -F',' 'NR > 1 && ($10 == "Sci-Fi" || $10 == "History") {print}' 'IMDB top 1000.csv'
+  918  awk -F',' 'NR > 1 && ($3 ~ /Sci-Fi/ || $4 ~ /Sci-Fi/ || $5 ~ /Sci-Fi/ || $6 ~ /Sci-Fi/ || $7 ~ /Sci-Fi/ || $3 ~ /History/ || $4 ~ /History/ || $5 ~ /History/ || $6 ~ /History/ || $7 ~ /History/) {print}' 'IMDB top 1000.csv'
+  919  awk -F',' 'NR > 1 && ($10 == "Sci-Fi" || $10 == "History") {print}' 'IMDB top 1000.csv'awk -F',' 'NR > 1 && ($3 == "Sci-Fi" || $4 == "Sci-Fi" || $5 == "Sci-Fi" || $6 == "Sci-Fi" || $7 == "Sci-Fi" || $3 == "History" || $4 == "History" || $5 == "History" || $6 == "History" || $7 == "History") {print}' 'IMDB top 1000.csv'
+  920  awk -F',' 'NR > 1 && ($3 == "Sci-Fi" || $4 == "Sci-Fi" || $5 == "Sci-Fi" || $6 == "Sci-Fi" || $7 == "Sci-Fi" || $3 == "History" || $4 == "History" || $5 == "History" || $6 == "History" || $7 == "History") {print}' 'IMDB top 1000.csv'
+  921  awk -F',' 'NR > 1 && (tolower($3) == "sci-fi" || tolower($4) == "sci-fi" || tolower($5) == "sci-fi" || tolower($6) == "sci-fi" || tolower($7) == "sci-fi" || tolower($3) == "history" || tolower($4) == "history" || tolower($5) == "history" || tolower($6) == "history" || tolower($7) == "history") {print}' 'IMDB top 1000.csv'
+  922  awk -F',' 'NR > 1 {
+  923      if (($3 == "Sci-Fi" || $4 == "Sci-Fi" || $5 == "Sci-Fi" || $6 == "Sci-Fi" || $7 == "Sci-Fi" || $3 == "History" || $4 == "History" || $5 == "History" || $6 == "History" || $7 == "History")) {
+  924          print
+  925      }
+  926  }' 'IMDB top 1000.csv'
+  927  awk -F',' 'NR > 1 && ($3 == "Sci-Fi" || $4 == "Sci-Fi" || $5 == "Sci-Fi" || $6 == "Sci-Fi" || $7 == "Sci-Fi" || $3 == "History" || $4 == "History" || $5 == "History" || $6 == "History" || $7 == "History") {print}' 'IMDB top 1000.csv'
+  928  awk -F',' 'NR > 1 {print $3, $4, $5, $6, $7}' 'IMDB top 1000.csv' | head
+  929  awk -F',' 'NR > 1 && (($3 ~ /Sci-Fi/) || ($4 ~ /Sci-Fi/) || ($5 ~ /Sci-Fi/) || ($6 ~ /Sci-Fi/) || ($7 ~ /Sci-Fi/) || ($3 ~ /History/) || ($4 ~ /History/) || ($5 ~ /History/) || ($6 ~ /History/) || ($7 ~ /History/)) {print}' 'IMDB top 1000.csv'
+  930  awk -F',' 'NR > 1 && (($3 ~ /Sci-Fi/) || ($4 ~ /Sci-Fi/) || ($5 ~ /Sci-Fi/) || ($6 ~ /Sci-Fi/) || ($7 ~ /Sci-Fi/) || ($3 ~ /History/) || ($4 ~ /History/) || ($5 ~ /History/) || ($6 ~ /History/) || ($7 ~ /History/)) {print}' 'IMDB top 1000.csv' > comparetwogenre.txt
+  931  wc -l comparetwogenre.txt
+  932  awk -F',' 'NR > 1 && (($3 ~ /Sci-Fi/) || ($4 ~ /Sci-Fi/) || ($5 ~ /Sci-Fi/) || ($6 ~ /Sci-Fi/) || ($7 ~ /Sci-Fi/) || ($3 ~ /History/) || ($4 ~ /History/) || ($5 ~ /History/) || ($6 ~ /History/) || ($7 ~ /History/)) {print}' 'IMDB top 1000.csv' | awk -F',' 'NR > 1 && ($3 ~ /Sci-Fi/ || $4 ~ /Sci-Fi/ || $5 ~ /Sci-Fi/ || $6 ~ /Sci-Fi/ || $7 ~ /Sci-Fi/) { sum += $16 } END { print "Sci-Fi Total Box Office: $" sum }'
+  933  awk -F ',' '{print $16}
+  934  ls
+  935  awk -F ',' '{print $16} 'IMDB top 1000.csv'
+  936  awk -F ',' 'NR>1 {print $16} 'IMDB top 1000.csv'
+  937  awk -F ',' 'NR>1 {print $16}' 'IMDB top 1000.csv'
+  938  awk -F ',' ' {print $16}' 'IMDB top 1000.csv'
+  939  awk -F',' 'NR > 1 && ($3 ~ /Sci-Fi/ || $4 ~ /Sci-Fi/ || $5 ~ /Sci-Fi/ || $6 ~ /Sci-Fi/ || $7 ~ /Sci-Fi/) { for (i=15; i<=18; i++) { if ($i ~ /\$/) { gsub(/[\$,]/, "", $i); sum += $i; count++ }}} END { if (count > 0) print "Average Box Office (Sci-Fi): $" sum / count }' 'IMDB top 1000.csv'
+  940  awk -F ',' ' {print $17}' 'IMDB top 1000.csv'
+  941  awk -F ',' ' {print $18}' 'IMDB top 1000.csv'
+  942  awk -F ',' ' {print $19}' 'IMDB top 1000.csv'
+  943  awk -F ',' ' {print $20}' 'IMDB top 1000.csv'
+  944  awk -F ',' ' {print $29}' 'IMDB top 1000.csv'
+  945  awk -F ',' ' {print $15}' 'IMDB top 1000.csv'
+  946  awk -F ',' ' {print $14}' 'IMDB top 1000.csv'
+  947  awk -F',' 'NR > 1 && ($3 ~ /Sci-Fi/ || $4 ~ /Sci-Fi/ || $5 ~ /Sci-Fi/ || $6 ~ /Sci-Fi/ || $7 ~ /Sci-Fi/) { for (i=15; i<=18; i++) { if ($i ~ /\$/) { gsub(/[\$,]/, "", $i); sum += $i; count++ }}} END { if (count > 0) print "Average Box Office (Sci-Fi): $" sum / count }' 'IMDB top 1000.csv'
+  948  awk -F',' 'NR > 1 { for (i=0; i<=40; i++) { if ($i ~ /Sci-Fi/) { for (j=0; j<=40; j++) { if ($j ~ /\$/) { gsub(/[\$,]/, "", $j); sum += $j; count++ }}}}} END { if (count > 0) print "Average Box Office (Sci-Fi): $" sum / count }' 'IMDB top 1000.csv'
+  949  awk -F',' 'NR > 1 { for (i=0; i<=40; i++) { if ($i ~ /Sci-Fi/) { for (j=0; j<=40; j++) { if ($j ~ /\$/) { gsub(/[\$,]/, "", $j); print $j }}}}}' 'IMDB top 1000.csv'
+  950  awk -F',' 'NR > 1 && ($3 ~ /Sci-Fi/ || $4 ~ /Sci-Fi/ || $5 ~ /Sci-Fi/ || $6 ~ /Sci-Fi/ || $7 ~ /Sci-Fi/) { for (i=1; i<=NF; i++) { if ($i ~ /\$/ && $i+0 > 0) { gsub(/[\$,]/, "", $i); print $i } }}' 'IMDB top 1000.csv'
+  951  awk -F',' 'NR > 1 && ($3 ~ /Sci-Fi/ || $4 ~ /Sci-Fi/ || $5 ~ /Sci-Fi/ || $6 ~ /Sci-Fi/ || $7 ~ /Sci-Fi/) { for (i=1; i<=NF; i++) { if ($i ~ /\$/ && $i+0 > 0) { gsub(/[\$,]/, "", $i); print NR, $i } }}' 'IMDB top 1000.csv'
+  952  cat -n 'IMDB top 1000.csv' | awk -F',' 'NR > 1 && ($3 ~ /Sci-Fi/ || $4 ~ /Sci-Fi/ || $5 ~ /Sci-Fi/ || $6 ~ /Sci-Fi/ || $7 ~ /Sci-Fi/) { for (i=1; i<=NF; i++) { if ($i ~ /\$/ && $i+0 > 0) { gsub(/[\$,]/, "", $i); print $1, $i } }}'
+  953  cat 'IMDB top 1000.csv' | awk -F',' 'NR > 1 && ($3 ~ /Sci-Fi/ || $4 ~ /Sci-Fi/ || $5 ~ /Sci-Fi/ || $6 ~ /Sci-Fi/ || $7 ~ /Sci-Fi/) { for (i=1; i<=NF; i++) { if ($i ~ /\$/ && $i+0 > 0) { gsub(/[\$,]/, "", $i); print $i } }}' | wc -l
+  954  awk -F',' 'NR > 1 { for (i=0; i<=40; i++) { if ($i ~ /Sci-Fi/) { for (j=0; j<=40; j++) { if ($j ~ /\$/) { gsub(/[\$,]/, "", $j); print ++count, $j }}}}}' 'IMDB top 1000.csv'
+  955  awk -F',' 'NR > 1 { for (i=0; i<=40; i++) { if ($i ~ /Sci-Fi/) { for (j=0; j<=40; j++) { if ($j ~ /\$/) { gsub(/[\$,]/, "", $j); print $j }}}}}' 'IMDB top 1000.csv'
+  956  awk -F',' 'NR > 1 { for (i=0; i<=40; i++) { if ($i ~ /Sci-Fi/) { for (j=0; j<=40; j++) { if ($j ~ /\$/) { gsub(/[^0-9.]/, "", $j); print $j }}}}}' 'IMDB top 1000.csv'
+  957  awk -F',' 'NR > 1 { for (i=0; i<=40; i++) { if ($i ~ /Sci-Fi/) { for (j=0awk -F',' 'NR > 1 { for (i=0; i<=40; i++) { if ($i ~ /Sci-Fi/) { for (j=0; j<=40; j++) { if ($j ~ /\$/) { gsub(/[^0-9.]/, "", $j); if ($j ~ /\./) print $j }}}}}' 'IMDB top 1000.csv'; j<=40; j++) { if ($j ~ /\$/) { gsub(/[^0-9.]/, "", $j); print $j }}}}}' 'IMDB top 1000.csv'
+  958  awk -F',' 'NR > 1 { for (i=0; i<=40; i++) { if ($i ~ /Sci-Fi/) { for (j=0; j<=40; j++) { if ($j ~ /\$/) { gsub(/[^0-9.]/, "", $j); if ($j ~ /\./) print $j }}}}}' 'IMDB top 1000.csv'
+  959  awk -F',' 'NR > 1 { for (i=0; i<=40; i++) { if ($i ~ /Sci-Fi/) { for (j=0; j<=40; j++) { if ($j ~ /\$/) { gsub(/[^0-9.]/, "", $j); if ($j ~ /\./) { gsub(/.*Votes:|[|].*/, "", $j); print $j }}}}}' 'IMDB top 1000.csv'
+  960  awk -F',' 'NR > 1 { for (i=0; i<=40; i++) { if ($i ~ /Sci-Fi/) { for (j=0; j<=40; j++) { if ($j ~ /\$/) { gsub(/[^0-9.]/, "", $j); if ($j ~ /\./) { sub(/.*Votes:[[:space:]]*[0-9]+[[:space:]]*|/, "", $j); print $j }}}}}' 'IMDB top 1000.csv'
+  961  awk -F',' 'NR > 1 { for (i=1; i<=NF; i++) { if ($i ~ /Sci-Fi/ && $(i+6) ~ /\$/) { gsub(/[^0-9.]/, "", $(i+6)); sub(/.*Votes:[[:space:]]*[0-9]+[[:space:]]*\|/, "", $(i+6)); print $(i+6) }} }' 'IMDB top 1000.csv'
+  962  awk -F',' 'NR > 1 { for (i=1; i<=NF; i++) { if ($i ~ /Sci-Fi/ && $0 ~ /\$/) { gsub(/[^0-9.]/, "", $0); sub(/.*Votes:[[:space:]]*[0-9]+[[:space:]]*\|/, "", $0); print $0 }} }' 'IMDB top 1000.csv'
+  963  awk -F',' 'NR > 1 { for (i=1; i<=NF; i++) { if ($i ~ /Sci-Fi/ && $0 ~ /Gross: \$/) { gsub(/[^0-9.]/, "", $0); sub(/.*Gross:[[:space:]]*\$/, "", $0); sub(/M.*/, "", $0); print $0 }} }' 'IMDB top 1000.csv'
+  964  awk -F',' 'NR > 1 { if ($0 ~ /Sci-Fi/ && $0 ~ /Gross: \$/) { gsub(/[^0-9.]/, "", $0); sub(/.*Gross:[[:space:]]*\$/, "", $0); sub(/M.*/, "", $0); print $0 }}' 'IMDB top 1000.csv'
+  965  awk -F',' 'NR > 1 && /Sci-Fi/ { match($0, /Gross: \$(\S+)M/, m); if (m[1]) print m[1] }' 'IMDB top 1000.csv'
+  966  awk -F',' 'NR > 1 && /Sci-Fi/ { match($0, /Gross: \$(\S+)M/, m); if (m[1]) print m[1] }' 'IMDB top 1000.csv' | wc -l
+  967  awk -F ',' ' {print $0}' 'IMDB top 1000.csv'
+  968  awk -F',' 'BEGIN { sum = 0; count = 0 } NR > 1 { if ($0 ~ /Sci-Fi/) { if (match($0, /\$([0-9.]+)M/, m)) { box_office = m[1]; } else if (match($0, /Gross: \$(\S+)M/, m)) { box_office = m[1]; } if (box_office) { sum += box_office; count += 1; print count ": " box_office; } } } END { if (count > 0) { print "Average: " sum / count } else { print "No Sci-Fi movies found" } }' 'IMDB top 1000.csv'
+  969  awk -F',' 'BEGIN { sum = 0; count = 0 } NR > 1 { if ($0 ~ /Sci-Fi/) { if (match($0, /\$([0-9.]+)M/, m)) { box_office = m[1]; } else if (match($0, /Gross: \$(\S+)M/, m)) { box_office = m[1]; } if (box_office) { sum += box_office; count += 1; print count ": " box_office; } } } END { if (count > 0) { print "Average: " sum / count } else { print "No Sci-Fi movies found" } }' 'IMDB top 1000.csv' | wc -l
+  970  awk -F',' 'BEGIN { sum = 0; count = 0 } NR > 1 { if ($0 ~ /Sci-Fi/) { if (match($0, /\$([0-9.]+)M/, m)) { box_office = m[1]; } else if (match($0, /Gross: \$(\S+)M/, m)) { box_office = m[1]; } if (box_office) { sum += box_office; count += 1; print count ": " box_office; } } } END { if (count > 0) { print "Average: " sum / count } else { print "No Sci-Fi movies found" } }' 'IMDB top 1000.csv' | wc -l 
+  971   awk -F',' 'BEGIN { sum = 0; count = 0 } NR > 1 { if ($0 ~ /Sci-Fi/) { if (match($0, /\$([0-9.]+)M/, m)) { box_office = m[1]; } else if (match($0, /Gross: \$(\S+)M/, m)) { box_office = m[1]; } if (box_office) { sum += box_office; count += 1; print count ": " box_office; } } } END { if (count > 0) { print "Average: " sum / count } else { print "No Sci-Fi movies found" } }' 'IMDB top 1000.csv'
+  972   awk -F',' 'BEGIN { sum = 0; count = 0 } NR > 1 { if ($0 ~ /Sci-Fi/) { if (match($0, /\$([0-9.]+)M/, m)) { box_office = m[1]; } else if (match($0, /Gross: \$(\S+)M/, m)) { box_office = m[1]; } if (box_office) { sum += box_office; count += 1; print count ": " box_office; } } } END { if (count > 0) { print "Average: " sum / count } else { print "No Sci-Fi movies found" } }' 'IMDB top 1000.csv' > scifiboxofficeaverage.txt
+  973  cat scifiboxofficeaverage.txt
+  974   awk -F',' 'BEGIN { sum = 0; count = 0 } NR > 1 { if ($0 ~ /History/) { if (match($0, /\$([0-9.]+)M/, m)) { box_office = m[1]; } else if (match($0, /Gross: \$(\S+)M/, m)) { box_office = m[1]; } if (box_office) { sum += box_office; count += 1; print count ": " box_office; } } } END { if (count > 0) { print "Average: " sum / count } else { print "No Sci-Fi movies found" } }' 'IMDB top 1000.csv'
+  975   awk -F',' 'BEGIN { sum = 0; count = 0 } NR > 1 { if ($0 ~ /History/) { if (match($0, /\$([0-9.]+)M/, m)) { box_office = m[1]; } else if (match($0, /Gross: \$(\S+)M/, m)) { box_office = m[1]; } if (box_office) { sum += box_office; count += 1; print count ": " box_office; } } } END { if (count > 0) { print "Average: " sum / count } else { print "No History movies found" } }' 'IMDB top 1000.csv' > historyboxofficeaverage.txt
+  976  cat historyboxofficeaverage.txt
+  977   awk -F',' 'BEGIN { sum = 0; count = 0 } NR > 1 { if ($0 ~ /Sci-Fi/) { if (match($0, /\$([0-9.]+)M/, m)) { box_office = m[1]; } else if (match($0, /Gross: \$(\S+)M/, m)) { box_office = m[1]; } if (box_office) { sum += box_office; count += 1; print count ": " box_office; } } } END { if (count > 0) { print "Average: " sum / count } else { print "No Sci-Fi movies found" } }' 'IMDB top 1000.csv'
+  978  ls
+  979   awk -F',' 'BEGIN { sum = 0; count = 0 } NR > 1 { if ($0 ~ /History/) { if (match($0, /\$([0-9.]+)M/, m)) { box_office = m[1]; } else if (match($0, /Gross: \$(\S+)M/, m)) { box_office = m[1]; } if (box_office) { sum += box_office; count += 1; print count ": " box_office; } } } END { if (count > 0) { print "Average: $" sum / count } else { print "No History movies found" } }' 'IMDB top 1000.csv' > historyboxofficeaverage.txt
+  980  cat # Step 2: Extract relevant information for Sci-Fi and History genres
+  981  ls
+  982  cat historyboxofficeaverage.txt
+  983  ls
+  984  cat scifiboxofficeaverage.txt
+  985   awk -F',' 'BEGIN { sum = 0; count = 0 } NR > 1 { if ($0 ~ /Sci-Fi/) { if (match($0, /\$([0-9.]+)M/, m)) { box_office = m[1]; } else if (match($0, /Gross: \$(\S+)M/, m)) { box_office = m[1]; } if (box_office) { sum += box_office; count += 1; print count ": " box_office; } } } END { if (count > 0) { print "Average: $" sum / count } else { print "No Sci-Fi movies found" } }' 'IMDB top 1000.csv'
+  986   awk -F',' 'BEGIN { sum = 0; count = 0 } NR > 1 { if ($0 ~ /Sci-Fi/) { if (match($0, /\$([0-9.]+)M/, m)) { box_office = m[1]; } else if (match($0, /Gross: \$(\S+)M/, m)) { box_office = m[1]; } if (box_office) { sum += box_office; count += 1; print count ": " box_office; } } } END { if (count > 0) { print "Average: $" sum / count "M" } else { print "No Sci-Fi movies found" } }' 'IMDB top 1000.csv'
+  987   awk -F',' 'BEGIN { sum = 0; count = 0 } NR > 1 { if ($0 ~ /Sci-Fi/) { if (match($0, /\$([0-9.]+)M/, m)) { box_office = m[1]; } else if (match($0, /Gross: \$(\S+)M/, m)) { box_office = m[1]; } if (box_office) { sum += box_office; count += 1; print count ": " box_office; } } } END { if (count > 0) { print "Average: $" sum / count "M" } else { print "No Sci-Fi movies found" } }' 'IMDB top 1000.csv' > scifiboxofficeaverage.txt
+  988   awk -F',' 'BEGIN { sum = 0; count = 0 } NR > 1 { if ($0 ~ /History/) { if (match($0, /\$([0-9.]+)M/, m)) { box_office = m[1]; } else if (match($0, /Gross: \$(\S+)M/, m)) { box_office = m[1]; } if (box_office) { sum += box_office; count += 1; print count ": " box_office; } } } END { if (count > 0) { print "Average: $" sum / count "M" } else { print "No History movies found" } }' 'IMDB top 1000.csv' > historyboxofficeaverage.txt
+  989  cat historyboxofficeaverage.txt
+  990  ls
+  991  cat years.txt
+  992  ls
+  993  cat scifiboxofficeaverage.txt
+  994  ls
+  995   historyboxofficeaverage.txt
+  996  cat  historyboxofficeaverage.txt
+  997  ls
+  998  vi  ourscript.sh
+  999  cd ssh hamzaf23@172.20.25.9
+ 1000  cd cs131
+ 1001  ls
+ 1002  cd MiniProjectGroup2
+ 1003  history > cmds.log
